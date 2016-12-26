@@ -1,7 +1,7 @@
 {
   "name": "siddarthvader.github.io",
   "version": "1.0.0",
-  "description": "My Portfolio in React",
+  "description": "My Portfolio in angular webpack",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,9 +20,11 @@
   },
   "homepage": "https://github.com/siddarthvader/siddarthvader.github.io#readme",
   "dependencies": {
-    "babel-preset-react": "^6.16.0",
-    "babelify": "^7.3.0",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "angular2": "^2.0.0-beta.21",  
+    "es6-shim": "^0.35",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.6",
+    "typescript": "^2.1.4",
+    "zone.js": "^0.6.12"
   }
 }
