@@ -1,5 +1,21 @@
-function greeter(str) {
-    return "first one here" + str;
+var student = (function () {
+    function student(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.fullName = firstName + lastName;
+    }
+    return student;
+}());
+function greeter(person) {
+    var color = 'blue';
+    var count = 10;
+    var a = "Hello " + (person.firstName + person.lastName) + "\n            and i'm going to be " + (count + 1) + " years old tomorrow ";
+    var list = [3, 3, 3];
+    var list1 = [2, 2, 2];
+    var list2 = [1, 'new'];
+    console.log(list2[0]);
+    console.log(a);
+    return a;
 }
-var user = "name is bond";
+var user = new student('mary', 'jane');
 document.body.innerHTML = greeter(user);
