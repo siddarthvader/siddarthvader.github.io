@@ -1,9 +1,11 @@
 var student = (function () {
     function student(firstName, lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
         this.fullName = firstName + lastName;
     }
+    ;
+    student.prototype.countArray = function (arr) {
+        return arr.length;
+    };
     return student;
 }());
 function greeter(person) {
@@ -13,9 +15,11 @@ function greeter(person) {
     var list = [3, 3, 3];
     var list1 = [2, 2, 2];
     var list2 = [1, 'new'];
-    console.log(list2[0]);
-    console.log(a);
+    // console.log(list2[0]);
+    // console.log(a);
     return a;
 }
 var user = new student('mary', 'jane');
-document.body.innerHTML = greeter(user);
+console.log(user);
+console.log(user.countArray([1, 2, 3, 4, 5]));
+// document.body.innerHTML=greeter(user); 
