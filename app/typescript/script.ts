@@ -7,7 +7,9 @@ class student{
         return arr.length;
     }
 }
-
+//comments
+//more comments
+// yes there will be comments
 interface Person{
     firstName:string,
     lastName:string
