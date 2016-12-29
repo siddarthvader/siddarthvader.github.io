@@ -8,6 +8,7 @@ class student{
     }
 }
 
+// this is a test comment
 interface Person{
     firstName:string,
     lastName:string
