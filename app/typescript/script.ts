@@ -1,34 +1,40 @@
-class student{
-    fullName:string;
-    constructor( firstName:string,  lastName:string){
-        this.fullName=firstName+lastName;
-    };
-    public countArray(arr:Array<number>){
-        return arr.length;
-    }
-}
+// we are learning typescript
 
-// this is a test comment
-interface Person{
-    firstName:string,
-    lastName:string
-}
+let flag:boolean;
+let colorCode:number=0xf00d;
+let binay:number=0b1010;
+let octal: number = 0o744;
+flag=true;
+let color:string=`blue
+why should not
+we use template 
+string whe
+there is ${colorCode} to
+learn
+`;
 
-function greeter(person : Person){
-    let color:string='blue';
-    let count:number=10;
-    let a:string=`Hello ${person.firstName+person.lastName}
-            and i'm going to be ${count+1} years old tomorrow `;
-    let list:number[]=[3,3,3];
-    let list1:Array<number>=[2,2,2];
-    let list2:[number,string]=[1,'new'];
-    // console.log(list2[0]);
-    // console.log(a);
-    return a;
-}
+let list: number[]=[1,2,3];
+let gList:Array<number>=[1,2,3];
 
-var user=new student('mary','jane');
-console.log(user);
-console.log(user.countArray([1,2,3,4,5]));
+let mix:[string,number];
+mix=["hello",12];
 
-// document.body.innerHTML=greeter(user);
+mix[2]='sid';
+
+// console.log(mix[0].substr(1));
+// console.log(color);
+
+enum Colour {Red,Green,Blue=2};
+let c:Colour=Colour.Blue;
+
+let dontKnow:any=4;
+
+console.log(typeof dontKnow);
+
+let liste:[any]=[1,2,true,'wowbehdni'];
+console.info(liste[3]);
+
+
+let someValue: any='this is a string';
+
+console.log((someValue as string).length,typeof someValue);
