@@ -380,6 +380,7 @@ body {
   animation: changeLetter 10000ms linear infinite;
   display: block;
   content: 'Portfolio';
+  animation-delay: 3s;
 }
 .header .element:after {
   color: #0b68ad;
