@@ -161,26 +161,105 @@ body {
 @keyframes changeLetter {
   0% {
     content: "Portfolio";
-    opacity: 1;
   }
-  49% {
-    opacity: 0;
+  9% {
     content: "Portfolio";
   }
-  50% {
-    opacity: 1;
+  12% {
+    content: "Portfoli";
+  }
+  15% {
+    content: "Portfol";
+  }
+  18% {
+    content: "Portfo";
+  }
+  21% {
+    content: "Portf";
+  }
+  24% {
+    content: "Port";
+  }
+  27% {
+    content: "Por";
+  }
+  30% {
+    content: "Po";
+  }
+  33% {
+    content: "P";
+  }
+  36% {
+    content: " ";
+  }
+  39% {
+    content: "B";
+  }
+  42% {
+    content: "Bl";
+  }
+  45% {
+    content: "Blo";
+  }
+  51% {
     content: "Blog";
   }
-  99% {
-    opacity: 0;
+  60% {
     content: "Blog";
+  }
+  63% {
+    content: "Blo";
+  }
+  66% {
+    content: "Bl";
+  }
+  69% {
+    content: "B";
+  }
+  72% {
+    content: " ";
+  }
+  75% {
+    content: "P";
+  }
+  78% {
+    content: "Po";
+  }
+  81% {
+    content: "Por";
+  }
+  84% {
+    content: "Port";
+  }
+  87% {
+    content: "Portf";
+  }
+  90% {
+    content: "Portfo";
+  }
+  93% {
+    content: "Portfol";
+  }
+  96% {
+    content: "Portfoli";
+  }
+  99% {
+    content: "Portfolio";
+  }
+}
+@keyframes blink {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: #0b68ad;
   }
 }
 .header {
   color: #0b68ad;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   font-size: 2.34rem;
 }
@@ -237,15 +316,76 @@ body {
 }
 .header .element {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  width: 10vw;
+  align-items: flex-end;
   font-size: 2.34rem;
   margin-left: .5vw;
-  transition: 300ms all ease-in-out;
+  position: relative;
+  height: 2.34rem;
+  width: 12vw;
 }
-.header .element:after {
-  animation: changeLetter 4s linear infinite;
+.header .element.row {
+  flex-direction: row;
+}
+.header .element.col {
+  flex-direction: column;
+}
+.header .element.ac {
+  align-items: center;
+}
+.header .element.ab {
+  align-items: baseline;
+}
+.header .element.fls {
+  align-items: flex-start;
+}
+.header .element.fe {
+  align-items: flex-end;
+}
+.header .element.fs {
+  align-items: flex-start;
+}
+.header .element.jc {
+  justify-content: center;
+}
+.header .element.sb {
+  justify-content: space-between;
+}
+.header .element.sa {
+  justify-content: space-around;
+}
+.header .element.je {
+  justify-content: flex-end;
+}
+.header .element.sc {
+  align-self: center;
+}
+.header .element.asb {
+  align-self: baseline;
+}
+.header .element.asf {
+  align-self: flex-start;
+}
+.header .element.rw {
+  flex-flow: row wrap;
+}
+.header .element .fg1 {
+  flex-grow: 1;
+}
+.header .element .ns {
+  flex-shrink: 0;
+}
+.header .element:before {
+  animation: changeLetter 10000ms linear infinite;
   display: block;
   content: 'Portfolio';
+}
+.header .element:after {
+  color: #0b68ad;
+  content: '_';
+  font-weight: 100;
+  font-size: 30px;
+  color: #2E3D48;
+  animation: 300ms blink step-end infinite;
 }
