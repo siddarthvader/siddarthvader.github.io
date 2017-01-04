@@ -2,7 +2,7 @@
 @import "desktop_var";
 @font-face {
     font-family: montserrat;
-	src: url('../static/fonts/montserrat/Montserrat-Light.otf') format('truetype');
+    src: url('../static/fonts/montserrat/Montserrat-Light.otf') format('truetype');
     font-weight: 900;
 }
 
@@ -78,98 +78,97 @@
 }
 
 .ml-5 {
-	margin-left: .5vw;
+    margin-left: .5vw;
 }
 
 .mr-5 {
-	margin-right: .5vw;
+    margin-right: .5vw;
 }
 
 .mt-5 {
-	margin-top: .5vw;
+    margin-top: .5vw;
 }
 
 .mb-5 {
-	margin-bottom: .5vw;
+    margin-bottom: .5vw;
 }
 
 .mh-5 {
-	.mr-5;
-	.ml-5;
+    .mr-5;
+    .ml-5;
 }
 
 .mv-5 {
-	.mt-5;
-	.mb-5;
+    .mt-5;
+    .mb-5;
 }
 
 .m-5 {
-	.mh-5;
-	.mv-5;
+    .mh-5;
+    .mv-5;
 }
 
 .ml1 {
-	margin-left: 1vw;
+    margin-left: 1vw;
 }
 
 .mr1 {
-	margin-right: 1vw;
+    margin-right: 1vw;
 }
 
 .mt1 {
-	margin-top: 1vw;
+    margin-top: 1vw;
 }
 
 .mb1 {
-	margin-bottom: 1vw;
+    margin-bottom: 1vw;
 }
 
 .mh1 {
-	.mr1;
-	.ml1;
+    .mr1;
+    .ml1;
 }
 
 .mv1 {
-	.mt1;
-	.mb1;
+    .mt1;
+    .mb1;
 }
 
 .m1 {
-	.mh1;
-	.mv1;
+    .mh1;
+    .mv1;
 }
 
 .ml2 {
-	margin-left: 2vw;
+    margin-left: 2vw;
 }
 
 .mr2 {
-	margin-right: 2vw;
+    margin-right: 2vw;
 }
 
 .mt2 {
-	margin-top: 2vw;
+    margin-top: 2vw;
 }
 
 .mb2 {
-	margin-bottom: 2vw;
+    margin-bottom: 2vw;
 }
 
 .mh2 {
-	.mr2;
-	.ml2;
+    .mr2;
+    .ml2;
 }
 
 .mv2 {
-	.mt2;
-	.mb2;
+    .mt2;
+    .mb2;
 }
 
 .m2 {
-	.mh2;
-	.mv2;
+    .mh2;
+    .mv2;
 }
-
 
 //element based css rules
 * {
@@ -189,42 +188,131 @@ body {
 @keyframes changeLetter {
     0% {
         content: "Portfolio";
-		opacity:1;
     }
-	49%{
-		opacity:0;
-		content:"Portfolio";
-	}
-	50%{
-		opacity:1;
-		content:"Blog";
-	}
-	99%{
-		opacity:0;
-		content:"Blog";
-	}
+    9% {
+        content: "Portfolio";
+    }
+    12% {
+        content: "Portfoli";
+    }
+    15% {
+        content: "Portfol";
+    }
+    18% {
+        content: "Portfo";
+    }
+    21% {
+        content: "Portf";
+    }
+    24% {
+        content: "Port";
+    }
+    27% {
+        content: "Por";
+    }
+    30% {
+        content: "Po";
+    }
+    33% {
+        content: "P";
+    }
+    36% {
+        content: " ";
+    }
+    39% {
+        content: "B";
+    }
+    42% {
+        content: "Bl";
+    }
+    45% {
+        content: "Blo";
+    }
+    51% {
+        content: "Blog";
+    }
+    60% {
+        content: "Blog";
+    }
+    63% {
+        content: "Blo";
+    }
+    66% {
+        content: "Bl";
+    }
+    69% {
+        content: "B";
+    }
+    72% {
+        content: " ";
+    }
+    75% {
+        content: "P";
+    }
+    78% {
+        content: "Po";
+    }
+    81% {
+        content: "Por";
+    }
+    84% {
+        content: "Port";
+    }
+    87% {
+        content: "Portf";
+    }
+    90% {
+        content: "Portfo";
+    }
+    93% {
+        content: "Portfol";
+    }
+    96% {
+        content: "Portfoli";
+    }
+    99% {
+        content: "Portfolio";
+    }
+}
+
+@keyframes blink {
+    0% {
+        color: transparent;
+    }
+    50% {
+        color: @blue;
+    }
 }
 
 .header {
     color: @blue;
     .flex;
     .row;
-    .ac;
+    .fe;
     .jc;
     .font-big;
     .element {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-		width:10vw;
+        .flex;
+        .row;
+        .ac;
+        .fe;
         .font-big;
-		.ml-5;
-		transition: 300ms all ease-in-out;
-		&:after {
-			animation: changeLetter 4s linear infinite;
+        .ml-5;
+        position: relative;
+        height: @font-big;
+        width: 12vw;
+        &:before {
+            animation: changeLetter 10000ms linear infinite;
             display: block;
-			content:'Portfolio';
+            content: 'Portfolio';
+        }
+        &:after {
+            color: @blue;
+            content: '_';
+            font-weight: 100;
+            font-size: 30px;
+            color: #2E3D48;
+            animation: 300ms blink step-end infinite;
         }
     }
 }
-
