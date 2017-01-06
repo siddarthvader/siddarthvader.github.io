@@ -2,6 +2,12 @@
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
-        "sourceMap": true
-    }
+        "sourceMap": true,
+        "outDir":"app/js",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true
+    },
+    "exclude":[
+        "node_modules"
+    ]
 }

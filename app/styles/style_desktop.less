@@ -1,0 +1,320 @@
+// absolute css rules
+@import "desktop_var";
+@font-face {
+    font-family: montserrat;
+    src: url('../static/fonts/montserrat/Montserrat-Light.otf') format('truetype');
+    font-weight: 900;
+}
+
+.flex {
+    display: flex;
+    &.row {
+        flex-direction: row;
+    }
+    &.col {
+        flex-direction: column;
+    }
+    &.ac {
+        align-items: center;
+    }
+    &.ab {
+        align-items: baseline;
+    }
+    &.fls {
+        align-items: flex-start;
+    }
+    &.fe {
+        align-items: flex-end;
+    }
+    &.fs {
+        align-items: flex-start;
+    }
+    &.jc {
+        justify-content: center;
+    }
+    &.sb {
+        justify-content: space-between;
+    }
+    &.sa {
+        justify-content: space-around;
+    }
+    &.je {
+        justify-content: flex-end;
+    }
+    &.sc {
+        align-self: center;
+    }
+    &.asb {
+        align-self: baseline;
+    }
+    &.asf {
+        align-self: flex-start;
+    }
+    &.rw {
+        flex-flow: row wrap;
+    }
+    .fg1 {
+        flex-grow: 1;
+    }
+    .ns {
+        flex-shrink: 0;
+    }
+}
+
+.font-big {
+    font-size: @font-big;
+}
+
+.font-medium {
+    font-size: @font-medium;
+}
+
+.font-regular {
+    font-size: @font-regular;
+}
+
+.font-small {
+    font-size: @font-small;
+}
+
+.ml-5 {
+    margin-left: .5vw;
+}
+
+.mr-5 {
+    margin-right: .5vw;
+}
+
+.mt-5 {
+    margin-top: .5vw;
+}
+
+.mb-5 {
+    margin-bottom: .5vw;
+}
+
+.mh-5 {
+    .mr-5;
+    .ml-5;
+}
+
+.mv-5 {
+    .mt-5;
+    .mb-5;
+}
+
+.m-5 {
+    .mh-5;
+    .mv-5;
+}
+
+.ml1 {
+    margin-left: 1vw;
+}
+
+.mr1 {
+    margin-right: 1vw;
+}
+
+.mt1 {
+    margin-top: 1vw;
+}
+
+.mb1 {
+    margin-bottom: 1vw;
+}
+
+.mh1 {
+    .mr1;
+    .ml1;
+}
+
+.mv1 {
+    .mt1;
+    .mb1;
+}
+
+.m1 {
+    .mh1;
+    .mv1;
+}
+
+.ml2 {
+    margin-left: 2vw;
+}
+
+.mr2 {
+    margin-right: 2vw;
+}
+
+.mt2 {
+    margin-top: 2vw;
+}
+
+.mb2 {
+    margin-bottom: 2vw;
+}
+
+.mh2 {
+    .mr2;
+    .ml2;
+}
+
+.mv2 {
+    .mt2;
+    .mb2;
+}
+
+.m2 {
+    .mh2;
+    .mv2;
+}
+
+//element based css rules
+* {
+    font-family: montserrat;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 1vw;
+}
+
+body {
+    background: #f7f7f7;
+}
+
+@keyframes changeLetter {
+    0% {
+        content: "Portfolio";
+    }
+    9.09% {
+        content: "Portfolio";
+    }
+    12.12% {
+        content: "Portfoli";
+    }
+    15.15% {
+        content: "Portfol";
+    }
+    18.18% {
+        content: "Portfo";
+    }
+    21.21% {
+        content: "Portf";
+    }
+    24.24% {
+        content: "Port";
+    }
+    27.27% {
+        content: "Por";
+    }
+    30.30% {
+        content: "Po";
+    }
+    33.33% {
+        content: "P";
+    }
+    36.36% {
+        content: " ";
+    }
+    39.39% {
+        content: "B";
+    }
+    42.42% {
+        content: "Bl";
+    }
+    45.45% {
+        content: "Blo";
+    }
+    51.51% {
+        content: "Blog";
+    }
+    60.60% {
+        content: "Blog";
+    }
+    63.63% {
+        content: "Blo";
+    }
+    66.66% {
+        content: "Bl";
+    }
+    69.69% {
+        content: "B";
+    }
+    72.72% {
+        content: " ";
+    }
+    75.75% {
+        content: "P";
+    }
+    78.78% {
+        content: "Po";
+    }
+    81.81% {
+        content: "Por";
+    }
+    84.84% {
+        content: "Port";
+    }
+    87.87% {
+        content: "Portf";
+    }
+    90.90% {
+        content: "Portfo";
+    }
+    93.93% {
+        content: "Portfol";
+    }
+    96.96% {
+        content: "Portfoli";
+    }
+    99.99% {
+        content: "Portfolio";
+    }
+}
+
+@keyframes blink {
+    0% {
+        color: transparent;
+    }
+    50% {
+        color: @blue;
+    }
+}
+
+.header {
+    color: @blue;
+    .flex;
+    .row;
+    .fe;
+    .jc;
+    .font-big;
+    .element {
+        .flex;
+        .row;
+        .ac;
+        .fe;
+        .font-big;
+        .ml-5;
+        position: relative;
+        height: @font-big;
+        width: 12vw;
+        &:before {
+            animation: changeLetter 9900ms linear infinite;
+            display: block;
+            content: 'Portfolio';
+             animation-delay: 3s;
+        }
+        &:after {
+            color: @blue;
+            content: '_';
+            font-weight: 100;
+            font-size: 30px;
+            color: #2E3D48;
+            animation: 300ms blink step-end infinite;
+            transition: all 100ms ease-in-out;
+        }
+    }
+}
