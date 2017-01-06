@@ -478,7 +478,6 @@ body {
   content: '_';
   font-weight: bold;
   font-size: 30px;
-  color: #2E3D48;
   animation: 300ms blink step-end infinite;
   transition: all 100ms ease-in-out;
   animation-iteration-count: 100;
