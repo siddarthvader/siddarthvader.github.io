@@ -1,4 +1,4 @@
-@import url('../../node_modules/css-media-all/css-media-all.css');
+@import url('css-media-all.css');
 @font-face {
   font-family: monaco;
   src: url('../static/fonts/montserrat/Montserrat-Hairline.otf') format('opentype');
