@@ -272,6 +272,7 @@
 //element based css rules
 * {
     font-family: monaco;
+    box-sizing: border-box;
 }
 
 html {
@@ -281,7 +282,7 @@ html {
 }
 
 body {
-    background: #f7f7f7;
+    background: @white-bg;
     font-family: monaco;
     .p1;
     width: 100%;
@@ -289,91 +290,91 @@ body {
 
 @keyframes changeLetter {
     0% {
-        content: "Portfolio";
+        content: "portfolio";
     }
     9.09% {
-        content: "Portfolio";
+        content: "portfolio";
     }
     12.12% {
-        content: "Portfoli";
+        content: "portfoli";
     }
     15.15% {
-        content: "Portfol";
+        content: "portfol";
     }
     18.18% {
-        content: "Portfo";
+        content: "portfo";
     }
     21.21% {
-        content: "Portf";
+        content: "portf";
     }
     24.24% {
-        content: "Port";
+        content: "port";
     }
     27.27% {
-        content: "Por";
+        content: "por";
     }
     30.30% {
-        content: "Po";
+        content: "po";
     }
     33.33% {
-        content: "P";
+        content: "p";
     }
     36.36% {
         content: " ";
     }
     39.39% {
-        content: "B";
+        content: "b";
     }
     42.42% {
-        content: "Bl";
+        content: "bl";
     }
     45.45% {
-        content: "Blo";
+        content: "blo";
     }
     51.51% {
-        content: "Blog";
+        content: "blog";
     }
     60.60% {
-        content: "Blog";
+        content: "blog";
     }
     63.63% {
-        content: "Blo";
+        content: "blo";
     }
     66.66% {
-        content: "Bl";
+        content: "bl";
     }
     69.69% {
-        content: "B";
+        content: "b";
     }
     72.72% {
         content: " ";
     }
     75.75% {
-        content: "P";
+        content: "p";
     }
     78.78% {
-        content: "Po";
+        content: "po";
     }
     81.81% {
-        content: "Por";
+        content: "por";
     }
     84.84% {
-        content: "Port";
+        content: "port";
     }
     87.87% {
-        content: "Portf";
+        content: "portf";
     }
     90.90% {
-        content: "Portfo";
+        content: "portfo";
     }
     93.93% {
-        content: "Portfol";
+        content: "portfol";
     }
     96.96% {
-        content: "Portfoli";
+        content: "portfoli";
     }
     99.99% {
-        content: "Portfolio";
+        content: "portfolio";
     }
 }
 
@@ -385,8 +386,6 @@ body {
         color: @blue;
     }
 }
-
-body {}
 
 .header {
     color: @blue;
@@ -409,7 +408,7 @@ body {}
         &:before {
             animation: changeLetter 9900ms linear infinite;
             display: block;
-            content: 'Portfolio';
+            content: 'portfolio';
             animation-delay: 3s;
             animation-iteration-count: 2;
         }
@@ -430,65 +429,85 @@ body {}
     .flex;
     .row;
     height: 50rem;
-    background: #272822;
+    background: @black;
     box-shadow: .0rem 0rem 6px 1px #000000;
     margin: 0 auto;
     margin-top: 5rem;
     .vmenu {
-        flex: 0 0 14%;
+        flex: 0 0 17%;
         .flex;
         .col;
-        .p1;
+        .pv1;
         border-right: solid 1px @blue;
         .vfile-name {
-            .p-5;
             .font-small;
-            color: #c6c6c6;
-            .ml1;
+            color: @white-text;
+            .p-5;
+            padding-left: 1.5rem;
+            cursor: pointer;
+            &:hover {
+                background: @black-bg;
+            }
         }
         .vfolder-name {
-            .p-5;
             .font-small;
-            color: #c6c6c6;
+            color: @white-text;
             position: relative;
             .flex;
             .row;
             .fls;
             width: 100%;
-            &:before {
-                width: 0;
-                height: 0;
-                border-top: .5rem solid transparent;
-                border-bottom: .5rem solid transparent;
-                border-left: .5rem solid #c6c6c6;
-                content: '';
-                display: inline-block;
-                .mr-5;
-                transition: all 100ms ease;
-            }
             .vcover {
                 .flex;
                 .col;
-                .kids {
-                    height: 0;
-                    opacity: 0;
-                    display: none;
-                    .mr-5;
-                    .kids-name {
-                        .p-5;
+                flex-grow: 1;
+                .parent {
+                    cursor: pointer;
+                    .flex;
+                    .row;
+                    .ac;
+                    .pv-5;
+                    .ph-5;
+                    &:before {
+                        width: 0;
+                        height: 0;
+                        border-top: .5rem solid transparent;
+                        border-bottom: .5rem solid transparent;
+                        border-left: .5rem solid @white-text;
+                        content: '';
+                        display: inline-block;
+                        .mr-5;
+                        transition: all 100ms ease;
                     }
                 }
-            }
-            &:hover {
-                &:before {
-                    transform: rotate(60deg);
+                input[type=checkbox] {
+                    display: none;
                 }
-                .vcover {
-                    .kids {
+                input[type=checkbox]:checked {
+                    ~.parent {
+                        background: @blue-bg;
+                        &:before {
+                            transform: rotate(60deg);
+                        }
+                    }
+                    ~.kids {
                         height: auto;
                         opacity: 1;
                         display: flex;
                         .col;
+                    }
+                }
+                .kids {
+                    height: 0;
+                    opacity: 0;
+                    display: none;
+                    .ml1;
+                    .kids-name {
+                        .p-5;
+                        .pl1;
+                        &:hover {
+                            background: @black-bg;
+                        }
                     }
                 }
             }
@@ -498,7 +517,7 @@ body {}
             >input {
                 border: none;
                 background: #3f3f46;
-                color: #c6c6c6;
+                color: @white-text;
                 outline: @blue solid .2rem;
                 width: 100%;
                 &:focus {
