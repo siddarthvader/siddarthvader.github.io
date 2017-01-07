@@ -232,6 +232,7 @@
 }
 * {
   font-family: monaco;
+  box-sizing: border-box;
 }
 html {
   width: 100%;
@@ -249,91 +250,91 @@ body {
 }
 @keyframes changeLetter {
   0% {
-    content: "Portfolio";
+    content: "portfolio";
   }
   9.09% {
-    content: "Portfolio";
+    content: "portfolio";
   }
   12.12% {
-    content: "Portfoli";
+    content: "portfoli";
   }
   15.15% {
-    content: "Portfol";
+    content: "portfol";
   }
   18.18% {
-    content: "Portfo";
+    content: "portfo";
   }
   21.21% {
-    content: "Portf";
+    content: "portf";
   }
   24.24% {
-    content: "Port";
+    content: "port";
   }
   27.27% {
-    content: "Por";
+    content: "por";
   }
   30.30% {
-    content: "Po";
+    content: "po";
   }
   33.33% {
-    content: "P";
+    content: "p";
   }
   36.36% {
     content: " ";
   }
   39.39% {
-    content: "B";
+    content: "b";
   }
   42.42% {
-    content: "Bl";
+    content: "bl";
   }
   45.45% {
-    content: "Blo";
+    content: "blo";
   }
   51.51% {
-    content: "Blog";
+    content: "blog";
   }
   60.60% {
-    content: "Blog";
+    content: "blog";
   }
   63.63% {
-    content: "Blo";
+    content: "blo";
   }
   66.66% {
-    content: "Bl";
+    content: "bl";
   }
   69.69% {
-    content: "B";
+    content: "b";
   }
   72.72% {
     content: " ";
   }
   75.75% {
-    content: "P";
+    content: "p";
   }
   78.78% {
-    content: "Po";
+    content: "po";
   }
   81.81% {
-    content: "Por";
+    content: "por";
   }
   84.84% {
-    content: "Port";
+    content: "port";
   }
   87.87% {
-    content: "Portf";
+    content: "portf";
   }
   90.90% {
-    content: "Portfo";
+    content: "portfo";
   }
   93.93% {
-    content: "Portfol";
+    content: "portfol";
   }
   96.96% {
-    content: "Portfoli";
+    content: "portfoli";
   }
   99.99% {
-    content: "Portfolio";
+    content: "portfolio";
   }
 }
 @keyframes blink {
@@ -469,7 +470,7 @@ body {
 .header .element:before {
   animation: changeLetter 9900ms linear infinite;
   display: block;
-  content: 'Portfolio';
+  content: 'portfolio';
   animation-delay: 3s;
   animation-iteration-count: 2;
 }
@@ -544,11 +545,9 @@ body {
   flex-shrink: 0;
 }
 .veditor .vmenu {
-  flex: 0 0 14%;
+  flex: 0 0 17%;
   display: flex;
   flex-direction: column;
-  padding-right: 1rem;
-  padding-left: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-right: solid 1px #1b819d;
@@ -605,19 +604,19 @@ body {
   flex-shrink: 0;
 }
 .veditor .vmenu .vfile-name {
-  padding-right: .5rem;
-  padding-left: .5rem;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
   font-size: 1rem;
   color: #c6c6c6;
-  margin-left: 1rem;
-}
-.veditor .vmenu .vfolder-name {
   padding-right: .5rem;
   padding-left: .5rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
+  padding-left: 1.5rem;
+  cursor: pointer;
+}
+.veditor .vmenu .vfile-name:hover {
+  background: #2a2d2e;
+}
+.veditor .vmenu .vfolder-name {
   font-size: 1rem;
   color: #c6c6c6;
   position: relative;
@@ -677,20 +676,10 @@ body {
 .veditor .vmenu .vfolder-name .ns {
   flex-shrink: 0;
 }
-.veditor .vmenu .vfolder-name:before {
-  width: 0;
-  height: 0;
-  border-top: .5rem solid transparent;
-  border-bottom: .5rem solid transparent;
-  border-left: .5rem solid #c6c6c6;
-  content: '';
-  display: inline-block;
-  margin-right: .5rem;
-  transition: all 100ms ease;
-}
 .veditor .vmenu .vfolder-name .vcover {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 .veditor .vmenu .vfolder-name .vcover.row {
   flex-direction: row;
@@ -743,26 +732,108 @@ body {
 .veditor .vmenu .vfolder-name .vcover .ns {
   flex-shrink: 0;
 }
+.veditor .vmenu .vfolder-name .vcover .parent {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-right: .5rem;
+  padding-left: .5rem;
+}
+.veditor .vmenu .vfolder-name .vcover .parent.row {
+  flex-direction: row;
+}
+.veditor .vmenu .vfolder-name .vcover .parent.col {
+  flex-direction: column;
+}
+.veditor .vmenu .vfolder-name .vcover .parent.ac {
+  align-items: center;
+}
+.veditor .vmenu .vfolder-name .vcover .parent.ab {
+  align-items: baseline;
+}
+.veditor .vmenu .vfolder-name .vcover .parent.fls {
+  align-items: flex-start;
+}
+.veditor .vmenu .vfolder-name .vcover .parent.fe {
+  align-items: flex-end;
+}
+.veditor .vmenu .vfolder-name .vcover .parent.fs {
+  align-items: flex-start;
+}
+.veditor .vmenu .vfolder-name .vcover .parent.jc {
+  justify-content: center;
+}
+.veditor .vmenu .vfolder-name .vcover .parent.sb {
+  justify-content: space-between;
+}
+.veditor .vmenu .vfolder-name .vcover .parent.sa {
+  justify-content: space-around;
+}
+.veditor .vmenu .vfolder-name .vcover .parent.je {
+  justify-content: flex-end;
+}
+.veditor .vmenu .vfolder-name .vcover .parent.sc {
+  align-self: center;
+}
+.veditor .vmenu .vfolder-name .vcover .parent.asb {
+  align-self: baseline;
+}
+.veditor .vmenu .vfolder-name .vcover .parent.asf {
+  align-self: flex-start;
+}
+.veditor .vmenu .vfolder-name .vcover .parent.rw {
+  flex-flow: row wrap;
+}
+.veditor .vmenu .vfolder-name .vcover .parent .fg1 {
+  flex-grow: 1;
+}
+.veditor .vmenu .vfolder-name .vcover .parent .ns {
+  flex-shrink: 0;
+}
+.veditor .vmenu .vfolder-name .vcover .parent:before {
+  width: 0;
+  height: 0;
+  border-top: .5rem solid transparent;
+  border-bottom: .5rem solid transparent;
+  border-left: 0.5rem solid #c6c6c6;
+  content: '';
+  display: inline-block;
+  margin-right: .5rem;
+  transition: all 100ms ease;
+}
+.veditor .vmenu .vfolder-name .vcover input[type=checkbox] {
+  display: none;
+}
+.veditor .vmenu .vfolder-name .vcover input[type=checkbox]:checked ~ .parent {
+  background: #0f4870;
+}
+.veditor .vmenu .vfolder-name .vcover input[type=checkbox]:checked ~ .parent:before {
+  transform: rotate(60deg);
+}
+.veditor .vmenu .vfolder-name .vcover input[type=checkbox]:checked ~ .kids {
+  height: auto;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+}
 .veditor .vmenu .vfolder-name .vcover .kids {
   height: 0;
   opacity: 0;
   display: none;
-  margin-right: .5rem;
+  margin-left: 1rem;
 }
 .veditor .vmenu .vfolder-name .vcover .kids .kids-name {
   padding-right: .5rem;
   padding-left: .5rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
+  padding-left: 1rem;
 }
-.veditor .vmenu .vfolder-name:hover:before {
-  transform: rotate(60deg);
-}
-.veditor .vmenu .vfolder-name:hover .vcover .kids {
-  height: auto;
-  opacity: 1;
-  display: flex;
-  flex-direction: column;
+.veditor .vmenu .vfolder-name .vcover .kids .kids-name:hover {
+  background: #2a2d2e;
 }
 .veditor .vmenu .vfile-search {
   padding-bottom: 1rem;

@@ -15,10 +15,13 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname));
 
-http.listen(port, "192.168.1.124", function () {
-	console.log('Acadly Front-end development server running on localhost:' + port);
-});
+// http.listen(port, "192.168.1.124", function () {
+// 	console.log('up and running');
+// });
 
+http.listen(port, "0.0.0.0", function () {
+	console.log('up and running');
+});
 
 app.get("*", function (req, res) {
 	res.sendFile(__dirname + '/index.html');
