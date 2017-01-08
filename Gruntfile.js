@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 
         bower_concat: {
             basic: {
-                dest: 'public/__generated/bower_concatenated.js',
+                dest: 'app/__generated/bower_concatenated.js',
                 dependencies: {}
             }
         },
@@ -13,38 +13,40 @@ module.exports = function (grunt) {
             options: {},
             production: {
                 files: {
-                    //'public/index_desktop_production.html': ['public/index_desktop.html'],
-                    //'public/index_mobile_production.html': ['public/index_mobile.html'],
                     'index.html': ['index.html']
                 }
             },
-            productionLocalHost: {
+            dev: {
                 files: {
-                    'public/index_desktop_production_local.html': ['public/index_desktop.html'],
-                    'public/index_mobile_production_local.html': ['public/index_mobile.html']
-
-                }
-            },
-            main: {
-                files: {
-                    'index.html': ['index.html']
+                    'index_desktop.html': ['index.html']
                 }
 
+            }
+        },
+        uglify: {
+            script: {
+                files: {
+                    'app/__dist/desktop.min.js': ['app/__generated/bower_concatenated.js']
+                }
             }
         },
         clean: {
-            trash: {
-                src: ['public/__generated']
-            }
-        },
+			trash: {
+				src: ['app/__dist', 'app/__generated']
+			},
+            all: {
+				src: ['app/__dist', 'app/__generated','index_desktop.html']
+			}
+		}
     });
 
 
     grunt.loadNpmTasks('grunt-bower-concat');		//Concatenate bower dependencies
     grunt.loadNpmTasks('grunt-processhtml');		//Process HTML inclusions (this might make many of the above obsolete)
+    grunt.loadNpmTasks('grunt-contrib-uglify');     //uglify your code    
     grunt.loadNpmTasks('grunt-contrib-clean');		//clean files
 
-
-    grunt.registerTask('build', ['bower_concat', 'processhtml:production', 'clean:trash']);
+    grunt.registerTask('build', ['bower_concat','uglify:script' ,'processhtml:production', 'clean:trash']);
+    grunt.registerTask('buildDev', ['bower_concat','uglify:script' ,'processhtml:dev', 'clean:trash']);
 
 };
