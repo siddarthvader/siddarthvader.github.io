@@ -424,120 +424,143 @@ body {
     }
 }
 
-.veditor {
-    width: 90%;
+.vmetaeditor {
     .flex;
-    .row;
+    .col;
+    width: 90%;
     height: 50rem;
     background: @black;
     box-shadow: .0rem 0rem 6px 1px #000000;
     margin: 0 auto;
     margin-top: 5rem;
-    .vmenu {
-        flex: 0 0 17%;
+    color: @white-text;
+    .vheader {
         .flex;
-        .col;
-        .pv1;
-        border-right: solid 1px @blue;
-        .vfile-name {
-            .font-small;
-            color: @white-text;
-            .p-5;
-            padding-left: 1.5rem;
-            cursor: pointer;
-            &:hover {
-                background: @black-bg;
-            }
+        .row;
+        border-bottom:solid .1rem @white-border;
+        .vexplorer {
+            flex: 0 0 17%;
+            text-align: center;
+            padding: 0.25vw;
         }
-        .vfolder-name {
-            .font-small;
-            color: @white-text;
-            position: relative;
-            .flex;
-            .row;
-            .fls;
-            width: 100%;
-            .vcover {
-                .flex;
-                .col;
-                flex-grow: 1;
-                .parent {
-                    cursor: pointer;
-                    .flex;
-                    .row;
-                    .ac;
-                    .pv-5;
-                    .ph-5;
-                    &:before {
-                        width: 0;
-                        height: 0;
-                        border-top: .5rem solid transparent;
-                        border-bottom: .5rem solid transparent;
-                        border-left: .5rem solid @white-text;
-                        content: '';
-                        display: inline-block;
-                        .mr-5;
-                        transition: all 100ms ease;
-                    }
-                }
-                input[type=checkbox] {
-                    display: none;
-                }
-                input[type=checkbox]:checked {
-                    ~.parent {
-                        background: @blue-bg;
-                        &:before {
-                            transform: rotate(60deg);
-                        }
-                    }
-                    ~.kids {
-                        height: auto;
-                        opacity: 1;
-                        display: flex;
-                        .col;
-                    }
-                }
-                .kids {
-                    height: 0;
-                    opacity: 0;
-                    display: none;
-                    .ml1;
-                    .kids-name {
-                        .p-5;
-                        .pl1;
-                        &:hover {
-                            background: @black-bg;
-                        }
-                    }
-                }
-            }
-        }
-        .vfile-search {
-            padding-bottom: 1rem;
-            >input {
-                border: none;
-                background: #3f3f46;
-                color: @white-text;
-                outline: @blue solid .2rem;
-                width: 100%;
-                &:focus {
-                    outline: @blue solid .2rem;
-                    outline-offset: 0;
-                }
-            }
+        .vheadername {
+            flex: 1;
+            padding: 0.25vw;
+            text-align: center;
         }
     }
-    .vfile {
+    .veditor {
         .flex;
-        .col;
-        flex-grow: 1;
-        .vtabs {
-            flex: 0 0 5%;
-            color: #f8f8f8;
+        .row;
+        height:100%;
+        .vmenu {
+            flex: 0 0 17%;
+            .flex;
+            .col;
+            .pv1;
+            border-right: solid 1px @blue;
+            .vfile-name {
+                .font-small;
+                color: @white-text;
+                .p-5;
+                padding-left: 1.5rem;
+                cursor: pointer;
+                &:hover {
+                    background: @black-bg;
+                }
+            }
+            .vfolder-name {
+                .font-small;
+                color: @white-text;
+                position: relative;
+                .flex;
+                .row;
+                .fls;
+                width: 100%;
+                .vcover {
+                    .flex;
+                    .col;
+                    flex-grow: 1;
+                    .parent {
+                        cursor: pointer;
+                        .flex;
+                        .row;
+                        .ac;
+                        .pv-5;
+                        .ph-5;
+                        transition: all 200ms ease;
+                        &:before {
+                            width: 0;
+                            height: 0;
+                            border-top: .5rem solid transparent;
+                            border-bottom: .5rem solid transparent;
+                            border-left: .5rem solid @white-text;
+                            content: '';
+                            display: inline-block;
+                            .mr-5;
+                            transition: all 100ms ease;
+                        }
+                    }
+                    input[type=checkbox] {
+                        display: none;
+                    }
+                    input[type=checkbox]:checked {
+                        ~.parent {
+                            background: @blue-bg;
+                            &:before {
+                                transform: rotate(60deg);
+                            }
+                        }
+                        ~.kids {
+                            height: auto;
+                            opacity: 1;
+                            display: flex;
+                            .col;
+                        }
+                    }
+                    .kids {
+                        height: 0;
+                        opacity: 0;
+                        display: none;
+                        .ml1;
+                        .kids-name {
+                            .p-5;
+                            .pl1;
+                            cursor:pointer;
+                            &:hover {
+                                background: @black-bg;
+                            }
+                        }
+                    }
+                }
+            }
+            .vfile-search {
+                padding-bottom: 1rem;
+                >input {
+                    border: none;
+                    background: #3f3f46;
+                    color: @white-text;
+                    // outline: @blue solid .2rem;
+                    width: 100%;
+                    &:focus {
+                        outline: @blue solid .2rem;
+                        outline-offset: 0;
+                    }
+                }
+            }
         }
-        .vport {
-            flex: 1;
-            color: #f8f8f8;
+        .vfile {
+            .flex;
+            .col;
+            flex-grow: 1;
+            .vtabs {
+                flex: 0 0 5%;
+                color: #f8f8f8;
+            }
+            .vport {
+                flex: 1;
+                color: #f8f8f8;
+            }
         }
     }
 }

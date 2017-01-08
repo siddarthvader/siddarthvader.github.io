@@ -483,68 +483,191 @@ body {
   transition: all 100ms ease-in-out;
   animation-iteration-count: 100;
 }
-.veditor {
-  width: 90%;
+.vmetaeditor {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  width: 90%;
   height: 50rem;
   background: #272822;
   box-shadow: .0rem 0rem 6px 1px #000000;
   margin: 0 auto;
   margin-top: 5rem;
+  color: #c6c6c6;
 }
-.veditor.row {
+.vmetaeditor.row {
   flex-direction: row;
 }
-.veditor.col {
+.vmetaeditor.col {
   flex-direction: column;
 }
-.veditor.ac {
+.vmetaeditor.ac {
   align-items: center;
 }
-.veditor.ab {
+.vmetaeditor.ab {
   align-items: baseline;
 }
-.veditor.fls {
+.vmetaeditor.fls {
   align-items: flex-start;
 }
-.veditor.fe {
+.vmetaeditor.fe {
   align-items: flex-end;
 }
-.veditor.fs {
+.vmetaeditor.fs {
   align-items: flex-start;
 }
-.veditor.jc {
+.vmetaeditor.jc {
   justify-content: center;
 }
-.veditor.sb {
+.vmetaeditor.sb {
   justify-content: space-between;
 }
-.veditor.sa {
+.vmetaeditor.sa {
   justify-content: space-around;
 }
-.veditor.je {
+.vmetaeditor.je {
   justify-content: flex-end;
 }
-.veditor.sc {
+.vmetaeditor.sc {
   align-self: center;
 }
-.veditor.asb {
+.vmetaeditor.asb {
   align-self: baseline;
 }
-.veditor.asf {
+.vmetaeditor.asf {
   align-self: flex-start;
 }
-.veditor.rw {
+.vmetaeditor.rw {
   flex-flow: row wrap;
 }
-.veditor .fg1 {
+.vmetaeditor .fg1 {
   flex-grow: 1;
 }
-.veditor .ns {
+.vmetaeditor .ns {
   flex-shrink: 0;
 }
-.veditor .vmenu {
+.vmetaeditor .vheader {
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid 0.1rem #7f807d;
+}
+.vmetaeditor .vheader.row {
+  flex-direction: row;
+}
+.vmetaeditor .vheader.col {
+  flex-direction: column;
+}
+.vmetaeditor .vheader.ac {
+  align-items: center;
+}
+.vmetaeditor .vheader.ab {
+  align-items: baseline;
+}
+.vmetaeditor .vheader.fls {
+  align-items: flex-start;
+}
+.vmetaeditor .vheader.fe {
+  align-items: flex-end;
+}
+.vmetaeditor .vheader.fs {
+  align-items: flex-start;
+}
+.vmetaeditor .vheader.jc {
+  justify-content: center;
+}
+.vmetaeditor .vheader.sb {
+  justify-content: space-between;
+}
+.vmetaeditor .vheader.sa {
+  justify-content: space-around;
+}
+.vmetaeditor .vheader.je {
+  justify-content: flex-end;
+}
+.vmetaeditor .vheader.sc {
+  align-self: center;
+}
+.vmetaeditor .vheader.asb {
+  align-self: baseline;
+}
+.vmetaeditor .vheader.asf {
+  align-self: flex-start;
+}
+.vmetaeditor .vheader.rw {
+  flex-flow: row wrap;
+}
+.vmetaeditor .vheader .fg1 {
+  flex-grow: 1;
+}
+.vmetaeditor .vheader .ns {
+  flex-shrink: 0;
+}
+.vmetaeditor .vheader .vexplorer {
+  flex: 0 0 17%;
+  text-align: center;
+  padding: 0.25vw;
+}
+.vmetaeditor .vheader .vheadername {
+  flex: 1;
+  padding: 0.25vw;
+  text-align: center;
+}
+.vmetaeditor .veditor {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.vmetaeditor .veditor.row {
+  flex-direction: row;
+}
+.vmetaeditor .veditor.col {
+  flex-direction: column;
+}
+.vmetaeditor .veditor.ac {
+  align-items: center;
+}
+.vmetaeditor .veditor.ab {
+  align-items: baseline;
+}
+.vmetaeditor .veditor.fls {
+  align-items: flex-start;
+}
+.vmetaeditor .veditor.fe {
+  align-items: flex-end;
+}
+.vmetaeditor .veditor.fs {
+  align-items: flex-start;
+}
+.vmetaeditor .veditor.jc {
+  justify-content: center;
+}
+.vmetaeditor .veditor.sb {
+  justify-content: space-between;
+}
+.vmetaeditor .veditor.sa {
+  justify-content: space-around;
+}
+.vmetaeditor .veditor.je {
+  justify-content: flex-end;
+}
+.vmetaeditor .veditor.sc {
+  align-self: center;
+}
+.vmetaeditor .veditor.asb {
+  align-self: baseline;
+}
+.vmetaeditor .veditor.asf {
+  align-self: flex-start;
+}
+.vmetaeditor .veditor.rw {
+  flex-flow: row wrap;
+}
+.vmetaeditor .veditor .fg1 {
+  flex-grow: 1;
+}
+.vmetaeditor .veditor .ns {
+  flex-shrink: 0;
+}
+.vmetaeditor .veditor .vmenu {
   flex: 0 0 17%;
   display: flex;
   flex-direction: column;
@@ -552,58 +675,58 @@ body {
   padding-bottom: 1rem;
   border-right: solid 1px #1b819d;
 }
-.veditor .vmenu.row {
+.vmetaeditor .veditor .vmenu.row {
   flex-direction: row;
 }
-.veditor .vmenu.col {
+.vmetaeditor .veditor .vmenu.col {
   flex-direction: column;
 }
-.veditor .vmenu.ac {
+.vmetaeditor .veditor .vmenu.ac {
   align-items: center;
 }
-.veditor .vmenu.ab {
+.vmetaeditor .veditor .vmenu.ab {
   align-items: baseline;
 }
-.veditor .vmenu.fls {
+.vmetaeditor .veditor .vmenu.fls {
   align-items: flex-start;
 }
-.veditor .vmenu.fe {
+.vmetaeditor .veditor .vmenu.fe {
   align-items: flex-end;
 }
-.veditor .vmenu.fs {
+.vmetaeditor .veditor .vmenu.fs {
   align-items: flex-start;
 }
-.veditor .vmenu.jc {
+.vmetaeditor .veditor .vmenu.jc {
   justify-content: center;
 }
-.veditor .vmenu.sb {
+.vmetaeditor .veditor .vmenu.sb {
   justify-content: space-between;
 }
-.veditor .vmenu.sa {
+.vmetaeditor .veditor .vmenu.sa {
   justify-content: space-around;
 }
-.veditor .vmenu.je {
+.vmetaeditor .veditor .vmenu.je {
   justify-content: flex-end;
 }
-.veditor .vmenu.sc {
+.vmetaeditor .veditor .vmenu.sc {
   align-self: center;
 }
-.veditor .vmenu.asb {
+.vmetaeditor .veditor .vmenu.asb {
   align-self: baseline;
 }
-.veditor .vmenu.asf {
+.vmetaeditor .veditor .vmenu.asf {
   align-self: flex-start;
 }
-.veditor .vmenu.rw {
+.vmetaeditor .veditor .vmenu.rw {
   flex-flow: row wrap;
 }
-.veditor .vmenu .fg1 {
+.vmetaeditor .veditor .vmenu .fg1 {
   flex-grow: 1;
 }
-.veditor .vmenu .ns {
+.vmetaeditor .veditor .vmenu .ns {
   flex-shrink: 0;
 }
-.veditor .vmenu .vfile-name {
+.vmetaeditor .veditor .vmenu .vfile-name {
   font-size: 1rem;
   color: #c6c6c6;
   padding-right: .5rem;
@@ -613,10 +736,10 @@ body {
   padding-left: 1.5rem;
   cursor: pointer;
 }
-.veditor .vmenu .vfile-name:hover {
+.vmetaeditor .veditor .vmenu .vfile-name:hover {
   background: #2a2d2e;
 }
-.veditor .vmenu .vfolder-name {
+.vmetaeditor .veditor .vmenu .vfolder-name {
   font-size: 1rem;
   color: #c6c6c6;
   position: relative;
@@ -625,114 +748,114 @@ body {
   align-items: flex-start;
   width: 100%;
 }
-.veditor .vmenu .vfolder-name.row {
+.vmetaeditor .veditor .vmenu .vfolder-name.row {
   flex-direction: row;
 }
-.veditor .vmenu .vfolder-name.col {
+.vmetaeditor .veditor .vmenu .vfolder-name.col {
   flex-direction: column;
 }
-.veditor .vmenu .vfolder-name.ac {
+.vmetaeditor .veditor .vmenu .vfolder-name.ac {
   align-items: center;
 }
-.veditor .vmenu .vfolder-name.ab {
+.vmetaeditor .veditor .vmenu .vfolder-name.ab {
   align-items: baseline;
 }
-.veditor .vmenu .vfolder-name.fls {
+.vmetaeditor .veditor .vmenu .vfolder-name.fls {
   align-items: flex-start;
 }
-.veditor .vmenu .vfolder-name.fe {
+.vmetaeditor .veditor .vmenu .vfolder-name.fe {
   align-items: flex-end;
 }
-.veditor .vmenu .vfolder-name.fs {
+.vmetaeditor .veditor .vmenu .vfolder-name.fs {
   align-items: flex-start;
 }
-.veditor .vmenu .vfolder-name.jc {
+.vmetaeditor .veditor .vmenu .vfolder-name.jc {
   justify-content: center;
 }
-.veditor .vmenu .vfolder-name.sb {
+.vmetaeditor .veditor .vmenu .vfolder-name.sb {
   justify-content: space-between;
 }
-.veditor .vmenu .vfolder-name.sa {
+.vmetaeditor .veditor .vmenu .vfolder-name.sa {
   justify-content: space-around;
 }
-.veditor .vmenu .vfolder-name.je {
+.vmetaeditor .veditor .vmenu .vfolder-name.je {
   justify-content: flex-end;
 }
-.veditor .vmenu .vfolder-name.sc {
+.vmetaeditor .veditor .vmenu .vfolder-name.sc {
   align-self: center;
 }
-.veditor .vmenu .vfolder-name.asb {
+.vmetaeditor .veditor .vmenu .vfolder-name.asb {
   align-self: baseline;
 }
-.veditor .vmenu .vfolder-name.asf {
+.vmetaeditor .veditor .vmenu .vfolder-name.asf {
   align-self: flex-start;
 }
-.veditor .vmenu .vfolder-name.rw {
+.vmetaeditor .veditor .vmenu .vfolder-name.rw {
   flex-flow: row wrap;
 }
-.veditor .vmenu .vfolder-name .fg1 {
+.vmetaeditor .veditor .vmenu .vfolder-name .fg1 {
   flex-grow: 1;
 }
-.veditor .vmenu .vfolder-name .ns {
+.vmetaeditor .veditor .vmenu .vfolder-name .ns {
   flex-shrink: 0;
 }
-.veditor .vmenu .vfolder-name .vcover {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
-.veditor .vmenu .vfolder-name .vcover.row {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover.row {
   flex-direction: row;
 }
-.veditor .vmenu .vfolder-name .vcover.col {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover.col {
   flex-direction: column;
 }
-.veditor .vmenu .vfolder-name .vcover.ac {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover.ac {
   align-items: center;
 }
-.veditor .vmenu .vfolder-name .vcover.ab {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover.ab {
   align-items: baseline;
 }
-.veditor .vmenu .vfolder-name .vcover.fls {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover.fls {
   align-items: flex-start;
 }
-.veditor .vmenu .vfolder-name .vcover.fe {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover.fe {
   align-items: flex-end;
 }
-.veditor .vmenu .vfolder-name .vcover.fs {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover.fs {
   align-items: flex-start;
 }
-.veditor .vmenu .vfolder-name .vcover.jc {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover.jc {
   justify-content: center;
 }
-.veditor .vmenu .vfolder-name .vcover.sb {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover.sb {
   justify-content: space-between;
 }
-.veditor .vmenu .vfolder-name .vcover.sa {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover.sa {
   justify-content: space-around;
 }
-.veditor .vmenu .vfolder-name .vcover.je {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover.je {
   justify-content: flex-end;
 }
-.veditor .vmenu .vfolder-name .vcover.sc {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover.sc {
   align-self: center;
 }
-.veditor .vmenu .vfolder-name .vcover.asb {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover.asb {
   align-self: baseline;
 }
-.veditor .vmenu .vfolder-name .vcover.asf {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover.asf {
   align-self: flex-start;
 }
-.veditor .vmenu .vfolder-name .vcover.rw {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover.rw {
   flex-flow: row wrap;
 }
-.veditor .vmenu .vfolder-name .vcover .fg1 {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .fg1 {
   flex-grow: 1;
 }
-.veditor .vmenu .vfolder-name .vcover .ns {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .ns {
   flex-shrink: 0;
 }
-.veditor .vmenu .vfolder-name .vcover .parent {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .parent {
   cursor: pointer;
   display: flex;
   flex-direction: row;
@@ -741,59 +864,60 @@ body {
   padding-bottom: .5rem;
   padding-right: .5rem;
   padding-left: .5rem;
+  transition: all 200ms ease;
 }
-.veditor .vmenu .vfolder-name .vcover .parent.row {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .parent.row {
   flex-direction: row;
 }
-.veditor .vmenu .vfolder-name .vcover .parent.col {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .parent.col {
   flex-direction: column;
 }
-.veditor .vmenu .vfolder-name .vcover .parent.ac {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .parent.ac {
   align-items: center;
 }
-.veditor .vmenu .vfolder-name .vcover .parent.ab {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .parent.ab {
   align-items: baseline;
 }
-.veditor .vmenu .vfolder-name .vcover .parent.fls {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .parent.fls {
   align-items: flex-start;
 }
-.veditor .vmenu .vfolder-name .vcover .parent.fe {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .parent.fe {
   align-items: flex-end;
 }
-.veditor .vmenu .vfolder-name .vcover .parent.fs {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .parent.fs {
   align-items: flex-start;
 }
-.veditor .vmenu .vfolder-name .vcover .parent.jc {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .parent.jc {
   justify-content: center;
 }
-.veditor .vmenu .vfolder-name .vcover .parent.sb {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .parent.sb {
   justify-content: space-between;
 }
-.veditor .vmenu .vfolder-name .vcover .parent.sa {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .parent.sa {
   justify-content: space-around;
 }
-.veditor .vmenu .vfolder-name .vcover .parent.je {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .parent.je {
   justify-content: flex-end;
 }
-.veditor .vmenu .vfolder-name .vcover .parent.sc {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .parent.sc {
   align-self: center;
 }
-.veditor .vmenu .vfolder-name .vcover .parent.asb {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .parent.asb {
   align-self: baseline;
 }
-.veditor .vmenu .vfolder-name .vcover .parent.asf {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .parent.asf {
   align-self: flex-start;
 }
-.veditor .vmenu .vfolder-name .vcover .parent.rw {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .parent.rw {
   flex-flow: row wrap;
 }
-.veditor .vmenu .vfolder-name .vcover .parent .fg1 {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .parent .fg1 {
   flex-grow: 1;
 }
-.veditor .vmenu .vfolder-name .vcover .parent .ns {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .parent .ns {
   flex-shrink: 0;
 }
-.veditor .vmenu .vfolder-name .vcover .parent:before {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .parent:before {
   width: 0;
   height: 0;
   border-top: .5rem solid transparent;
@@ -804,112 +928,112 @@ body {
   margin-right: .5rem;
   transition: all 100ms ease;
 }
-.veditor .vmenu .vfolder-name .vcover input[type=checkbox] {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover input[type=checkbox] {
   display: none;
 }
-.veditor .vmenu .vfolder-name .vcover input[type=checkbox]:checked ~ .parent {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover input[type=checkbox]:checked ~ .parent {
   background: #0f4870;
 }
-.veditor .vmenu .vfolder-name .vcover input[type=checkbox]:checked ~ .parent:before {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover input[type=checkbox]:checked ~ .parent:before {
   transform: rotate(60deg);
 }
-.veditor .vmenu .vfolder-name .vcover input[type=checkbox]:checked ~ .kids {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover input[type=checkbox]:checked ~ .kids {
   height: auto;
   opacity: 1;
   display: flex;
   flex-direction: column;
 }
-.veditor .vmenu .vfolder-name .vcover .kids {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .kids {
   height: 0;
   opacity: 0;
   display: none;
   margin-left: 1rem;
 }
-.veditor .vmenu .vfolder-name .vcover .kids .kids-name {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .kids .kids-name {
   padding-right: .5rem;
   padding-left: .5rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
   padding-left: 1rem;
+  cursor: pointer;
 }
-.veditor .vmenu .vfolder-name .vcover .kids .kids-name:hover {
+.vmetaeditor .veditor .vmenu .vfolder-name .vcover .kids .kids-name:hover {
   background: #2a2d2e;
 }
-.veditor .vmenu .vfile-search {
+.vmetaeditor .veditor .vmenu .vfile-search {
   padding-bottom: 1rem;
 }
-.veditor .vmenu .vfile-search > input {
+.vmetaeditor .veditor .vmenu .vfile-search > input {
   border: none;
   background: #3f3f46;
   color: #c6c6c6;
-  outline: #1b819d solid 0.2rem;
   width: 100%;
 }
-.veditor .vmenu .vfile-search > input:focus {
+.vmetaeditor .veditor .vmenu .vfile-search > input:focus {
   outline: #1b819d solid 0.2rem;
   outline-offset: 0;
 }
-.veditor .vfile {
+.vmetaeditor .veditor .vfile {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
-.veditor .vfile.row {
+.vmetaeditor .veditor .vfile.row {
   flex-direction: row;
 }
-.veditor .vfile.col {
+.vmetaeditor .veditor .vfile.col {
   flex-direction: column;
 }
-.veditor .vfile.ac {
+.vmetaeditor .veditor .vfile.ac {
   align-items: center;
 }
-.veditor .vfile.ab {
+.vmetaeditor .veditor .vfile.ab {
   align-items: baseline;
 }
-.veditor .vfile.fls {
+.vmetaeditor .veditor .vfile.fls {
   align-items: flex-start;
 }
-.veditor .vfile.fe {
+.vmetaeditor .veditor .vfile.fe {
   align-items: flex-end;
 }
-.veditor .vfile.fs {
+.vmetaeditor .veditor .vfile.fs {
   align-items: flex-start;
 }
-.veditor .vfile.jc {
+.vmetaeditor .veditor .vfile.jc {
   justify-content: center;
 }
-.veditor .vfile.sb {
+.vmetaeditor .veditor .vfile.sb {
   justify-content: space-between;
 }
-.veditor .vfile.sa {
+.vmetaeditor .veditor .vfile.sa {
   justify-content: space-around;
 }
-.veditor .vfile.je {
+.vmetaeditor .veditor .vfile.je {
   justify-content: flex-end;
 }
-.veditor .vfile.sc {
+.vmetaeditor .veditor .vfile.sc {
   align-self: center;
 }
-.veditor .vfile.asb {
+.vmetaeditor .veditor .vfile.asb {
   align-self: baseline;
 }
-.veditor .vfile.asf {
+.vmetaeditor .veditor .vfile.asf {
   align-self: flex-start;
 }
-.veditor .vfile.rw {
+.vmetaeditor .veditor .vfile.rw {
   flex-flow: row wrap;
 }
-.veditor .vfile .fg1 {
+.vmetaeditor .veditor .vfile .fg1 {
   flex-grow: 1;
 }
-.veditor .vfile .ns {
+.vmetaeditor .veditor .vfile .ns {
   flex-shrink: 0;
 }
-.veditor .vfile .vtabs {
+.vmetaeditor .veditor .vfile .vtabs {
   flex: 0 0 5%;
   color: #f8f8f8;
 }
-.veditor .vfile .vport {
+.vmetaeditor .veditor .vfile .vport {
   flex: 1;
   color: #f8f8f8;
 }
