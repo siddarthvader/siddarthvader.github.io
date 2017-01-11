@@ -12,6 +12,10 @@
 }
 
 @import url('css-media-all.css');
+[ng-click] {
+    cursor: pointer;
+}
+
 .flex {
     display: flex;
     &.row {
@@ -428,7 +432,7 @@ body {
     .flex;
     .col;
     width: 90%;
-    height: 50rem;
+    height: 45rem;
     background: @black;
     box-shadow: .0rem 0rem 6px 1px #000000;
     margin: 0 auto;
@@ -553,13 +557,52 @@ body {
             .flex;
             .col;
             flex-grow: 1;
+            position: relative;
             .vtabs {
-                flex: 0 0 5%;
+                flex: 0 0 3.5%;
                 color: #f8f8f8;
+                border-bottom: solid 1px @white-border;
+                .tab-space {
+                    height: auto;
+                }
             }
             .vport {
                 flex: 1;
                 color: #f8f8f8;
+            }
+            .vterminal {
+                width: 100%;
+                .terminal-space {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    border-top: solid 1px @white-border;
+                    .terminal-head {
+                        .flex;
+                        .row;
+                        .sb;
+                        >i {
+                            padding: .35vw;
+                        }
+                    }
+                    .terminal-area {
+                        display: flex;
+                        height: 11rem;
+                    }
+                    &.hide{
+                        .terminal-head{
+                            .fa-chevron-down::before{
+                                display:block;
+                                transform:rotate(180deg);
+                            }
+                        }
+                        .terminal-area{
+                            display: none;
+                            height:0;
+                        }
+                    }
+                }
             }
         }
     }

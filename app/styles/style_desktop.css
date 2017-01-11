@@ -8,6 +8,9 @@
   src: url('../static/fonts/montserrat/Montserrat-Light.otf') format('opentype');
   font-weight: bold;
 }
+[ng-click] {
+  cursor: pointer;
+}
 .flex {
   display: flex;
 }
@@ -487,7 +490,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 90%;
-  height: 50rem;
+  height: 45rem;
   background: #272822;
   box-shadow: .0rem 0rem 6px 1px #000000;
   margin: 0 auto;
@@ -977,6 +980,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  position: relative;
 }
 .vmetaeditor .veditor .vfile.row {
   flex-direction: row;
@@ -1030,10 +1034,95 @@ body {
   flex-shrink: 0;
 }
 .vmetaeditor .veditor .vfile .vtabs {
-  flex: 0 0 5%;
+  flex: 0 0 3.5%;
   color: #f8f8f8;
+  border-bottom: solid 1px #7f807d;
+}
+.vmetaeditor .veditor .vfile .vtabs .tab-space {
+  height: auto;
 }
 .vmetaeditor .veditor .vfile .vport {
   flex: 1;
   color: #f8f8f8;
+}
+.vmetaeditor .veditor .vfile .vterminal {
+  width: 100%;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: solid 1px #7f807d;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-head.row {
+  flex-direction: row;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-head.col {
+  flex-direction: column;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-head.ac {
+  align-items: center;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-head.ab {
+  align-items: baseline;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-head.fls {
+  align-items: flex-start;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-head.fe {
+  align-items: flex-end;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-head.fs {
+  align-items: flex-start;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-head.jc {
+  justify-content: center;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-head.sb {
+  justify-content: space-between;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-head.sa {
+  justify-content: space-around;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-head.je {
+  justify-content: flex-end;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-head.sc {
+  align-self: center;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-head.asb {
+  align-self: baseline;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-head.asf {
+  align-self: flex-start;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-head.rw {
+  flex-flow: row wrap;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-head .fg1 {
+  flex-grow: 1;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-head .ns {
+  flex-shrink: 0;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-head > i {
+  padding: .35vw;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-area {
+  display: flex;
+  height: 11rem;
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space.hide .terminal-head .fa-chevron-down::before {
+  display: block;
+  transform: rotate(180deg);
+}
+.vmetaeditor .veditor .vfile .vterminal .terminal-space.hide .terminal-area {
+  display: none;
+  height: 0;
 }
