@@ -1118,6 +1118,10 @@ body {
   display: flex;
   height: 11rem;
 }
+.vmetaeditor .veditor .vfile .vterminal .terminal-space .terminal-area #terminal-canvas {
+  width: 100%;
+  height: 100%;
+}
 .vmetaeditor .veditor .vfile .vterminal .terminal-space.hide .terminal-head .fa-chevron-down::before {
   display: block;
   transform: rotate(180deg);
