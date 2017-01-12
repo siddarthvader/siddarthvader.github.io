@@ -1042,14 +1042,72 @@ body {
 }
 .vmetaeditor .veditor .vfile .vport {
   flex: 1;
+  display: flex;
+  flex-direction: row;
   color: #f8f8f8;
   padding-right: 1rem;
   padding-left: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+.vmetaeditor .veditor .vfile .vport.row {
+  flex-direction: row;
+}
+.vmetaeditor .veditor .vfile .vport.col {
+  flex-direction: column;
+}
+.vmetaeditor .veditor .vfile .vport.ac {
+  align-items: center;
+}
+.vmetaeditor .veditor .vfile .vport.ab {
+  align-items: baseline;
+}
+.vmetaeditor .veditor .vfile .vport.fls {
+  align-items: flex-start;
+}
+.vmetaeditor .veditor .vfile .vport.fe {
+  align-items: flex-end;
+}
+.vmetaeditor .veditor .vfile .vport.fs {
+  align-items: flex-start;
+}
+.vmetaeditor .veditor .vfile .vport.jc {
+  justify-content: center;
+}
+.vmetaeditor .veditor .vfile .vport.sb {
+  justify-content: space-between;
+}
+.vmetaeditor .veditor .vfile .vport.sa {
+  justify-content: space-around;
+}
+.vmetaeditor .veditor .vfile .vport.je {
+  justify-content: flex-end;
+}
+.vmetaeditor .veditor .vfile .vport.sc {
+  align-self: center;
+}
+.vmetaeditor .veditor .vfile .vport.asb {
+  align-self: baseline;
+}
+.vmetaeditor .veditor .vfile .vport.asf {
+  align-self: flex-start;
+}
+.vmetaeditor .veditor .vfile .vport.rw {
+  flex-flow: row wrap;
+}
+.vmetaeditor .veditor .vfile .vport .fg1 {
+  flex-grow: 1;
+}
+.vmetaeditor .veditor .vfile .vport .ns {
+  flex-shrink: 0;
+}
+.vmetaeditor .veditor .vfile .vport .vruler {
+  flex: 0 0 5%;
+  border-left: solid 0.2rem #1b819d;
+  height: 100%;
+}
 .vmetaeditor .veditor .vfile .vport .vcontent {
-  width: 82%;
+  flex: 0 0 82%;
 }
 .vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-header .header-name {
   font-size: 1.45rem;
@@ -1142,9 +1200,18 @@ body {
 .vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills .ns {
   flex-shrink: 0;
 }
-.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills span {
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills a.skill {
+  line-height: 1.45rem;
+  text-decoration: none;
+  color: #f9f9f3;
+  border-bottom: solid 1px #7f807d;
+  margin-right: .5rem;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills span.skill {
+  text-decoration: none;
+  color: #c6c6c6;
   padding: .2rem;
-  border: solid 1px #0f4870;
+  border-bottom: solid 1px #0f4870;
   margin-right: 0.25rem;
   margin-bottom: 0.25rem;
 }
