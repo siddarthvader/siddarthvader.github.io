@@ -674,8 +674,6 @@ body {
   flex: 0 0 17%;
   display: flex;
   flex-direction: column;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   border-right: solid 1px #1b819d;
 }
 .vmetaeditor .veditor .vmenu.row {
@@ -964,16 +962,17 @@ body {
   background: #2a2d2e;
 }
 .vmetaeditor .veditor .vmenu .vfile-search {
-  padding-bottom: 1rem;
+  flex: 0 0 3.5%;
 }
 .vmetaeditor .veditor .vmenu .vfile-search > input {
   border: none;
   background: #3f3f46;
   color: #c6c6c6;
   width: 100%;
+  height: 100%;
 }
 .vmetaeditor .veditor .vmenu .vfile-search > input:focus {
-  outline: #1b819d solid 0.2rem;
+  outline: #1b819d solid 0.1rem;
   outline-offset: 0;
 }
 .vmetaeditor .veditor .vfile {
@@ -1044,6 +1043,110 @@ body {
 .vmetaeditor .veditor .vfile .vport {
   flex: 1;
   color: #f8f8f8;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent {
+  width: 82%;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-header .header-name {
+  font-size: 1.45rem;
+  color: #f9f9f3;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-header .header-content {
+  padding-right: .5rem;
+  padding-left: .5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  line-height: 1.45rem;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-header .header-content > a {
+  text-decoration: none;
+  border-bottom: solid 1px #7f807d;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit {
+  padding-right: .5rem;
+  padding-left: .5rem;
+  border-left: solid 2px #1b819d;
+  color: #f9f9f3;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-header {
+  font-weight: 800;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content > a {
+  line-height: 1.45rem;
+  text-decoration: none;
+  color: #f9f9f3;
+  border-bottom: solid 1px #7f807d;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills.row {
+  flex-direction: row;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills.col {
+  flex-direction: column;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills.ac {
+  align-items: center;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills.ab {
+  align-items: baseline;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills.fls {
+  align-items: flex-start;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills.fe {
+  align-items: flex-end;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills.fs {
+  align-items: flex-start;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills.jc {
+  justify-content: center;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills.sb {
+  justify-content: space-between;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills.sa {
+  justify-content: space-around;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills.je {
+  justify-content: flex-end;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills.sc {
+  align-self: center;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills.asb {
+  align-self: baseline;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills.asf {
+  align-self: flex-start;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills.rw {
+  flex-flow: row wrap;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills .fg1 {
+  flex-grow: 1;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills .ns {
+  flex-shrink: 0;
+}
+.vmetaeditor .veditor .vfile .vport .vcontent .about-port .port-unit .unit-content .list-skills span {
+  padding: .2rem;
+  border: solid 1px #0f4870;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 .vmetaeditor .veditor .vfile .vterminal {
   width: 100%;

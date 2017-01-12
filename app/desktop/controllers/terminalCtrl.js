@@ -4,6 +4,5 @@ syd.controller('terminalCtrl',['$scope',function($scope) {
     $scope.toggle=function(){
         $scope.isClose=!$scope.isClose;
     }
-  
 
-}])
+}]);
