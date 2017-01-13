@@ -1,7 +1,6 @@
 //  we write routes here @9jan17
 syd.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
-    console.log('unreal wow');
     $locationProvider.html5Mode(true).hashPrefix('*');
     $stateProvider.state('ground', {
         views: {

@@ -461,7 +461,6 @@ body {
             flex: 0 0 17%;
             .flex;
             .col;
-            .pv1;
             border-right: solid 1px @blue;
             .vfile-name {
                 .font-small;
@@ -539,15 +538,17 @@ body {
                 }
             }
             .vfile-search {
-                padding-bottom: 1rem;
+                // padding-bottom: .5rem;
+                flex: 0 0 3.5%;
                 >input {
                     border: none;
                     background: #3f3f46;
                     color: @white-text;
                     // outline: @blue solid .2rem;
                     width: 100%;
+                    height: 100%;
                     &:focus {
-                        outline: @blue solid .2rem;
+                        outline: @blue solid .1rem;
                         outline-offset: 0;
                     }
                 }
@@ -568,7 +569,72 @@ body {
             }
             .vport {
                 flex: 1;
+                .flex;
+                .row;
                 color: #f8f8f8;
+                .p1;
+                .vruler {
+                    flex: 0 0 5%;
+                    border-left: solid .2rem @blue;
+                    height: 100%;
+                }
+                .vcontent {
+                    flex: 0 0 82%;
+                    .about-port {
+                        .port-header {
+                            .header-name {
+                                font-size: @font-medium;
+                                color: @white-text1;
+                            }
+                            .header-content {
+                                .p-5;
+                                line-height: @font-medium;
+                                >a {
+                                    text-decoration: none;
+                                    border-bottom: solid 1px @white-border;
+                                }
+                            }
+                        }
+                        .port-unit {
+                            .ph-5;
+                            border-left: solid 2px @blue;
+                            color: @white-text1;
+                            .unit-header {
+                                font-weight: 800;
+                            }
+                            .unit-content {
+                                .pv-5;
+                                >a {
+                                    line-height: @font-medium;
+                                    text-decoration: none;
+                                    color: @white-text1;
+                                    border-bottom: solid 1px @white-border;
+                                }
+                                .list-skills {
+                                    .flex;
+                                    .row;
+                                    flex-wrap: wrap;
+                                    width: 50%;
+                                    a.skill {
+                                        line-height: 1.45rem;
+                                        text-decoration: none;
+                                        color: #f9f9f3;
+                                        border-bottom: solid 1px @white-border;
+                                        margin-right: .5rem;
+                                    }
+                                    span.skill {
+                                        text-decoration: none;
+                                        color: @white-text;
+                                        padding: .2rem;
+                                        border-bottom: solid 1px @blue-bg;
+                                        margin-right: 0.25rem;
+                                        margin-bottom: 0.25rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
             .vterminal {
                 width: 100%;
@@ -589,17 +655,21 @@ body {
                     .terminal-area {
                         display: flex;
                         height: 11rem;
+                        #terminal-canvas {
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
-                    &.hide{
-                        .terminal-head{
-                            .fa-chevron-down::before{
-                                display:block;
-                                transform:rotate(180deg);
+                    &.hide {
+                        .terminal-head {
+                            .fa-chevron-down::before {
+                                display: block;
+                                transform: rotate(180deg);
                             }
                         }
-                        .terminal-area{
+                        .terminal-area {
                             display: none;
-                            height:0;
+                            height: 0;
                         }
                     }
                 }
