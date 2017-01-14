@@ -42,7 +42,9 @@ syd.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
     .state('ground.contact',{
         views:{
             "content":{
-                templateUrl:'app/desktop/views/contact.html'
+                templateUrl:'app/desktop/views/contact.html',
+                controller:'contactCtrl',
+                controllerAs:'contact'
             }
         }
     })

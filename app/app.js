@@ -1,2 +1,2 @@
 
-var syd=angular.module('sydApp', ['ui.router', 'ngAnimate', 'ngResource', 'ngCookies','angular-vterminal']);
+var syd=angular.module('sydApp', ['ui.router', 'ngAnimate', 'ngResource', 'ngCookies','angular-vterminal','angular-httpshooter']);
