@@ -11,23 +11,27 @@
 
     <div class="port-unit mt1">
         <div class="unit-header">
-            Or Mail me rn
+            Or Mail me rn {{name}}
         </div>
         <div class="unit-content w30">
-           <form method="POST" action="http://formspree.io/siddharthjn93@gmail.com">     <div class="text-unit">
+            <form ng-submit="sendMail()">
+                <div class="text-unit">
                     <label for="mail-name">Name</label>
-                    <input class="text-input" name="name" type="text" id="mail-name">
+                    <input class="text-input" ng-model="formData.name" name="name" type="text" id="mail-name">
                 </div>
                 <div class="text-unit">
                     <label for="mail-name">Email</label>
-                    <input class="text-input" name="email" type="email" id="mail-email">
+                    <input class="text-input" ng-model="formData.email" name="email" type="email" id="mail-email">
                 </div>
                 <div class="text-unit">
                     <label for="mail-name">Message</label>
-                    <textarea class="area-input" name="message" id="mail-message"></textarea>
+                    <textarea class="area-input" ng-model="formData.message" name="message" id="mail-message"></textarea>
                 </div>
                 <div class="text-unit mt1">
                     <input class="button-input" type="submit" value="Send">
+                </div>
+                <div class="success-unit" ng-if="success">
+                    Sent Successfully
                 </div>
             </form>
         </div>

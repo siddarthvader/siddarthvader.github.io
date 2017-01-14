@@ -1,7 +1,6 @@
 // absolute css rules
 @import "desktop_var";
 @import "structure";
-
 @font-face {
     font-family: monaco;
     src: url('../static/fonts/montserrat/Montserrat-Hairline.otf') format('opentype');
@@ -660,13 +659,19 @@ body {
                                         outline-offset: 0;
                                     }
                                 }
-                                .button-input{
-                                     border: none;
+                                .button-input {
+                                    border: none;
                                     background: #3f3f46;
-                                   color: @white-text1;
+                                    color: @white-text1;
                                     width: 100%;
                                     cursor: pointer;
                                 }
+                            }
+                            .success-unit {
+                                .mt-5;
+                                text-align: center;
+                                color: @blue;
+                                font-weight: 500;
                             }
                         }
                     }

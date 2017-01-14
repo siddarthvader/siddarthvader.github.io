@@ -1346,6 +1346,12 @@ body {
   width: 100%;
   cursor: pointer;
 }
+.vmetaeditor .veditor .vfile .vport .vcontent .port-unit .unit-content .success-unit {
+  margin-top: .5rem;
+  text-align: center;
+  color: #1b819d;
+  font-weight: 500;
+}
 .vmetaeditor .veditor .vfile .vterminal {
   width: 100%;
 }
