@@ -10,22 +10,24 @@
     </div>
 
     <div class="port-unit mt1">
-        <div class="unit-header w60">
+        <div class="unit-header">
             Or Mail me rn
         </div>
-        <div class="unit-content w60">
-            <form action="mailto:siddharthjn93@gmail.com" method="post" enctype="text/plain"></form>
-                <div class="text-unit">
+        <div class="unit-content w30">
+           <form method="POST" target="_blank" action="http://formspree.io/siddharthjn93@gmail.com">     <div class="text-unit">
                     <label for="mail-name">Name</label>
-                    <input class="text-input" type="text" id="mail-name">
+                    <input class="text-input" name="name" type="text" id="mail-name">
                 </div>
                 <div class="text-unit">
                     <label for="mail-name">Email</label>
-                    <input class="text-input" type="email" id="mail-email">
+                    <input class="text-input" name="email" type="email" id="mail-email">
                 </div>
                 <div class="text-unit">
                     <label for="mail-name">Message</label>
-                    <textarea class="area-input" id="mail-message"></textarea>
+                    <textarea class="area-input" name="message" id="mail-message"></textarea>
+                </div>
+                <div class="text-unit mt1">
+                    <input class="button-input" type="submit" value="Send">
                 </div>
             </form>
         </div>
