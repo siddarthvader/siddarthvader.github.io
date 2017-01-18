@@ -1,0 +1,21 @@
+{
+  "name": "matchit",
+  "version": "1.0.0",
+  "description": "matching things and images",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "www.github.com//x/c/c"
+  },
+  "keywords": [
+    "matchit"
+  ],
+  "author": "siddarthvader",
+  "license": "ISC",
+  "dependencies": {
+    "css-media-all": "^1.2.0"
+  }
+}
