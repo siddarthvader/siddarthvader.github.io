@@ -1,0 +1,95 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "css-media-all",
+        "scope": null,
+        "escapedName": "css-media-all",
+        "name": "css-media-all",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/acetonewebdev4/Desktop/siddarthvader/matchit"
+    ]
+  ],
+  "_from": "css-media-all@latest",
+  "_id": "css-media-all@1.2.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/css-media-all",
+  "_nodeVersion": "5.6.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/css-media-all-1.2.0.tgz_1483874096619_0.4406571448780596"
+  },
+  "_npmUser": {
+    "name": "siddarthvader",
+    "email": "siddharthjn93@gmail.com"
+  },
+  "_npmVersion": "3.10.5",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "css-media-all",
+    "scope": null,
+    "escapedName": "css-media-all",
+    "name": "css-media-all",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/css-media-all/-/css-media-all-1.2.0.tgz",
+  "_shasum": "7b0e98738090e1c328c2e8e757a92e2ea6c13b05",
+  "_shrinkwrap": null,
+  "_spec": "css-media-all",
+  "_where": "/Users/acetonewebdev4/Desktop/siddarthvader/matchit",
+  "author": {
+    "name": "siddarthvader",
+    "url": "siddharthjn93@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/siddarthvader/CSS-MEDIA-ALL/issues"
+  },
+  "dependencies": {},
+  "description": "css file with media queries for all devices",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "7b0e98738090e1c328c2e8e757a92e2ea6c13b05",
+    "tarball": "https://registry.npmjs.org/css-media-all/-/css-media-all-1.2.0.tgz"
+  },
+  "gitHead": "e787cccfa1073a37477247d261c031b4eca744c1",
+  "homepage": "https://github.com/siddarthvader/CSS-MEDIA-ALL#readme",
+  "keywords": [
+    "css",
+    "media",
+    "media",
+    "query",
+    "css",
+    "media",
+    "query"
+  ],
+  "license": "MIT",
+  "main": "css-media-all.min.css",
+  "maintainers": [
+    {
+      "name": "siddarthvader",
+      "email": "siddharthjn93@gmail.com"
+    }
+  ],
+  "name": "css-media-all",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siddarthvader/CSS-MEDIA-ALL.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.2.0"
+}
