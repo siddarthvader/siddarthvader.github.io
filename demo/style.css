@@ -35,7 +35,12 @@ body {
   height: 700;
 }
 #canvas.wall4 {
-  background: url('wall4.jpg');
+  background: url('wall4.png');
+  width: 583;
+  height: 720;
+}
+#canvas.wall5 {
+  background: url('wall5.png');
   width: 525;
   height: 700;
 }
@@ -45,6 +50,7 @@ body {
   display: flex;
   flex-direction: column;
   list-style-type: none;
+  flex-wrap: wrap;
 }
 .side-menu > li {
   border: solid 1px cadetblue;
