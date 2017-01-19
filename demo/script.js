@@ -232,4 +232,7 @@ function changeBackground(mode) {
     ctx.drawImage(img, 0, 0, 100, 100);
 }
 
+function changeBackgroundCanvas(mode){
+    document.getElementById('canvas').className=mode;
+}
 
