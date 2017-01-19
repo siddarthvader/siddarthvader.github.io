@@ -10,7 +10,7 @@ body {
 .container {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: flex-start;
   width: 100%;
   justify-content: space-between;
   padding: 1rem;
@@ -21,15 +21,23 @@ body {
 }
 #canvas.wall1 {
   background: url('wall1.jpg');
+  width: 500px;
+  height: 750px;
 }
 #canvas.wall2 {
-  background: url('wall2.jpg');
+  background: url('wall2.png');
+  width: 571;
+  height: 700;
 }
 #canvas.wall3 {
   background: url('wall3.jpg');
+  width: 525;
+  height: 700;
 }
 #canvas.wall4 {
   background: url('wall4.jpg');
+  width: 525;
+  height: 700;
 }
 .side-menu {
   width: 80px;
