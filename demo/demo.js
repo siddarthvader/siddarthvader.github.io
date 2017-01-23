@@ -11,6 +11,9 @@
 var videoElement = document.querySelector('video');
 var videoSelect = document.querySelector('select#videoSource');
 var selectors = [videoSelect];
+var canvas = document.getElementById('canvas');
+var context = canvas.getContext('2d');
+
 
 function gotDevices(deviceInfos) {
   // Handles being called several times to update labels. Preserve values.
@@ -44,34 +47,13 @@ function gotDevices(deviceInfos) {
 
 navigator.mediaDevices.enumerateDevices().then(gotDevices).catch(handleError);
 
-// Attach audio output device to video element using device/sink ID.
-function attachSinkId(element) {
-
-    element.setSinkId(sinkId)
-    .then(function() {
-      console.log('Success, audio output device attached: ' + sinkId);
-    })
-    .catch(function(error) {
-      var errorMessage = error;
-      if (error.name === 'SecurityError') {
-        errorMessage = 'You need to use HTTPS for selecting audio output ' +
-            'device: ' + error;
-      }
-      console.error(errorMessage);
-
-    });
-  
-}
-
-function changeAudioDestination() {
-
-  attachSinkId(videoElement);
-}
 
 function gotStream(stream) {
   window.stream = stream; // make stream available to console
   videoElement.srcObject = stream;
   // Refresh button list in case labels have become available
+
+
   return navigator.mediaDevices.enumerateDevices();
 }
 
@@ -97,11 +79,14 @@ function handleError(error) {
   console.log('navigator.getUserMedia error: ', error);
 }
 
+setInterval(function(){
+        context.drawImage(video, 0, 0, 640, 480);
+
+},1)
+
 
 // Grab elements, create settings, etc.
 // var video = document.getElementById('video');
-// var canvas = document.getElementById('canvas');
-// var context = canvas.getContext('2d');
 
 
 // // Get access to the camera!
@@ -116,10 +101,7 @@ function handleError(error) {
 //     });
 // }
 
-// setInterval(function(){
-//         context.drawImage(video, 0, 0, 640, 480);
 
-// },1)
 // Trigger photo take
 // document.getElementById("snap").addEventListener("click", function() {
 //         console.info(video,"video");
