@@ -73,10 +73,10 @@ function draw(withAnchors, withBorders) {
 }
 
 function drawDragAnchor(x, y) {
-    // ctx.beginPath();
-    // ctx.arc(x, y, resizerRadius, 0, pi2, false);
-    // ctx.closePath();
-    // ctx.fill();
+    ctx.beginPath();
+    ctx.arc(x, y, resizerRadius, 0, pi2, false);
+    ctx.closePath();
+    ctx.fill();
 }
 
 function anchorHitTest(x, y) {
@@ -206,24 +206,18 @@ function handleMouseMove(e) {
 }
 
 
-
-
-
-
-
-
-$("#canvas").mousedown(function (e) {
-    handleMouseDown(e);
-});
-$("#canvas").mousemove(function (e) {
-    handleMouseMove(e);
-});
-$("#canvas").mouseup(function (e) {
-    handleMouseUp(e);
-});
-$("#canvas").mouseout(function (e) {
-    handleMouseOut(e);
-});
+ $("#canvas").mousedown(function (e) {
+        handleMouseDown(e);
+    });
+    $("#canvas").mousemove(function (e) {
+        handleMouseMove(e);
+    });
+    $("#canvas").mouseup(function (e) {
+        handleMouseUp(e);
+    });
+    $("#canvas").mouseout(function (e) {
+        handleMouseOut(e);
+    });
 
 function changeBackground(mode) {
     img.src=mode+'.jpg';

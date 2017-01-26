@@ -6,104 +6,176 @@
 *  tree.
 */
 
-'use strict';
 
-var videoElement = document.querySelector('video');
-var videoSelect = document.querySelector('select#videoSource');
-var selectors = [videoSelect];
-var canvas = document.getElementById('canvas');
-var context = canvas.getContext('2d');
+window.onload = function () {
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+    var input = document.getElementById('capture');
 
+    input.addEventListener('change', capture, false);
 
-function gotDevices(deviceInfos) {
-  // Handles being called several times to update labels. Preserve values.
-  var values = selectors.map(function(select) {
-    return select.value;
-  });
-  selectors.forEach(function(select) {
-    while (select.firstChild) {
-      select.removeChild(select.firstChild);
+    function capture() {
+        var x = document.getElementById("capture");
+        console.log(x);
+        if ('files' in x) {
+            console.log(x.files);
+            handleImage(x.files);
+        }
     }
-  });
-  for (var i = 0; i !== deviceInfos.length; ++i) {
-    var deviceInfo = deviceInfos[i];
-    var option = document.createElement('option');
-    option.value = deviceInfo.deviceId;
-    if (deviceInfo.kind === 'videoinput') {
-      option.text = deviceInfo.label || 'camera ' + (videoSelect.length + 1);
-      videoSelect.appendChild(option);
-    } else {
-      console.log('Some other kind of source/device: ', deviceInfo);
+
+    var onefootInPixel = 0;
+    var dpi_x = document.getElementById('dpi').offsetWidth;
+    var dpi_y = document.getElementById('dpi').offsetHeight;
+    var widthInInch;
+    var heightInInch;
+
+    function handleImage(e) {
+        var reader = new FileReader();
+        reader.onload = function (event) {
+            var img1 = new Image();
+            img1.onload = function () {
+                // canvas.height = img.width;
+                // canvas.width = img.height;
+                // img.width=img.width/2;
+                var ratio = img1.width / img1.height;
+                var screen = window.innerWidth;
+                img1.width = screen * .9;
+                img1.height = img1.width / ratio;
+                widthInInch = img1.width / dpi_x;
+                heightInInch = img1.height / dpi_y;
+                onefootInPixel = img1.width / 10;
+
+                // img.height=img.height/2;
+                document.getElementById('img').appendChild(img1);
+
+                new Darkroom('#image');
+            };
+
+            img1.src = event.target.result;
+            img1.id = "image";
+
+        };
+        reader.readAsDataURL(e[0]);
     }
-  }
-  selectors.forEach(function(select, selectorIndex) {
-    if (Array.prototype.slice.call(select.childNodes).some(function(n) {
-      return n.value === values[selectorIndex];
-    })) {
-      select.value = values[selectorIndex];
-    }
-  });
-}
 
-navigator.mediaDevices.enumerateDevices().then(gotDevices).catch(handleError);
+    new Darkroom('#img', {
+        // Canvas initialization size
+        minWidth: 400,
+        minHeight: 200,
+        maxWidth: 10000,
+        maxHeight: 10000,
 
+        // Plugins options
+        plugins: {
+            crop: {
+                minHeight: 400,
+                minWidth: 200,
+                ratio: 1
+            },
+            save: false
+        },
+        // Post initialization method
+        initialize: function () {
+            // Active crop selection
+            this.plugins['crop'].requireFocus();
 
-function gotStream(stream) {
-  window.stream = stream; // make stream available to console
-  videoElement.srcObject = stream;
-  // Refresh button list in case labels have become available
+            // Add custom listener
+            this.addEventListener('core:transformation', function () { /* ... */
+            });
+        }
 
-
-  return navigator.mediaDevices.enumerateDevices();
-}
-
-function start() {
-  if (window.stream) {
-    window.stream.getTracks().forEach(function(track) {
-      track.stop();
     });
-  }
-  var videoSource = videoSelect.value;
-  var constraints = {
-    video: {deviceId: videoSource ? {exact: videoSource} : undefined}
-  };
-  navigator.mediaDevices.getUserMedia(constraints).
-      then(gotStream).then(gotDevices).catch(handleError);
+
+
+    $(document).on('click', '.darkroom-button', function (event) {
+        var kid = event.target;
+        var flag = false;
+        do {
+            if (kid.getAttribute('xlink:href') == '#save') {
+                flag = true;
+            }
+            kid = kid.children[0];
+        }
+        while (kid);
+
+        if (flag) {
+            setTimeout(function () {
+                var image = document.getElementById('img').children[0];
+                canvas.width = image.width;
+                canvas.height = image.height;
+                //ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.width = image.width;
+                ctx.height = image.height;
+                ctx.drawImage(image, 0, 0);
+                document.getElementById('img').remove();
+                document.getElementsByClassName('button-group')[0].remove();
+                document.getElementsByClassName('item')[0].style.display='inline';
+                document.getElementsByClassName('side-menu')[0].style.display='flex';
+
+            }, 1000);
+        }
+
+    });
+
+
+    // target elements with the "draggable" class
+};
+
+
+interact('.draggable')
+    .draggable({
+        // enable inertial throwing
+        inertia: true,
+        // keep the element within the area of it's parent
+        //restrict: {
+        //    restriction: "parent",
+        //    endOnly: true,
+        //    elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+        //},
+        // enable autoScroll
+        autoScroll: true,
+
+        // call this function on every dragmove event
+        onmove: dragMoveListener,
+        // call this function on every dragend event
+        onend: function (event) {
+            var textEl = event.target.querySelector('p');
+
+            textEl && (textEl.textContent =
+                'moved a distance of '
+                + (Math.sqrt(event.dx * event.dx +
+                    event.dy * event.dy)|0) + 'px');
+        }
+    });
+
+function dragMoveListener (event) {
+    var target = event.target,
+    // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+    // translate the element
+    target.style.webkitTransform =
+        target.style.transform =
+            'translate(' + x + 'px, ' + y + 'px)';
+
+    // update the posiion attributes
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
 }
 
-videoSelect.onchange = start;
+// this is used later in the resizing and gesture demos
+window.dragMoveListener = dragMoveListener;
 
-start();
+//
 
-function handleError(error) {
-  console.log('navigator.getUserMedia error: ', error);
+function changeBackground(mode) {
+    for(var i=0;i<document.getElementsByClassName('item').length;i++){
+        document.getElementsByClassName('item')[i].style.display='none';
+    }
+
+
+    document.getElementsByClassName('item')[mode].style.display='inline';
+
 }
 
-setInterval(function(){
-        context.drawImage(video, 0, 0, 640, 480);
-
-},1)
-
-
-// Grab elements, create settings, etc.
-// var video = document.getElementById('video');
-
-
-// // Get access to the camera!
-// if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-//     // Not adding `{ audio: true }` since we only want video now
-//     navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
-//         video.src = window.URL.createObjectURL(stream);
-//         video.play()
-//         // context.drawImage(video, 0, 0, 640, 480);
-//         console.info(video,"video--->");        
-        
-//     });
-// }
-
-
-// Trigger photo take
-// document.getElementById("snap").addEventListener("click", function() {
-//         console.info(video,"video");
-	
-// });
