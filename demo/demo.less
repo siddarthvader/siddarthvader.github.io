@@ -4,12 +4,39 @@
     src: url('../app/static/fonts/montserrat/Montserrat-Hairline.otf') format('opentype');
 }
 
+@font-face {
+    font-family: monaco;
+    src: url('../app/static/fonts/montserrat/Montserrat-Light.otf') format('opentype');
+    font-weight: bold;
+}
+
+
 body {
     text-align: center;
     font-family: monaco;
+    width: 100rem;
+    height: 100vh;
+    overflow: scroll;
+    padding: 1rem;
+    font-size: 4rem;
 }
 
-canvas{
-    // width:90vw;
-    height:90vh;
+canvas {
+    height: 90vh;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    .capture {
+        color:lightseagreen;
+        font-weight: 900;
+        box-shadow: 0 0 3px seagreen;
+    }
+    .notice {
+        font-size: 4rem;
+        color: orangered
+    }
 }

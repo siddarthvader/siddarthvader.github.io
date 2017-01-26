@@ -14,15 +14,32 @@
     </div>-->
 
     <canvas id="canvas" width="640" height="480"></canvas>
-    <div class="select">
-        <label for="videoSource">Video source: </label><select id="videoSource"></select>
+    <div class="button-group">
+        <label class="capture" for="capture">Capture Image</label>
+        <span class="notice">Please stand 5 feet away from the wall and try to keep camera in the center of it</span>
+        <p>
+            <input type="file" hidden accept="image/*" id="capture" capture="camera">
+
     </div>
 
-    <video id="video" autoplay style="display: none"></video>
+    <!--<div class="select">
+        <label for="videoSource">Video source: </label><select id="videoSource"></select>
+    </div>-->
 
+
+
+    <!--<video id="video" autoplay style="display: none"></video>-->
+
+
+    <script src="scripts/jquery/dist/jquery.js"></script>
     <script src="../bower_components/webrtc-adapter/release/adapter.js"></script>
+    <script src="../bower_components/interactjs/dist/interact.min.js"></script>
+  
     <script src="demo.js"></script>
+    <script>
+       
 
+    </script>
 </body>
 
 </html>
