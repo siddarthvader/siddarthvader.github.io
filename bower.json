@@ -32,6 +32,7 @@
     "ngstorage": "~0.3.9",
     "font-awesome": "^4.7.0",
     "webrtc-adapter": "^3.1.0",
-    "interactjs": "^1.2.8"
+    "interactjs": "^1.2.8",
+    "darkroom": "darkroomjs#^2.0.1"
   }
 }

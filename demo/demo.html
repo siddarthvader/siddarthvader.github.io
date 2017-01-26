@@ -2,7 +2,7 @@
 
 <head>
     <link rel="stylesheet" href="demo.css">
-
+    <link rel="stylesheet" href="../bower_components/darkroom/build/darkroom.css">
 </head>
 
 <body>
@@ -13,7 +13,42 @@
 
     </div>-->
 
+    <div id="dpi" style="height: 1in; width: 1in; left: 100%; position: fixed; top: 100%;"></div>
+    <div id="img"></div>
+
+
     <canvas id="canvas" width="640" height="480"></canvas>
+
+    <!--<div class="resize-container">
+       <div class="resize-drag">
+           <!--Resize from any edge or corner-->
+    <!--</div>
+</div>-->
+
+    <ul class="side-menu" style="display: none;">
+        <li>
+            <img src="paint1.jpg"  alt="" onclick="changeBackground(0)"></li>
+        <li>
+            <img src="paint2.jpg"  alt="" onclick="changeBackground(1)"></li>
+        <li>
+            <img src="paint3.jpg"  alt="" onclick="changeBackground(2)"></li>
+        <li>
+            <img src="paint4.jpg" alt="" onclick="changeBackground(3)"></li>
+        <li>
+            <img src="paint5.jpg"  alt="" onclick="changeBackground(4)"></li>
+        <li>
+            <img src="paint6.jpg"  alt="" onclick="changeBackground(5)"></li>
+        <li>
+            <img src="paint7.jpg"  alt="" onclick="changeBackground(6)"></li>
+        <li>
+            <img src="paint8.jpg"  alt="" onclick="changeBackground(7)"></li>
+        <li>
+            <img src="paint9.jpg"  alt="" onclick="changeBackground(8)"></li>
+        <li>
+            <img src="paint10.jpg" alt="" onclick="changeBackground(9)"></li>
+
+    </ul>
+
     <div class="button-group">
         <label class="capture" for="capture">Capture Image</label>
         <span class="notice">Please stand 5 feet away from the wall and try to keep camera in the center of it</span>
@@ -22,24 +57,29 @@
 
     </div>
 
-    <!--<div class="select">
-        <label for="videoSource">Video source: </label><select id="videoSource"></select>
-    </div>-->
+    <div id="drag-1" class="draggable">
+        <img src="paint1.jpg" class="item"  alt="" style="display: none">
+            <img src="paint1.jpg" class="item"  alt="" style="display: none" ></li>
+            <img src="paint2.jpg" class="item"  alt="" style="display: none"></li>
+            <img src="paint3.jpg" class="item"  alt="" style="display: none"></li>
+            <img src="paint4.jpg" class="item"  alt="" style="display: none" ></li>
+            <img src="paint5.jpg" class="item"  alt="" style="display: none"></li>
+            <img src="paint6.jpg" class="item"  alt="" style="display: none" ></li>
+            <img src="paint7.jpg" class="item"  alt="" style="display: none"></li>
+            <img src="paint8.jpg" class="item"  alt="" style="display: none" ></li>
+            <img src="paint9.jpg" class="item"  alt="" style="display: none" ></li>
+            <img src="paint10.jpg" class="item"  alt="" style="display: none"></li>
 
-
-
-    <!--<video id="video" autoplay style="display: none"></video>-->
-
+    </div>
 
     <script src="scripts/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/webrtc-adapter/release/adapter.js"></script>
-    <script src="../bower_components/interactjs/dist/interact.min.js"></script>
-  
-    <script src="demo.js"></script>
-    <script>
-       
 
-    </script>
+    <script src="../bower_components/fabric/dist/fabric.min.js"></script>
+    <script src="../bower_components/darkroom/build/darkroom.js"></script>
+    <script src="../bower_components/interactjs/dist/interact.min.js"></script>
+
+    <script src="demo.js"></script>
+
 </body>
 
 </html>
