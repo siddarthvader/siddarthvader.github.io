@@ -1,0 +1,101 @@
+@import url('css-media-all/css-media-all.min.css');
+@font-face {
+    font-family: monaco;
+    src: url('../../app/static/fonts/montserrat/Montserrat-Hairline.otf') format('opentype');
+}
+
+@font-face {
+    font-family: monaco;
+    src: url('../../app/static/fonts/montserrat/Montserrat-Light.otf') format('opentype');
+    font-weight: bold;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    text-align: center;
+    font-family: monaco;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    padding: 1rem;
+    font-size: 4rem;
+}
+
+// canvas {
+//     width:90vw;
+//     height: 90vh;
+// }
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    .capture {
+        color:lightseagreen;
+        font-weight: 900;
+        box-shadow: 0 0 3px seagreen;
+    }
+    .notice {
+        font-size: 4rem;
+        color: orangered
+    }
+}
+
+.resize-drag {
+    // background:url('border.png');
+    color: transparent;
+    font-size: 20px;
+    font-family: sans-serif;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px 20px;
+    width: 7cm;
+    height: 7cm;
+    /* This makes things *much* easier */
+    box-sizing: border-box;
+    border: solid 4px red;
+}
+
+.resize-container {
+    width: 7cm;
+    height: 7cm;
+}
+
+#image {
+    transform: rotate(90deg);
+}
+
+#img {
+    margin-top: 10rem;
+}
+
+.side-menu {
+    width: 80px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    flex-wrap: wrap;
+    > li {
+        border: solid 1px cadetblue;
+        width: 80px;
+        height: 80px;
+        &.title {
+            height: 20px;
+            border: none;
+            color: #048444
+        }
+        > img {
+            width: 100%;
+            height: 100%;
+        }
+        &:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    }
+}

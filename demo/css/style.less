@@ -1,0 +1,104 @@
+@import url('css-media-all/css-media-all.min.css');
+@font-face {
+    font-family: monaco;
+    src: url('static/fonts/montserrat/Montserrat-Hairline.otf') format('opentype');
+}
+
+body {
+    text-align: center;
+    font-family: monaco;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+#canvas {
+    // width:80rem;
+    // height:40rem;
+    border: solid 1px rebeccapurple;
+    background: url('../img/wall1.jpg');
+    &.wall1 {
+        background: url('../img/wall1.jpg');
+        width: 500px;
+        height: 750px;
+    }
+    &.wall2 {
+        background: url('../img/wall2.png');
+        width: 571;
+        height: 700;
+    }
+    &.wall3 {
+        background: url('../img/wall3.jpg');
+        width: 525;
+        height: 700;
+    }
+    &.wall4 {
+        background: url('../img/wall4.png');
+        width: 583;
+        height: 720;
+    }
+    &.wall5 {
+        background: url('../img/wall5.png');
+        width: 525;
+        height: 700;
+    }
+}
+
+.side-menu {
+    width: 80px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    flex-wrap: wrap;
+    >li {
+        border: solid 1px cadetblue;
+        width: 80px;
+        height: 80px;
+        &.title {
+            height: 20px;
+            border: none;
+            color: #048444
+        }
+        >img {
+            width: 100%;
+            height: 100%;
+        }
+        &:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    }
+}
+
+.side-menu-big {
+    width: 100px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    >li {
+        border: solid 1px cadetblue;
+        width: 100px;
+        height: 100px;
+        &.title {
+            height: 20px;
+            border: none;
+            color: #048444
+        }
+        >img {
+            width: 100%;
+            height: 100%;
+        }
+        &:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    }
+}
