@@ -1,0 +1,97 @@
+@import url('scripts/css-media-all/css-media-all.min.css');
+@font-face {
+  font-family: monaco;
+  src: url('../app/static/fonts/montserrat/Montserrat-Hairline.otf') format('opentype');
+}
+body {
+  text-align: center;
+  font-family: monaco;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem;
+}
+#canvas {
+  border: solid 1px rebeccapurple;
+  background: url('wall1.jpg');
+}
+#canvas.wall1 {
+  background: url('wall1.jpg');
+  width: 500px;
+  height: 750px;
+}
+#canvas.wall2 {
+  background: url('wall2.png');
+  width: 571;
+  height: 700;
+}
+#canvas.wall3 {
+  background: url('wall3.jpg');
+  width: 525;
+  height: 700;
+}
+#canvas.wall4 {
+  background: url('wall4.png');
+  width: 583;
+  height: 720;
+}
+#canvas.wall5 {
+  background: url('wall5.png');
+  width: 525;
+  height: 700;
+}
+.side-menu {
+  width: 80px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+.side-menu > li {
+  border: solid 1px cadetblue;
+  width: 80px;
+  height: 80px;
+}
+.side-menu > li.title {
+  height: 20px;
+  border: none;
+  color: #048444;
+}
+.side-menu > li > img {
+  width: 100%;
+  height: 100%;
+}
+.side-menu > li:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.side-menu-big {
+  width: 100px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+.side-menu-big > li {
+  border: solid 1px cadetblue;
+  width: 100px;
+  height: 100px;
+}
+.side-menu-big > li.title {
+  height: 20px;
+  border: none;
+  color: #048444;
+}
+.side-menu-big > li > img {
+  width: 100%;
+  height: 100%;
+}
+.side-menu-big > li:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}

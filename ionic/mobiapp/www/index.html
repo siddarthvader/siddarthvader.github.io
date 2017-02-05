@@ -1,19 +1,47 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+
+  <link rel="manifest" href="manifest.json">
+
+  <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link rel="stylesheet" href="css/demo.css">
     <link rel="stylesheet" href="css/build/darkroom.css">
+
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+<script src="js/jquery/dist/jquery.js"></script>
+
+
+  <!-- your app's js -->
+  <script src="js/app.js"></script>
 </head>
 
-<body>
-    <!--<div class="container">
+<body ng-app="starter">
 
-        <video id="video" width="640" height="480" autoplay style="display:none"></video>
-        <button id="snap">Snap Photo</button>
-
-    </div>-->
-
-    <div id="dpi" style="height: 1in; width: 1in; left: 100%; position: fixed; top: 100%;"></div>
+   <div id="dpi" style="height: 1in; width: 1in; left: 100%; position: fixed; top: 100%;"></div>
     <div id="img"></div>
 
 
@@ -53,7 +81,7 @@
         <label class="capture" for="capture">Capture Image</label>
         <span class="notice">Please stand 5 feet away from the wall and try to keep camera in the center of it</span>
         <p>
-            <input type="file" hidden accept="image/*" id="capture" capture="camera">
+            <input type="file"  accept="image/*" id="capture" capture="camera">
 
     </div>
 
@@ -70,12 +98,11 @@
             <img src="img/paint10.jpg" class="item"  alt="" style="display: none"></li>
     </div>
 
-    <script src="js/scripts/jquery/dist/jquery.js"></script>
+     <script src="js/scripts/jquery/dist/jquery.js"></script>
 
-    <script src="js/fabric/dist/fabric.min.js"></script>
+     <script src="js/fabric/dist/fabric.min.js"></script>
     <script src="css/build/darkroom.js"></script>
     <script src="js/interactjs/dist/interact.min.js"></script>
-
     <script src="js/demo.js"></script>
 
 </body>
