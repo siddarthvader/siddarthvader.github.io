@@ -1,11 +1,11 @@
 @import url('css-media-all/css-media-all.min.css');
 @font-face {
   font-family: monaco;
-  src: url('../static/fonts/montserrat/Montserrat-Hairline.otf') format('opentype');
+  src: url('../../app/static/fonts/montserrat/Montserrat-Hairline.otf') format('opentype');
 }
 @font-face {
   font-family: monaco;
-  src: url('../static/fonts/montserrat/Montserrat-Light.otf') format('opentype');
+  src: url('../../app/static/fonts/montserrat/Montserrat-Light.otf') format('opentype');
   font-weight: bold;
 }
 html {
@@ -19,6 +19,10 @@ body {
   overflow: scroll;
   padding: 1rem;
   font-size: 4rem;
+}
+canvas {
+  width: 90vw;
+  height: 90vh;
 }
 .button-group {
   display: flex;
@@ -67,6 +71,7 @@ body {
   flex-wrap: wrap;
 }
 .side-menu > li {
+  color: red;
   border: solid 1px cadetblue;
   width: 80px;
   height: 80px;
