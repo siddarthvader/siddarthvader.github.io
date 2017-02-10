@@ -109,7 +109,7 @@ window.onload = function () {
                 ctx.drawImage(image, 0, 0);
                 document.getElementById('img').remove();
                 document.getElementsByClassName('button-group')[0].remove();
-                document.getElementsByClassName('item')[0].style.display='inline';
+                document.getElementsByClassName('speciman')[0].style.display='inline';
                 document.getElementsByClassName('side-menu')[0].style.display='flex';
 
             }, 1000);
@@ -170,12 +170,12 @@ window.dragMoveListener = dragMoveListener;
 //
 
 function changeBackground(mode) {
-    for(var i=0;i<document.getElementsByClassName('item').length;i++){
-        document.getElementsByClassName('item')[i].style.display='none';
+    for(var i=0;i<document.getElementsByClassName('speciman').length;i++){
+        document.getElementsByClassName('speciman')[i].style.display='none';
     }
 
 
-    document.getElementsByClassName('item')[mode].style.display='inline';
+    document.getElementsByClassName('speciman')[mode].style.display='inline';
 
 }
 
