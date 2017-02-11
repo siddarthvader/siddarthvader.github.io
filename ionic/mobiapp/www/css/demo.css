@@ -62,6 +62,18 @@
 .flex .ns {
   flex-shrink: 0;
 }
+.red-bg {
+  background-color: #be003b !important;
+}
+.grey-bg {
+  background-color: #637d8e !important;
+}
+.orange-bg {
+  background-color: #ef473a !important;
+}
+.blue-bg {
+  background-color: #1da1ff !important;
+}
 html {
   width: 100%;
 }
@@ -144,4 +156,9 @@ canvas {
 .side-menu > li:hover {
   opacity: 0.7;
   cursor: pointer;
+}
+.title {
+  color: white !important;
+  font-size: 4rem;
+  font-weight: 600;
 }
