@@ -2,13 +2,13 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-  <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
 
-  <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.json">
 
-  <!-- un-comment this code to enable service worker
+    <!-- un-comment this code to enable service worker
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js')
@@ -17,31 +17,34 @@
       }
     </script>-->
 
-  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link rel="stylesheet" href="css/demo.css">
     <link rel="stylesheet" href="css/build/darkroom.css">
+    <link rel="stylesheet" href="lib/ionicons/css/ionicons.min.css">
 
-
-  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
-  <!-- ionic/angularjs js -->
-  <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
 
-  <!-- cordova script (this will be a 404 during development) -->
-  <script src="cordova.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
 
-<script src="js/jquery/dist/jquery.js"></script>
+  
 
-
-  <!-- your app's js -->
-  <script src="js/app.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
 </head>
 
 <body ng-app="starter">
 
-   <div id="dpi" style="height: 1in; width: 1in; left: 100%; position: fixed; top: 100%;"></div>
+    <div class="bar bar-header bar-assertive">
+        <h1 class="title">Vismyra</h1>
+    </div>
+
+    <div id="dpi" style="height: 1in; width: 1in; left: 100%; position: fixed; top: 100%;"></div>
     <div id="img"></div>
 
 
@@ -55,23 +58,23 @@
 
     <ul class="side-menu" style="display: none;">
         <li>
-            <img src="img/paint1.jpg"  alt="" onclick="changeBackground(0)"></li>
+            <img src="img/paint1.jpg" alt="" onclick="changeBackground(0)"></li>
         <li>
-            <img src="img/paint2.jpg"  alt="" onclick="changeBackground(1)"></li>
+            <img src="img/paint2.jpg" alt="" onclick="changeBackground(1)"></li>
         <li>
-            <img src="img/paint3.jpg"  alt="" onclick="changeBackground(2)"></li>
+            <img src="img/paint3.jpg" alt="" onclick="changeBackground(2)"></li>
         <li>
             <img src="img/paint4.jpg" alt="" onclick="changeBackground(3)"></li>
         <li>
-            <img src="img/paint5.jpg"  alt="" onclick="changeBackground(4)"></li>
+            <img src="img/paint5.jpg" alt="" onclick="changeBackground(4)"></li>
         <li>
-            <img src="img/paint6.jpg"  alt="" onclick="changeBackground(5)"></li>
+            <img src="img/paint6.jpg" alt="" onclick="changeBackground(5)"></li>
         <li>
-            <img src="img/paint7.jpg"  alt="" onclick="changeBackground(6)"></li>
+            <img src="img/paint7.jpg" alt="" onclick="changeBackground(6)"></li>
         <li>
-            <img src="img/paint8.jpg"  alt="" onclick="changeBackground(7)"></li>
+            <img src="img/paint8.jpg" alt="" onclick="changeBackground(7)"></li>
         <li>
-            <img src="img/paint9.jpg"  alt="" onclick="changeBackground(8)"></li>
+            <img src="img/paint9.jpg" alt="" onclick="changeBackground(8)"></li>
         <li>
             <img src="img/paint10.jpg" alt="" onclick="changeBackground(9)"></li>
 
@@ -81,28 +84,27 @@
         <label class="capture" for="capture">Capture Image</label>
         <span class="notice">Please stand 5 feet away from the wall and try to keep camera in the center of it</span>
         <p>
-            <input type="file"  accept="image/*" id="capture" capture="camera">
+            <input type="file" accept="image/*" id="capture" capture="camera">
 
     </div>
 
     <div id="drag-1" class="draggable">
-            <img src="img/paint1.jpg" class="speciman"  alt="" style="display: none" ></li>
-            <img src="img/paint2.jpg" class="speciman"  alt="" style="display: none"></li>
-            <img src="img/paint3.jpg" class="speciman"  alt="" style="display: none"></li>
-            <img src="img/paint4.jpg" class="speciman"  alt="" style="display: none" ></li>
-            <img src="img/paint5.jpg" class="speciman"  alt="" style="display: none"></li>
-            <img src="img/paint6.jpg" class="speciman"  alt="" style="display: none" ></li>
-            <img src="img/paint7.jpg" class="speciman"  alt="" style="display: none"></li>
-            <img src="img/paint8.jpg" class="speciman"  alt="" style="display: none" ></li>
-            <img src="img/paint9.jpg" class="speciman"  alt="" style="display: none" ></li>
-            <img src="img/paint10.jpg" class="speciman"  alt="" style="display: none"></li>
+        <img src="img/paint1.jpg" class="speciman" alt="" style="display: none"></li>
+        <img src="img/paint2.jpg" class="speciman" alt="" style="display: none"></li>
+        <img src="img/paint3.jpg" class="speciman" alt="" style="display: none"></li>
+        <img src="img/paint4.jpg" class="speciman" alt="" style="display: none"></li>
+        <img src="img/paint5.jpg" class="speciman" alt="" style="display: none"></li>
+        <img src="img/paint6.jpg" class="speciman" alt="" style="display: none"></li>
+        <img src="img/paint7.jpg" class="speciman" alt="" style="display: none"></li>
+        <img src="img/paint8.jpg" class="speciman" alt="" style="display: none"></li>
+        <img src="img/paint9.jpg" class="speciman" alt="" style="display: none"></li>
+        <img src="img/paint10.jpg" class="speciman" alt="" style="display: none"></li>
     </div>
 
-     <script src="js/scripts/jquery/dist/jquery.js"></script>
-
-     <script src="js/fabric/dist/fabric.min.js"></script>
-    <script src="css/build/darkroom.js"></script>
-    <script src="js/interactjs/dist/interact.min.js"></script>
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/fabric.js/dist/fabric.js"></script>
+    <script src="lib/darkroom/build/darkroom.js"></script>
+    <script src="lib/interactjs/dist/interact.min.js"></script>
     <script src="js/demo.js"></script>
 
 </body>
