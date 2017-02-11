@@ -8,6 +8,60 @@
   src: url('../static/fonts/montserrat/Montserrat-Light.otf') format('opentype');
   font-weight: bold;
 }
+.flex {
+  display: flex;
+}
+.flex.row {
+  flex-direction: row;
+}
+.flex.col {
+  flex-direction: column;
+}
+.flex.ac {
+  align-items: center;
+}
+.flex.ab {
+  align-items: baseline;
+}
+.flex.fls {
+  align-items: flex-start;
+}
+.flex.fe {
+  align-items: flex-end;
+}
+.flex.jc {
+  justify-content: center;
+}
+.flex.sb {
+  justify-content: space-between;
+}
+.flex.sa {
+  justify-content: space-around;
+}
+.flex.je {
+  justify-content: flex-end;
+}
+.flex.sc {
+  align-self: center;
+}
+.flex.asb {
+  align-self: baseline;
+}
+.flex.asf {
+  align-self: flex-start;
+}
+.flex.ase {
+  align-self: flex-end;
+}
+.flex.rw {
+  flex-flow: row wrap;
+}
+.flex .fg1 {
+  flex-grow: 1;
+}
+.flex .ns {
+  flex-shrink: 0;
+}
 html {
   width: 100%;
 }
@@ -18,8 +72,9 @@ body {
   font-size: 4rem;
   width: 100vw;
   height: 100vh;
-  overflow: scroll;
-  margin-top:10rem;
+  overflow-y: scroll;
+  margin-top: 10rem;
+  overflow-x: scroll;
 }
 canvas {
   width: 90vw;

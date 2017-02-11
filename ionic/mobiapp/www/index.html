@@ -40,8 +40,9 @@
 
 <body ng-app="starter">
 
-    <div class="bar bar-header bar-assertive">
-        <h1 class="title">Vismyra</h1>
+    <div class="bar bar-header bar-assertive flex ac">
+        <h1 class="title">HEADER</h1>
+        <i class="icon ion-android-cart"></i>
     </div>
 
     <div id="dpi" style="height: 1in; width: 1in; left: 100%; position: fixed; top: 100%;"></div>
@@ -81,10 +82,10 @@
     </ul>
 
     <div class="button-group">
-        <label class="capture" for="capture">Capture Image</label>
+        <label data-tap-disabled="true"  class="capture" for="capture">Capture Image</label>
         <span class="notice">Please stand 5 feet away from the wall and try to keep camera in the center of it</span>
         <p>
-            <input type="file" accept="image/*" id="capture" capture="camera">
+            <input type="file" hidden accept="image/*" id="capture" capture="camera">
 
     </div>
 
