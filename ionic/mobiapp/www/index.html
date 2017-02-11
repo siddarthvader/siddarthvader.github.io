@@ -26,87 +26,47 @@
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/fabric.js/dist/fabric.js"></script>
+    <script src="lib/darkroom/build/darkroom.js"></script>
+    <script src="lib/interactjs/dist/interact.min.js"></script>
+    <!--<script src="js/demo.js"></script>-->
+
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
-  
-
-    <!-- your app's js -->
-    <script src="js/app.js"></script>
 </head>
 
-<body ng-app="starter">
+<body ng-app="vismyra">
+    <div class="test"></div>
 
-    <div class="bar bar-header bar-assertive flex ac">
-        <h1 class="title">HEADER</h1>
-        <i class="icon ion-android-cart"></i>
-    </div>
+    <div class="" ui-view="header"></div>
 
-    <div id="dpi" style="height: 1in; width: 1in; left: 100%; position: fixed; top: 100%;"></div>
-    <div id="img"></div>
+    <ion-content>
+        <div class="" ui-view='content'></div>
+    </ion-content>
 
+    <!--<div class="" ui-view='content'></div>-->
+
+    <div class="" ui-view="footer"></div>
 
     <canvas id="canvas" width="640" height="480"></canvas>
 
-    <!--<div class="resize-container">
-       <div class="resize-drag">
-           <!--Resize from any edge or corner-->
-    <!--</div>
-</div>-->
 
-    <ul class="side-menu" style="display: none;">
-        <li>
-            <img src="img/paint1.jpg" alt="" onclick="changeBackground(0)"></li>
-        <li>
-            <img src="img/paint2.jpg" alt="" onclick="changeBackground(1)"></li>
-        <li>
-            <img src="img/paint3.jpg" alt="" onclick="changeBackground(2)"></li>
-        <li>
-            <img src="img/paint4.jpg" alt="" onclick="changeBackground(3)"></li>
-        <li>
-            <img src="img/paint5.jpg" alt="" onclick="changeBackground(4)"></li>
-        <li>
-            <img src="img/paint6.jpg" alt="" onclick="changeBackground(5)"></li>
-        <li>
-            <img src="img/paint7.jpg" alt="" onclick="changeBackground(6)"></li>
-        <li>
-            <img src="img/paint8.jpg" alt="" onclick="changeBackground(7)"></li>
-        <li>
-            <img src="img/paint9.jpg" alt="" onclick="changeBackground(8)"></li>
-        <li>
-            <img src="img/paint10.jpg" alt="" onclick="changeBackground(9)"></li>
+    <!-- your app's js -->
+    <script src="app/app.js"></script>
+    <script src="app/config.js"></script>-->
 
-    </ul>
+    <!--controllers-->
+    <script src="app/controllers/header.js"></script>
+    <script src="app/controllers/footer.js"></script>
+    <script src="app/controllers/jumbo.js"></script>
+    <!--controllers-->
 
-    <div class="button-group">
-        <label data-tap-disabled="true"  class="capture" for="capture">Capture Image</label>
-        <span class="notice">Please stand 5 feet away from the wall and try to keep camera in the center of it</span>
-        <p>
-            <input type="file" hidden accept="image/*" id="capture" capture="camera">
 
-    </div>
-
-    <div id="drag-1" class="draggable">
-        <img src="img/paint1.jpg" class="speciman" alt="" style="display: none"></li>
-        <img src="img/paint2.jpg" class="speciman" alt="" style="display: none"></li>
-        <img src="img/paint3.jpg" class="speciman" alt="" style="display: none"></li>
-        <img src="img/paint4.jpg" class="speciman" alt="" style="display: none"></li>
-        <img src="img/paint5.jpg" class="speciman" alt="" style="display: none"></li>
-        <img src="img/paint6.jpg" class="speciman" alt="" style="display: none"></li>
-        <img src="img/paint7.jpg" class="speciman" alt="" style="display: none"></li>
-        <img src="img/paint8.jpg" class="speciman" alt="" style="display: none"></li>
-        <img src="img/paint9.jpg" class="speciman" alt="" style="display: none"></li>
-        <img src="img/paint10.jpg" class="speciman" alt="" style="display: none"></li>
-    </div>
-
-    <script src="lib/jquery/dist/jquery.js"></script>
-    <script src="lib/fabric.js/dist/fabric.js"></script>
-    <script src="lib/darkroom/build/darkroom.js"></script>
-    <script src="lib/interactjs/dist/interact.min.js"></script>
-    <script src="js/demo.js"></script>
 
 </body>
 
