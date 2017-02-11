@@ -10,6 +10,66 @@
     font-weight: bold;
 }
 
+
+//  absolute rules
+
+.flex {
+	display: flex;
+	&.row {
+		flex-direction: row;
+	}
+	&.col {
+		flex-direction: column;
+	}
+	&.ac {
+		align-items: center;
+	}
+	&.ab {
+		align-items: baseline;
+	}
+	&.fls {
+		align-items: flex-start;
+	}
+	&.fe {
+		align-items: flex-end;
+	}
+	&.jc {
+		justify-content: center;
+	}
+	&.sb {
+		justify-content: space-between;
+	}
+	&.sa {
+		justify-content: space-around;
+	}
+	&.je {
+		justify-content: flex-end;
+	}
+	&.sc {
+		align-self: center;
+	}
+	&.asb {
+		align-self: baseline;
+	}
+	&.asf {
+		align-self: flex-start;
+	}
+	&.ase {
+		align-self: flex-end;
+	}
+	&.rw {
+		flex-flow: row wrap;
+	}
+	.fg1 {
+		flex-grow: 1;
+	}
+	.ns {
+		flex-shrink: 0;
+	}
+}
+
+// absolute rules
+
 html {
     width: 100%;
 }
@@ -21,7 +81,9 @@ body {
     font-size: 4rem;
     width:100vw;
     height:100vh;
-    overflow:scroll;
+    overflow-y:scroll;
+    margin-top:10rem;
+    overflow-x:scroll;
 }
 
 canvas {

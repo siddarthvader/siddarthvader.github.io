@@ -171,6 +171,7 @@ window.dragMoveListener = dragMoveListener;
 //
 
 function changeBackground(mode) {
+    
     for (var i = 0; i < document.getElementsByClassName('speciman').length; i++) {
         document.getElementsByClassName('speciman')[i].style.display = 'none';
     }
