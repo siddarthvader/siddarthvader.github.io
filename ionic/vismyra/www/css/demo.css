@@ -86,7 +86,7 @@ span {
   background-color: #fff !important;
 }
 .white {
-  color: white;
+  color: white !important;
 }
 .red {
   color: #be003b !important;
@@ -205,7 +205,7 @@ canvas {
   cursor: pointer;
 }
 .title {
-  color: white;
+  color: white !important;
   font-size: 3rem;
   font-weight: 600;
   line-height: 3.5rem;
@@ -229,4 +229,20 @@ canvas {
 .draggable .item {
   background-color: transparent;
   border: none;
+}
+.button.button-outline.activated.blue {
+  background-color: #1da1ff !important;
+  color: white !important;
+}
+.button.button-outline.activated.red {
+  background-color: #be003b !important;
+  color: white !important;
+}
+.button.button-outline.activated.orange {
+  background-color: #ef473a !important;
+  color: white !important;
+}
+.button.button-outline.activated.grey {
+  background-color: #637d8e !important;
+  color: white !important;
 }

@@ -90,7 +90,7 @@ div,h1,p,span{
     background-color: #fff !important;
 }
 .white{
-    color:white;
+    color:white !important;
 }
 .red{
     color:#be003b !important;
@@ -263,4 +263,27 @@ canvas {
          border:none;
     }
 
+}
+
+.button{
+    &.button-outline{
+        &.activated{
+            &.blue{
+                .blue-bg;
+                .white;
+            }
+            &.red{
+                .red-bg;
+                .white;
+            }
+            &.orange{
+                .orange-bg;
+                .white;
+            }
+            &.grey{
+                .grey-bg;
+                .white;
+            }
+        }
+    }
 }
