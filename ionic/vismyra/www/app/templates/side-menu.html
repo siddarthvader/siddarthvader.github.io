@@ -1,6 +1,6 @@
 <ion-list align="center">
 <ion-item>Categories</ion-item>
 </ion-list>
-<ion-list align="left" ng-repeat="cat in categories" ng-click="showCategory(cat)">
+<ion-list align="left" menuToggle=true menu-toggle="left" ng-repeat="cat in categories" ng-click="showCategory(cat)" toggle->
     <ion-item>{{cat}}</ion-item>
 </ion-list>
