@@ -56,8 +56,8 @@
             </ion-header-bar>
 
             <ion-content class="has-header" scrollbar-y="false" padding="true">
-                <!--<ion-refresher pulling-text="Pull to refresh..." on-refresh="$root.doRefresh()">
-                </ion-refresher>-->
+                <ion-refresher ng-if="$root.state!='testing'" pulling-text="Pull to refresh..." on-refresh="$root.doRefresh()">
+                </ion-refresher>
                 <div ui-view="content">
             </ion-content>
 

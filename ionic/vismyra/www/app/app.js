@@ -29,4 +29,8 @@ var vapp = angular.module('vismyra', ['ionic', 'hm.readmore','ngCordova'])
       $window.location.reload();
     }
 
+    $rootScope.$on('$stateChangeSuccess',function(event,toState){
+        $rootScope.currentState=toState.name;
+    });
+
   })
