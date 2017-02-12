@@ -2,6 +2,7 @@
 @font-face {
     font-family: monaco;
     src: url('../static/fonts/montserrat/Montserrat-Hairline.otf') format('opentype');
+    font-weight: normal;
 }
 
 @font-face {
@@ -92,7 +93,7 @@ div,h1,p,span{
     color:white;
 }
 .red{
-    color:33be003b !important;
+    color:#be003b !important;
 }
 .grey{
         color: #637d8e !important;
@@ -102,6 +103,35 @@ div,h1,p,span{
 }
 .blue{
      color: #1da1ff !important;
+}
+
+.red-border{
+    border: solid 1px #be003b !important;
+}
+.grey-border{
+    border: solid 1px  #637d8e !important;
+}
+.orange-border{
+    border: solid 1px  rgb(239, 71, 58) !important;
+}
+.blue-border{
+     border: solid 1px  #1da1ff !important;
+}
+
+.font-bold{
+    font-weight: bold !important;
+}
+.font-light{
+    font-weight:500;
+}
+
+.line-through{
+    text-decoration: line-through;
+}
+
+
+.mr2{
+    margin-right:2rem;
 }
 
 
@@ -140,7 +170,7 @@ canvas {
     }
     .notice {
         font-size: 4rem;
-        color: orangered
+        color: orangered;
     }
 }
 
@@ -201,9 +231,17 @@ canvas {
 }
 
 .title{
-    color:white !important;
-    font-size: 4rem;
+
+    .white;    
+    font-size: 3rem;
     font-weight:600;
+    line-height:3.5rem;
+}
+.pro-title{
+    .grey;
+     font-size: 3rem;
+    font-weight:600;
+    line-height:3.5rem;
 }
 
 .app-header{
