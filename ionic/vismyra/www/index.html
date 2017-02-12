@@ -34,6 +34,8 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="lib/angular-read-more/dist/readmore.min.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -53,7 +55,7 @@
                 </div>
                 <h1 class="title">VISMYRA</h1>
             </ion-header-bar>
-            <div ui-view="header"></div>
+            <!--<div ui-view="header"></div>-->
 
             <ion-content class="has-header" scrollbar-y="false" padding="true">
                 <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
@@ -84,6 +86,7 @@
     <script src="app/controllers/footer.js"></script>
     <script src="app/controllers/jumbo.js"></script>
     <script src="app/controllers/sideMenu.js"></script>
+     <script src="app/controllers/product.js"></script>
     <!--controllers-->
 
 
