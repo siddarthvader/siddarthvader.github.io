@@ -1,0 +1,43 @@
+<div id="dpi" style="height: 1in; width: 1in; left: 100%; position: fixed; top: 100%;">
+</div>
+<div id="img"></div>
+
+<canvas id="canvas" width="640" height="480"></canvas>
+
+<!--<ul class="side-menu" style="display: none;">-->
+<!--<li>
+        <img src="img/paint1.jpg" alt="" onclick="changeBackground(0)"></li>
+    <li>
+        <img src="img/paint2.jpg" alt="" onclick="changeBackground(1)"></li>
+    <li>
+        <img src="img/paint3.jpg" alt="" onclick="changeBackground(2)"></li>
+    <li>
+        <img src="img/paint4.jpg" alt="" onclick="changeBackground(3)"></li>
+    <li>
+        <img src="img/paint5.jpg" alt="" onclick="changeBackground(4)"></li>
+    <li>
+        <img src="img/paint6.jpg" alt="" onclick="changeBackground(5)"></li>
+    <li>
+        <img src="img/paint7.jpg" alt="" onclick="changeBackground(6)"></li>
+    <li>
+        <img src="img/paint8.jpg" alt="" onclick="changeBackground(7)"></li>
+    <li>
+        <img src="img/paint9.jpg" alt="" onclick="changeBackground(8)"></li>
+    <li>
+        <img src="img/paint10.jpg" alt="" onclick="changeBackground(9)"></li>-->
+
+</ul>
+
+<div class="button-group">
+    <span class="notice" align="center">Please stand 5 feet away from the wall and try to keep camera in the center of it</span>
+
+    <input hidden type="file" accept="image/*" id="capture" capture="camera">
+
+</div>
+
+       <label class="button button-full button-positive orange-bg font-bold" for="capture" data-tap-disabled="true" ng-show="!testing.showDrag">Open your camera</label>
+
+
+<div id="drag-1" class="draggable" ng-if="testing.showDrag">
+    <img src="img/{{$root.product._id}}.png" class="full-image" alt=""></li>
+</div>

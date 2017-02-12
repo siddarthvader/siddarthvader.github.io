@@ -136,8 +136,8 @@ body {
   padding-top: 5rem;
 }
 canvas {
-  width: 90rem;
-  height: 60vh;
+  width: 90%;
+  height: 60%;
 }
 .button-group {
   display: flex;
@@ -221,4 +221,8 @@ canvas {
 }
 .app-header h1.title {
   font-weight: bold;
+}
+.draggable .item {
+  background-color: transparent;
+  border: none;
 }
