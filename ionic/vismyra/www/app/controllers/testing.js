@@ -58,7 +58,7 @@ vapp.controller('testingCtrl', ['$scope', '$rootScope', '$state', '$ionicScrollD
                         // img.width=img.width/2;
                         var ratio = img1.width / img1.height;
                         var screen = window.innerWidth;
-                        img1.width = screen * .9;
+                        img1.width = screen * .95;
                         img1.height = img1.width / ratio;
                         widthInInch = img1.width / dpi_x;
                         heightInInch = img1.height / dpi_y;
@@ -121,14 +121,20 @@ vapp.controller('testingCtrl', ['$scope', '$rootScope', '$state', '$ionicScrollD
                 if (flag) {
                     setTimeout(function () {
                         var image = document.getElementById('img').children[0];
+                        var cmsinTenFeet = 200;
+                        var screen = window.innerWidth;
                         canvas.width = image.width;
                         canvas.height = image.height;
                         //ctx.clearRect(0, 0, canvas.width, canvas.height);
                         ctx.width = image.width;
                         ctx.height = image.height;
                         ctx.drawImage(image, 0, 0);
-                        document.getElementById('img').remove();
-                        document.getElementsByClassName('button-group')[0].remove();
+                        document.getElementById('img').style.display = 'none';
+                        document.getElementsByClassName('button-group')[0].style.display = 'none';
+                        document.getElementsByClassName('proImage')[0].style.width = (screen / cmsinTenFeet) * $rootScope.product.width + 'px';
+                        document.getElementsByClassName('proImage')[0].style.height = (screen / cmsinTenFeet) * $rootScope.product.length + 'px';
+                        document.getElementsByClassName('proImage')[0].style.display = 'block';
+                        document.getElementsByClassName('cameraLabel')[0].style.display = 'none';
                         // document.getElementsByClassName('speciman')[0].style.display = 'inline';
                         // document.getElementsByClassName('side-menu')[0].style.display = 'flex';
 
@@ -136,7 +142,6 @@ vapp.controller('testingCtrl', ['$scope', '$rootScope', '$state', '$ionicScrollD
                     }, 1000);
                 }
                 testing.showDrag = true;
-
             });
 
 

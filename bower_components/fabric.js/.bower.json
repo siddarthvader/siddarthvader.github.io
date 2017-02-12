@@ -39,5 +39,6 @@
   },
   "_source": "https://github.com/kangax/fabric.js.git",
   "_target": "^1.7.3",
-  "_originalSource": "fabric"
+  "_originalSource": "fabric",
+  "_direct": true
 }

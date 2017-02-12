@@ -222,6 +222,10 @@ canvas {
 .app-header h1.title {
   font-weight: bold;
 }
+.draggable {
+  position: fixed;
+  top: 0;
+}
 .draggable .item {
   background-color: transparent;
   border: none;
