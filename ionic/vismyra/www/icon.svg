@@ -1,0 +1,45 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet"
+        viewBox="618 310 133 171">
+        <g data-item-type="text" data-item="Business" id="logo__item--business" class="logo__item">
+            <g class="logo__item__inner" transform="translate(621.46875 472.90876980525906) scale(1 1) rotate(0 0 0)">
+                <text data-part-id="logo__item--business" dy="0" dominant-baseline="auto" alignment-baseline="auto" font-family="Montserrat"
+                    font-size="32px" fill="#231F20" letter-spacing="0" font-weight="bold" font-style="normal" data-font-family="Montserrat"
+                    data-font-weight="bold" data-font-style="normal" data-ttf-url="/builder_assets/fontsttf/font-montserrat-bold-normal.ttf">vismyra</text>
+            </g>
+        </g>
+        <g data-item-type="image" data-item="Image" data-logo-item="" id="logo__item--logo_0" class="logo__item">
+            <g class="logo__item__inner" transform="translate(617.493515922717 301.5) scale(1.4008546041023384 1.4008546041023384) rotate(0 0 0)">
+
+                <g>
+                    <g>
+                        <g>
+                            <path fill="#231F20" d="M21.029,94.52c-0.112,0-0.22-0.011-0.322-0.044c-0.449-0.118-0.659-0.47-0.483-0.782l27.155-47.09     c0.176-0.313,0.684-0.459,1.128-0.337c0.45,0.122,0.665,0.474,0.484,0.782L21.835,94.143     C21.704,94.377,21.376,94.52,21.029,94.52z"
+                                data-part-id="logo__item--logo_0__0"></path>
+                        </g>
+                        <g>
+                            <path fill="#231F20" d="M75.349,94.52c-0.347,0-0.674-0.143-0.811-0.377L49.054,49.954v31.58c0,0.338-0.391,0.602-0.869,0.602     c-0.479,0-0.865-0.264-0.865-0.602V46.828c0-0.293,0.293-0.538,0.708-0.591c0.406-0.059,0.816,0.093,0.962,0.367l27.164,47.09     c0.177,0.313-0.038,0.664-0.483,0.782C75.563,94.509,75.451,94.52,75.349,94.52z"
+                                data-part-id="logo__item--logo_0__1"></path>
+                        </g>
+                    </g>
+                    <path fill="#00AEA1" d="M64.099,29.648c5.677-11.433,0.128-20.79-12.344-20.79h-7.039c-12.471,0-18.021,9.357-12.344,20.79   l5.54,11.174c5.676,11.438,14.967,11.438,20.643,0L64.099,29.648z"
+                        data-part-id="logo__item--logo_0__2"></path>
+                        <path fill="#FFFFFF" d="M56.625,26.136c0,4.779-3.761,8.661-8.402,8.661c-4.641,0-8.407-3.881-8.407-8.661   c0-4.78,3.766-8.661,8.407-8.661C52.864,17.475,56.625,21.356,56.625,26.136z"
+                            data-part-id="logo__item--logo_0__3"></path>
+                            <g>
+                                <path fill="#FFFFFF" d="M48.223,38.565c-6.653,0-12.065-5.576-12.065-12.429c0-6.854,5.413-12.435,12.065-12.435v1.163    c-6.033,0-10.941,5.059-10.941,11.272c0,6.216,4.909,11.271,10.941,11.271V38.565z"
+                                    data-part-id="logo__item--logo_0__4"></path>
+                            </g>
+                            <ellipse fill="#231F20" cx="54.703" cy="22.294" rx="4.223" ry="4.218" data-part-id="logo__item--logo_0__5"></ellipse>
+                </g>
+
+            </g>
+        </g>
+        <g data-item-type="text" id="logo__item--tagline_1" data-item="Tagline" class="logo__item">
+            <g class="logo__item__inner" transform="translate(685 401.5) scale(1 1) rotate(0 0 0)">
+                <text dy="0" dominant-baseline="auto" alignment-baseline="auto" font-family="Open Sans--normal--normal" font-size="18px"
+                    fill="#000000" letter-spacing="1" data-font-family="Open Sans" data-font-weight="normal" data-font-style="normal"
+                    font-weight="normal" font-style="normal" data-ttf-url="/builder_assets/fontsttf/font-open-sans-normal-normal.ttf"
+                    data-part-id="logo__item--tagline_1__0"></text>
+            </g>
+        </g>
+        </svg>
