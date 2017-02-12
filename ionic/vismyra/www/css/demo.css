@@ -1,0 +1,192 @@
+@import url('css-media-all/css-media-all.min.css');
+@font-face {
+  font-family: monaco;
+  src: url('../static/fonts/montserrat/Montserrat-Hairline.otf') format('opentype');
+}
+@font-face {
+  font-family: monaco;
+  src: url('../static/fonts/montserrat/Montserrat-Regular.otf') format('opentype');
+  font-weight: bold;
+}
+div,
+h1,
+p,
+span {
+  font-family: monaco;
+  font-weight: bold;
+}
+.flex {
+  display: flex;
+}
+.flex.row {
+  flex-direction: row;
+}
+.flex.col {
+  flex-direction: column;
+}
+.flex.ac {
+  align-items: center;
+}
+.flex.ab {
+  align-items: baseline;
+}
+.flex.fls {
+  align-items: flex-start;
+}
+.flex.fe {
+  align-items: flex-end;
+}
+.flex.jc {
+  justify-content: center;
+}
+.flex.sb {
+  justify-content: space-between;
+}
+.flex.sa {
+  justify-content: space-around;
+}
+.flex.je {
+  justify-content: flex-end;
+}
+.flex.sc {
+  align-self: center;
+}
+.flex.asb {
+  align-self: baseline;
+}
+.flex.asf {
+  align-self: flex-start;
+}
+.flex.ase {
+  align-self: flex-end;
+}
+.flex.rw {
+  flex-flow: row wrap;
+}
+.flex .fg1 {
+  flex-grow: 1;
+}
+.flex .ns {
+  flex-shrink: 0;
+}
+.red-bg {
+  background-color: #be003b !important;
+}
+.grey-bg {
+  background-color: #637d8e !important;
+}
+.orange-bg {
+  background-color: #ef473a !important;
+}
+.blue-bg {
+  background-color: #1da1ff !important;
+}
+.white-bg {
+  background-color: #fff !important;
+}
+.white {
+  color: white;
+}
+.red {
+  color: 33be003b !important;
+}
+.grey {
+  color: #637d8e !important;
+}
+.orange {
+  color: #ef473a !important;
+}
+.blue {
+  color: #1da1ff !important;
+}
+html {
+  width: 100%;
+}
+body {
+  font-family: monaco;
+  font-size: 4rem;
+  overflow-x: scroll;
+}
+.p-5 {
+  padding-top: 5rem;
+}
+canvas {
+  width: 90rem;
+  height: 60vh;
+}
+.button-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+.button-group .capture {
+  color: lightseagreen;
+  font-weight: 900;
+  box-shadow: 0 0 3px seagreen;
+}
+.button-group .notice {
+  font-size: 4rem;
+  color: orangered;
+}
+.resize-drag {
+  color: transparent;
+  font-size: 20px;
+  font-family: sans-serif;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 30px 20px;
+  width: 7cm;
+  height: 7cm;
+  /* This makes things *much* easier */
+  box-sizing: border-box;
+  border: solid 4px red;
+}
+.resize-container {
+  width: 7cm;
+  height: 7cm;
+}
+#image {
+  transform: rotate(90deg);
+}
+#img {
+  margin-top: 10rem;
+}
+.side-menu {
+  width: 80px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+.side-menu > li {
+  color: red;
+  border: solid 1px cadetblue;
+  width: 80px;
+  height: 80px;
+}
+.side-menu > li.title {
+  height: 20px;
+  border: none;
+  color: #048444;
+}
+.side-menu > li > img {
+  width: 100%;
+  height: 100%;
+}
+.side-menu > li:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.title {
+  color: white !important;
+  font-size: 4rem;
+  font-weight: 600;
+}
+.app-header .buttons i {
+  font-size: 6rem;
+}
+.app-header h1.title {
+  font-weight: bold;
+}

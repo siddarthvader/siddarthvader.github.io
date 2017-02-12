@@ -1,0 +1,9 @@
+<div class="list card" ng-repeat="pro in products|filter:search:$root.category" ng-if="!$root.category||pro.category==$root.category">
+    <div class="list">
+        <a class="item item-thumbnail-left" ng-click="openPlayFor(pro._id)">
+            <img ng-src="img/{{pro._id}}.png">
+            <h2>{{pro.name}}</h2>
+            <p>{{pro.shortDesc}}</p>
+        </a>
+    </div>
+</div>
