@@ -2,10 +2,16 @@
 </div>
 <div id="img"></div>
 
-<canvas id="canvas" width="640" height="480"></canvas>
+<ion-scroll zooming="true" direction="xy" delegate-handle="zoom-pane" class="zoom-pane" min-zoom="1" scrollbar-x="false"
+    scrollbar-y="false">
+    <canvas id="canvas"></canvas>
+    <div id="drag-1" class="draggable">
+        <img src="img/{{$root.product._id}}.png" class="proImage" alt="" style="display:none"></li>
+    </div>
+    </ion-scroll>
 
-<!--<ul class="side-menu" style="display: none;">-->
-<!--<li>
+    <!--<ul class="side-menu" style="display: none;">-->
+    <!--<li>
         <img src="img/paint1.jpg" alt="" onclick="changeBackground(0)"></li>
     <li>
         <img src="img/paint2.jpg" alt="" onclick="changeBackground(1)"></li>
@@ -26,18 +32,13 @@
     <li>
         <img src="img/paint10.jpg" alt="" onclick="changeBackground(9)"></li>-->
 
-</ul>
+    </ul>
 
-<div class="button-group">
-    <span class="notice" align="center">Please stand 5 feet away from the wall and try to keep camera in the center of it</span>
+    <div class="button-group">
+        <span class="notice" align="center">Please stand 5 feet away from the wall and try to keep camera in the center of it</span>
 
-    <input hidden type="file" accept="image/*" id="capture" capture="camera">
+        <input hidden type="file" accept="image/*" id="capture" capture="camera">
 
-</div>
+    </div>
 
-       <label class="button button-full button-positive orange-bg font-bold" for="capture" data-tap-disabled="true" ng-show="!testing.showDrag">Open your camera</label>
-
-
-<div id="drag-1" class="draggable" ng-if="testing.showDrag">
-    <img src="img/{{$root.product._id}}.png" class="full-image" alt=""></li>
-</div>
+    <label class="button button-full button-positive orange-bg font-bold cameraLabel" for="capture" data-tap-disabled="true">Open your camera</label>
