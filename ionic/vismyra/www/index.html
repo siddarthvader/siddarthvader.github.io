@@ -21,23 +21,26 @@
     <link rel="stylesheet" href="css/demo.css">
     <link rel="stylesheet" href="css/build/darkroom.css">
     <link rel="stylesheet" href="lib/ionicons/css/ionicons.min.css">
-
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
     <script src="lib/jquery/dist/jquery.js"></script>
     <script src="lib/fabric/dist/fabric.min.js"></script>
-    <!--<script src="lib/darkroom/build/darkroom.js"></script>-->
+    <script src="lib/darkroom/build/darkroom.js"></script>
     <script src="lib/interactjs/dist/interact.min.js"></script>
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+
     <!--<script src="js/demo.js"></script>-->
 
     <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
     <script src="lib/angular-read-more/dist/readmore.min.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
     <script src="cordova.js"></script>
 
 </head>
@@ -53,7 +56,7 @@
             </ion-header-bar>
 
             <ion-content class="has-header" scrollbar-y="false" padding="true">
-                <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
+                <ion-refresher pulling-text="Pull to refresh..." on-refresh="$root.doRefresh()">
                 </ion-refresher>
                 <div ui-view="content">
             </ion-content>

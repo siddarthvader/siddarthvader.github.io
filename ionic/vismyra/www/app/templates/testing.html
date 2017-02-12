@@ -4,8 +4,8 @@
 
 <canvas id="canvas" width="640" height="480"></canvas>
 
-<ul class="side-menu" style="display: none;">
-    <li>
+<!--<ul class="side-menu" style="display: none;">-->
+<!--<li>
         <img src="img/paint1.jpg" alt="" onclick="changeBackground(0)"></li>
     <li>
         <img src="img/paint2.jpg" alt="" onclick="changeBackground(1)"></li>
@@ -24,27 +24,20 @@
     <li>
         <img src="img/paint9.jpg" alt="" onclick="changeBackground(8)"></li>
     <li>
-        <img src="img/paint10.jpg" alt="" onclick="changeBackground(9)"></li>
+        <img src="img/paint10.jpg" alt="" onclick="changeBackground(9)"></li>-->
 
 </ul>
 
 <div class="button-group">
-    <label class="capture" for="capture">Capture Image</label>
-    <span class="notice">Please stand 5 feet away from the wall and try to keep camera in the center of it</span>
-    <p>
-        <input type="file" hidden accept="image/*" id="capture" capture="camera">
+    <span class="notice" align="center">Please stand 5 feet away from the wall and try to keep camera in the center of it</span>
+
+    <input hidden type="file" accept="image/*" id="capture" capture="camera">
 
 </div>
 
-<div id="drag-1" class="draggable">
-    <img src="img/paint1.jpg" class="item" alt="" style="display: none"></li>
-    <img src="img/paint2.jpg" class="item" alt="" style="display: none"></li>
-    <img src="img/paint3.jpg" class="item" alt="" style="display: none"></li>
-    <img src="img/paint4.jpg" class="item" alt="" style="display: none"></li>
-    <img src="img/paint5.jpg" class="item" alt="" style="display: none"></li>
-    <img src="img/paint6.jpg" class="item" alt="" style="display: none"></li>
-    <img src="img/paint7.jpg" class="item" alt="" style="display: none"></li>
-    <img src="img/paint8.jpg" class="item" alt="" style="display: none"></li>
-    <img src="img/paint9.jpg" class="item" alt="" style="display: none"></li>
-    <img src="img/paint10.jpg" class="item" alt="" style="display: none"></li>
+       <label class="button button-full button-positive orange-bg font-bold" for="capture" data-tap-disabled="true" ng-show="!testing.showDrag">Open your camera</label>
+
+
+<div id="drag-1" class="draggable" ng-if="testing.showDrag">
+    <img src="img/{{$root.product._id}}.png" class="full-image" alt=""></li>
 </div>

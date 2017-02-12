@@ -1,10 +1,32 @@
-vapp.controller('testingCtrl', ['$scope', '$rootScope', '$state', '$ionicScrollDelegate', function ($scope, $rootScope, $state, $ionicScrollDelegate) {
+vapp.controller('testingCtrl', ['$scope', '$rootScope', '$state', '$ionicScrollDelegate', '$cordovaCamera', function ($scope, $rootScope, $state, $ionicScrollDelegate, $cordovaCamera) {
     var testing = this;
+    testing.showDrag = false;
     $ionicScrollDelegate.scrollTop(true);
 
-      $scope.initSlider = function () {
+    // document.addEventListener("deviceready", function () {
+
+    //     var options = {
+    //         destinationType: Camera.DestinationType.FILE_URI,
+    //         sourceType: Camera.PictureSourceType.CAMERA,
+    //     };
+
+    //     $cordovaCamera.getPicture(options).then(function (imageURI) {
+    //         var image = document.getElementById('myImage');
+    //         image.src = imageURI;
+    //     }, function (err) {
+    //         // error
+    //     });
+
+
+    //     $cordovaCamera.cleanup(); // only for FILE_URI
+
+    // }, false);
+
+    $scope.initSlider = function () {
         $(function () {
-    
+
+
+
             var canvas = document.getElementById('canvas');
             var ctx = canvas.getContext('2d');
             var input = document.getElementById('capture');
@@ -85,6 +107,7 @@ vapp.controller('testingCtrl', ['$scope', '$rootScope', '$state', '$ionicScrollD
 
 
             $(document).on('click', '.darkroom-button', function (event) {
+
                 var kid = event.target;
                 var flag = false;
                 do {
@@ -106,11 +129,13 @@ vapp.controller('testingCtrl', ['$scope', '$rootScope', '$state', '$ionicScrollD
                         ctx.drawImage(image, 0, 0);
                         document.getElementById('img').remove();
                         document.getElementsByClassName('button-group')[0].remove();
-                        document.getElementsByClassName('speciman')[0].style.display = 'inline';
-                        document.getElementsByClassName('side-menu')[0].style.display = 'flex';
+                        // document.getElementsByClassName('speciman')[0].style.display = 'inline';
+                        // document.getElementsByClassName('side-menu')[0].style.display = 'flex';
+
 
                     }, 1000);
                 }
+                testing.showDrag = true;
 
             });
 
@@ -181,7 +206,7 @@ vapp.controller('testingCtrl', ['$scope', '$rootScope', '$state', '$ionicScrollD
 
         });
 
-    
+
     };
 
     $scope.initSlider();
