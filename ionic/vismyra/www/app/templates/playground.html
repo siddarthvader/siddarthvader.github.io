@@ -1,9 +1,10 @@
 <div class="playCanvas">
 
-    <input type="file" accept="image/*" capture>
-    <canvas></canvas>
-   
-    <button class="back-button">
+    <video hidden id="video" width="640" height="480" autoplay></video>
+    <button id="snap">Snap Photo</button>
+    <canvas id="canvas" width="640" height="480"></canvas>
+
+    <button class="back-button" ng-click=goToProduct()>
        Back 
     </button>
 </div>

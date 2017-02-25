@@ -2,38 +2,32 @@ vapp.controller('playgroundCtrl', ['$scope', '$rootScope', '$state', '$ionicScro
     console.info('we full here');
 
     $scope.$on('$viewContentLoaded', function () {
-        var input = document.querySelector('input[type=file]'); // see Example 4
+        // Elements for taking the snapshot
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        var video = document.getElementById('video');
 
-        input.onchange = function () {
-            var file = input.files[0];
+        // Grab elements, create settings, etc.
+        var video = document.getElementById('video');
 
-            // upload(file);
-            drawOnCanvas(file);   // see Example 6
-            // displayAsImage(file); // see Example 7
-        };
-
-        function drawOnCanvas(file) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                var dataURL = e.target.result,
-                    c = document.querySelector('canvas'), // see Example 4
-                    ctx = c.getContext('2d'),
-                    img = new Image();
-
-                img.onload = function () {
-                    c.width = img.width;
-                    c.height = img.height;
-                    ctx.drawImage(img, 0, 0);
-                };
-
-                img.src = dataURL;
-            };
-
-            reader.readAsDataURL(file);
+        // Get access to the camera!
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            // Not adding `{ audio: true }` since we only want video now
+            navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
+                video.src = window.URL.createObjectURL(stream);
+                video.play();
+            });
         }
 
+        // Trigger photo take
+        document.getElementById("snap").addEventListener("click", function () {
+            context.drawImage(video, 0, 0);
+        });
 
-    })
+    });
+
+    $scope.goToProduct = function () {
+        $state.go('product');
+    };
 
 }]);
