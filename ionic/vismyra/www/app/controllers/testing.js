@@ -29,9 +29,9 @@ vapp.controller('testingCtrl', ['$scope', '$rootScope', '$state', '$ionicScrollD
 
             var canvas = document.getElementById('canvas');
             var ctx = canvas.getContext('2d');
-            var input = document.getElementById('capture');
+            // var input = document.getElementById('capture');
 
-            input.addEventListener('change', capture, false);
+            // input.addEventListener('change', capture, false);
 
             function capture() {
                 var x = document.getElementById("capture");
@@ -216,6 +216,10 @@ vapp.controller('testingCtrl', ['$scope', '$rootScope', '$state', '$ionicScrollD
 
     $scope.initSlider();
 
+
+    $scope.goToPlayground=function(){
+        $state.go('playground');
+    }
 
 
 }]);

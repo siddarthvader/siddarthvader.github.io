@@ -1,4 +1,4 @@
-vapp.controller('productCtrl', ['$scope', '$rootScope', '$state', '$ionicScrollDelegate', function ($scope, $rootScope, $state, $ionicScrollDelegate) {
+vapp.controller('productCtrl', ['$scope', '$rootScope', '$state', '$ionicScrollDelegate','$timeout', function ($scope, $rootScope, $state, $ionicScrollDelegate,$timeout) {
     var product = this;
     $ionicScrollDelegate.scrollTop(true);
 
@@ -79,8 +79,17 @@ vapp.controller('productCtrl', ['$scope', '$rootScope', '$state', '$ionicScrollD
     ]
 
     $scope.goToTesting = function () {
-        $state.go('testing');
+        $scope.showPlayground = true;
+        $rootScope.hideHeader = true;
+
+
+
     }
 
+
+
+    $scope.$on('$viewContentLoaded', function () {
+
+    })
 
 }]);
