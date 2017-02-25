@@ -1,52 +1,57 @@
-<div class="list card">
+<div ng-if="!showPlayground">
+    <div class="list card">
+        <div class="flex row blue pro-title padding">{{proData.name}}</div>
 
+        <div class="item item-body">
+            <img class="full-image" ng-src="img/{{proData.sku}}.png">
+            <hm-read-more hm-text=" {{proData.proDesc}}" hm-limit="100" hm-more-text="read more" hm-less-text="read less" hm-dots-class="dots"
+                hm-link-class="links">
+                </hm-read-more>
 
-    <div class="flex row blue pro-title padding">{{proData.name}}</div>
-
-
-    <div class="item item-body">
-        <img class="full-image" ng-src="img/{{proData.sku}}.png">
-
-        <hm-read-more hm-text=" {{proData.proDesc}}" hm-limit="100" hm-more-text="read more" hm-less-text="read less" hm-dots-class="dots"
-            hm-link-class="links">
-            </hm-read-more>
-
-            <div class="flex col">
-                <div class="subdued flex row">
-                    <span class="grey line-through mr2 font-light">MRP {{proData.mrp}} </span>
-                    <span class="orange"> ({{((proData.mrp-proData.wasp)/proData.wasp)*100|number:2}}% off)</span>
+                <div class="flex col">
+                    <div class="subdued flex row">
+                        <span class="grey line-through mr2 font-light">MRP {{proData.mrp}} </span>
+                        <span class="orange"> ({{((proData.mrp-proData.wasp)/proData.wasp)*100|number:2}}% off)</span>
+                    </div>
+                    <div class="subdued grey flex row">Selling Price {{proData.wasp}}</div>
                 </div>
-                <div class="subdued grey flex row">Selling Price {{proData.wasp}}</div>
-            </div>
+        </div>
+
     </div>
 
-</div>
-
-<button class="button button-full button-positive orange-bg" ng-click="goToTesting()">
+    <button class="button button-full button-positive orange-bg" ng-click="goToTesting()">
         <i class="icon ion-ios-camera-outline"></i> VR testing
  </button>
 
-<div class="flex row sb">
-    <a class="button button-outline icon-right blue-border ion-ios-cart-outline button-balanced blue">Add to cart</a>
-    <a class="button button-outline icon-right  button-balanced ion-card blye red red-border">Buy now</a>
+    <div class="flex row sb">
+        <a class="button button-outline icon-right blue-border ion-ios-cart-outline button-balanced blue">Add to cart</a>
+        <a class="button button-outline icon-right  button-balanced ion-card blye red red-border">Buy now</a>
 
-</div>
-
-<div class="list" ng-repeat="spec in specType">
-    <div class="item flex sb">
-        <span>
-        {{spec.displayTxt}}
-    </span>
-        <span>
-        {{proData[spec.dataKey]}}
-    </span>
     </div>
 
+    <div class="list" ng-repeat="spec in specType">
+        <div class="item flex sb">
+            <span>
+        {{spec.displayTxt}}
+    </span>
+            <span>
+        {{proData[spec.dataKey]}}
+    </span>
+        </div>
 
+
+
+    </div>
 
 </div>
 
-<!--<div class="button-bar grey-bg">
-    <i class="icon ion-ios-cart-outline"> Add to Cart</i> 
-    <i class="icon ion-card">Buy Now</i> 
-</div>-->
+
+<div class="playCanvas" ng-if="showPlayground">
+
+    <input type="file" accept="image/*" capture>
+    <canvas></canvas>
+   
+    <button class="back-button">
+       Back 
+    </button>
+</div>

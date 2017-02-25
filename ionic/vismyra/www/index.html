@@ -29,7 +29,6 @@
     <script src="lib/fabric/dist/fabric.min.js"></script>
     <script src="lib/darkroom/build/darkroom.js"></script>
     <script src="lib/interactjs/dist/interact.min.js"></script>
-
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
 
@@ -48,7 +47,7 @@
 <body ng-app="vismyra">
     <ion-side-menus>
         <ion-side-menu-content>
-            <ion-header-bar align-title="center" class="app-header bar orange-bg">
+            <ion-header-bar align-title="center" class="app-header bar orange-bg" ng-if="!$root.hideHeader">
                 <div class="buttons" menuToggle=true menu-toggle="left">
                     <i class="white icon ion-ios-list-outline"></i>
                 </div>
@@ -59,15 +58,19 @@
                 <ion-refresher ng-if="$root.state!='testing'" pulling-text="Pull to refresh..." on-refresh="$root.doRefresh()">
                 </ion-refresher>
                 <div ui-view="content">
+                </div>
             </ion-content>
 
-            </div>
+
 
         </ion-side-menu-content>
         <ion-side-menu side="left" ui-view="side-menu">
 
         </ion-side-menu>
     </ion-side-menus>
+
+
+
 
     <!-- your app's js -->
     <script src="app/app.js"></script>
@@ -80,6 +83,7 @@
     <script src="app/controllers/sideMenu.js"></script>
     <script src="app/controllers/product.js"></script>
     <script src="app/controllers/testing.js"></script>
+    <script src="app/controllers/playground.js"></script>
     <!--controllers-->
 
 

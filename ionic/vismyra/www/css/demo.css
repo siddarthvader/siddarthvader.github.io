@@ -246,3 +246,30 @@ canvas {
   background-color: #637d8e !important;
   color: white !important;
 }
+.playCanvas {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.playCanvas canvas {
+  width: 100%;
+  height: 100%;
+}
+.playCanvas .back-button {
+  position: fixed;
+  top: 80vh;
+  left: 3vw;
+  opacity: 0.5;
+  font-size: 3.5rem;
+  background-color: black;
+  border: solid 1px #637d8e;
+  display: block;
+  font-weight: 500;
+  border-radius: 8%;
+  padding: 1rem;
+  color: #f7f7f7;
+  box-shadow: 0px 0px 2px 1px #637d8e;
+}

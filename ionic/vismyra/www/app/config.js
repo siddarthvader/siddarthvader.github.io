@@ -63,6 +63,20 @@ vapp.config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvide
                 controllerAs: 'sideMenu'
             }
         }
+    }).state('playground', {
+        //    templateUrl:'app/templates/header.html',
+        views: {
+            'content': {
+                templateUrl: 'app/templates/playground.html',
+                controller: 'playgroundCtrl',
+                controllerAs: 'playground'
+            }
+            // 'side-menu': {
+            //     templateUrl: 'app/templates/side-menu.html',
+            //     controller: 'sideMenuCtrl',
+            //     controllerAs: 'sideMenu'
+            // }
+        }
     });
 
 }]);
