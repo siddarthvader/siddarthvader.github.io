@@ -1,50 +1,24 @@
 vapp.controller('playgroundCtrl', ['$scope', '$rootScope', '$state', '$ionicScrollDelegate', '$cordovaCamera', function ($scope, $rootScope, $state, $ionicScrollDelegate, $cordovaCamera) {
-    console.info('we full here');
 
-    $scope.$on('$viewContentLoaded', function () {
-        // Elements for taking the snapshot
-        /*
- *  Copyright (c) 2015 The WebRTC project authors. All Rights Reserved.
- *
- *  Use of this source code is governed by a BSD-style license
- *  that can be found in the LICENSE file in the root of the source
- *  tree.
- */
-
-        'use strict';
-
-        // Put variables in global scope to make them available to the browser console.
-        var video = document.querySelector('video');
-        var canvas = window.canvas = document.querySelector('canvas');
-        canvas.width = 480;
-        canvas.height = 360;
-
-        var button = document.querySelector('button');
-        button.onclick = function () {
-            canvas.width = video.videoWidth;
-            canvas.height = video.videoHeight;
-            canvas.getContext('2d').
-                drawImage(video, 0, 0, canvas.width, canvas.height);
+    $scope.takeImage = function () {
+        var options = {
+            quality: 80,
+            destinationType: Camera.DestinationType.DATA_URL,
+            sourceType: Camera.PictureSourceType.CAMERA,
+            allowEdit: true,
+            encodingType: Camera.EncodingType.JPEG,
+            targetWidth: 250,
+            targetHeight: 250,
+            popoverOptions: CameraPopoverOptions,
+            saveToPhotoAlbum: false
         };
 
-        var constraints = {
-            audio: false,
-            video: true
-        };
-
-        function handleSuccess(stream) {
-            window.stream = stream; // make stream available to browser console
-            video.srcObject = stream;
-        }
-
-        function handleError(error) {
-            console.log('navigator.getUserMedia error: ', error);
-        }
-
-        navigator.mediaDevices.getUserMedia(constraints).
-            then(handleSuccess).catch(handleError);
-
-    });
+        $cordovaCamera.getPicture(options).then(function (imageData) {
+            $scope.srcImage = "data:image/jpeg;base64," + imageData;
+        }, function (err) {
+            // error
+        });
+    }
 
     $scope.goToProduct = function () {
         $state.go('product');
