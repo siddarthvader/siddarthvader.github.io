@@ -81,15 +81,11 @@ vapp.controller('productCtrl', ['$scope', '$rootScope', '$state', '$ionicScrollD
     $scope.goToTesting = function () {
         $scope.showPlayground = true;
         $rootScope.hideHeader = true;
-
-
+        $state.go('playground')
 
     }
 
 
 
-    $scope.$on('$viewContentLoaded', function () {
-
-    })
-
+   
 }]);
