@@ -3,26 +3,46 @@ vapp.controller('playgroundCtrl', ['$scope', '$rootScope', '$state', '$ionicScro
 
     $scope.$on('$viewContentLoaded', function () {
         // Elements for taking the snapshot
-        var canvas = document.getElementById('canvas');
-        var context = canvas.getContext('2d');
-        var video = document.getElementById('video');
+        /*
+ *  Copyright (c) 2015 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+ */
 
-        // Grab elements, create settings, etc.
-        var video = document.getElementById('video');
+        'use strict';
 
-        // Get access to the camera!
-        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-            // Not adding `{ audio: true }` since we only want video now
-            navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
-                video.src = window.URL.createObjectURL(stream);
-                video.play();
-            });
+        // Put variables in global scope to make them available to the browser console.
+        var video = document.querySelector('video');
+        var canvas = window.canvas = document.querySelector('canvas');
+        canvas.width = 480;
+        canvas.height = 360;
+
+        var button = document.querySelector('button');
+        button.onclick = function () {
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            canvas.getContext('2d').
+                drawImage(video, 0, 0, canvas.width, canvas.height);
+        };
+
+        var constraints = {
+            audio: false,
+            video: true
+        };
+
+        function handleSuccess(stream) {
+            window.stream = stream; // make stream available to browser console
+            video.srcObject = stream;
         }
 
-        // Trigger photo take
-        document.getElementById("snap").addEventListener("click", function () {
-            context.drawImage(video, 0, 0);
-        });
+        function handleError(error) {
+            console.log('navigator.getUserMedia error: ', error);
+        }
+
+        navigator.mediaDevices.getUserMedia(constraints).
+            then(handleSuccess).catch(handleError);
 
     });
 
