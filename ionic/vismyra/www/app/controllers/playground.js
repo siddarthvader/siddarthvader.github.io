@@ -2,47 +2,74 @@ vapp.controller('playgroundCtrl', ['$scope', '$rootScope', '$state', '$ionicScro
     console.info('we full here');
 
     $scope.$on('$viewContentLoaded', function () {
-        // Elements for taking the snapshot
-        /*
- *  Copyright (c) 2015 The WebRTC project authors. All Rights Reserved.
- *
- *  Use of this source code is governed by a BSD-style license
- *  that can be found in the LICENSE file in the root of the source
- *  tree.
- */
+        var videoElement = document.querySelector('video');
+        var audioSelect = document.querySelector('select#audioSource');
+        var videoSelect = document.querySelector('select#videoSource');
 
-        'use strict';
+        navigator.getUserMedia = navigator.getUserMedia ||
+            navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
-        // Put variables in global scope to make them available to the browser console.
-        var video = document.querySelector('video');
-        var canvas = window.canvas = document.querySelector('canvas');
-        canvas.width = 480;
-        canvas.height = 360;
-
-        var button = document.querySelector('button');
-        button.onclick = function () {
-            canvas.width = video.videoWidth;
-            canvas.height = video.videoHeight;
-            canvas.getContext('2d').
-                drawImage(video, 0, 0, canvas.width, canvas.height);
-        };
-
-        var constraints = {
-            audio: false,
-            video: true
-        };
-
-        function handleSuccess(stream) {
-            window.stream = stream; // make stream available to browser console
-            video.srcObject = stream;
+        function gotSources(sourceInfos) {
+            for (var i = 0; i !== sourceInfos.length; ++i) {
+                var sourceInfo = sourceInfos[i];
+                var option = document.createElement('option');
+                option.value = sourceInfo.id;
+                if (sourceInfo.kind === 'audio') {
+                    option.text = sourceInfo.label || 'microphone ' +
+                        (audioSelect.length + 1);
+                    audioSelect.appendChild(option);
+                } else if (sourceInfo.kind === 'video') {
+                    option.text = sourceInfo.label || 'camera ' + (videoSelect.length + 1);
+                    videoSelect.appendChild(option);
+                } else {
+                    console.log('Some other kind of source: ', sourceInfo);
+                }
+            }
         }
 
-        function handleError(error) {
+        if (typeof MediaStreamTrack === 'undefined' ||
+            typeof MediaStreamTrack.getSources === 'undefined') {
+            alert('This browser does not support MediaStreamTrack.\n\nTry Chrome.');
+        } else {
+            MediaStreamTrack.getSources(gotSources);
+        }
+
+        function successCallback(stream) {
+            window.stream = stream; // make stream available to console
+            videoElement.src = window.URL.createObjectURL(stream);
+            videoElement.play();
+        }
+
+        function errorCallback(error) {
             console.log('navigator.getUserMedia error: ', error);
         }
 
-        navigator.mediaDevices.getUserMedia(constraints).
-            then(handleSuccess).catch(handleError);
+        function start() {
+            if (window.stream) {
+                videoElement.src = null;
+                window.stream.stop();
+            }
+            var audioSource = audioSelect.value;
+            var videoSource = videoSelect.value;
+            var constraints = {
+                audio: {
+                    optional: [{
+                        sourceId: audioSource
+                    }]
+                },
+                video: {
+                    optional: [{
+                        sourceId: videoSource
+                    }]
+                }
+            };
+            navigator.getUserMedia(constraints, successCallback, errorCallback);
+        }
+
+        audioSelect.onchange = start;
+        videoSelect.onchange = start;
+
+        start();
 
     });
 
