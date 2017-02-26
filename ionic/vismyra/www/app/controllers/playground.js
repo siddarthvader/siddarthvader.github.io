@@ -1,24 +1,16 @@
 vapp.controller('playgroundCtrl', ['$scope', '$rootScope', '$state', '$ionicScrollDelegate', '$cordovaCamera', function ($scope, $rootScope, $state, $ionicScrollDelegate, $cordovaCamera) {
 
-    $scope.takeImage = function () {
-        var options = {
-            quality: 80,
-            destinationType: Camera.DestinationType.DATA_URL,
-            sourceType: Camera.PictureSourceType.CAMERA,
-            allowEdit: true,
-            encodingType: Camera.EncodingType.JPEG,
-            targetWidth: 250,
-            targetHeight: 250,
-            popoverOptions: CameraPopoverOptions,
-            saveToPhotoAlbum: false
-        };
+    var constraints = { audio: true, video: { width: 1280, height: 720 } };
 
-        $cordovaCamera.getPicture(options).then(function (imageData) {
-            $scope.srcImage = "data:image/jpeg;base64," + imageData;
-        }, function (err) {
-            // error
-        });
-    }
+    navigator.mediaDevices.getUserMedia(constraints)
+        .then(function (mediaStream) {
+            var video = document.querySelector('video');
+            video.srcObject = mediaStream;
+            video.onloadedmetadata = function (e) {
+                video.play();
+            };
+        })
+        .catch(function (err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
 
     $scope.goToProduct = function () {
         $state.go('product');
