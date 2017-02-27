@@ -36,7 +36,8 @@ vapp.controller('playgroundCtrl', ['$scope', '$rootScope', '$state', '$ionicScro
 
     navigator.mediaDevices.getUserMedia({ audio: false, video: true })
         .then(function (stream) {
-            var stream=stram;
+            var track = stream.getTracks()[0];  // if only one media track
+    
             var video = document.querySelector('video');
             // Older browsers may not have srcObject
             if ("srcObject" in video) {
@@ -49,7 +50,7 @@ vapp.controller('playgroundCtrl', ['$scope', '$rootScope', '$state', '$ionicScro
                 video.play();
             };
             $scope.goToProduct = function () {
-                stream.stop();
+                track.stop();
                 $state.go('product');
             };
         })
