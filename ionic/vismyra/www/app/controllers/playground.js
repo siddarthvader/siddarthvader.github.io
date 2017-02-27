@@ -42,12 +42,14 @@ vapp.controller('playgroundCtrl', ['$scope', '$rootScope', '$state', '$ionicScro
             video.onloadedmetadata = function (e) {
                 video.play();
             };
+            $scope.goToProduct = function () {
+                stream.stop();
+                $state.go('product');
+            };
         })
         .catch(function (err) {
             console.log(err.name + ": " + err.message);
         });
-    $scope.goToProduct = function () {
-        $state.go('product');
-    };
+
 
 }]);
