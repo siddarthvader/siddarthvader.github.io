@@ -1,8 +1,13 @@
 vapp.controller('playgroundCtrl', ['$scope', '$rootScope', '$state', '$ionicScrollDelegate', '$cordovaCamera', function ($scope, $rootScope, $state, $ionicScrollDelegate, $cordovaCamera) {
 
-    var constraints = { audio: true, video: { width: 1280, height: 720 } };
+    var constraints = { audio: false, video: { width: 1280, height: 720 } };
 
     // Older browsers might not implement mediaDevices at all, so we set an empty object first
+
+    navigator.getUserMedia ||
+        navigator.webkitGetUserMedia ||
+        navigator.mozGetUserMedia;
+
     if (navigator.mediaDevices === undefined) {
         navigator.mediaDevices = {};
     }
@@ -29,8 +34,9 @@ vapp.controller('playgroundCtrl', ['$scope', '$rootScope', '$state', '$ionicScro
         }
     }
 
-    navigator.mediaDevices.getUserMedia({ audio: true, video: true })
+    navigator.mediaDevices.getUserMedia({ audio: false, video: true })
         .then(function (stream) {
+            var stream=stram;
             var video = document.querySelector('video');
             // Older browsers may not have srcObject
             if ("srcObject" in video) {
