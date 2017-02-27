@@ -2,6 +2,14 @@ vapp.controller('playgroundCtrl', ['$scope', '$rootScope', '$state', '$ionicScro
 
     var constraints = { audio: false, video: { width: 1280, height: 720 } };
 
+
+    var front = false;
+
+    $scope.flipCamera = function () {
+        front = !front;
+        constraints = { video: { facingMode: (front ? "environment" : "user") } };
+    }
+
     // Older browsers might not implement mediaDevices at all, so we set an empty object first
 
     navigator.getUserMedia ||
@@ -37,7 +45,7 @@ vapp.controller('playgroundCtrl', ['$scope', '$rootScope', '$state', '$ionicScro
     navigator.mediaDevices.getUserMedia({ audio: false, video: true })
         .then(function (stream) {
             var track = stream.getTracks()[0];  // if only one media track
-    
+
             var video = document.querySelector('video');
             // Older browsers may not have srcObject
             if ("srcObject" in video) {
