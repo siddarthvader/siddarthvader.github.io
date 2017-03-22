@@ -18,11 +18,6 @@ syd.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
                 templateUrl: 'app/desktop/views/port.html',
                 controller: 'portCtrl',
                 controllerAs: 'vport'
-            },
-            "vterminal": {
-                templateUrl: 'app/desktop/views/terminal.html',
-                controller: 'terminalCtrl',
-                controllerAs: 'vterminal'
             }
         }
     }).state('ground.work',{

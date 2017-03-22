@@ -429,292 +429,295 @@ body {
     }
 }
 
-.vmetaeditor {
-    .flex;
-    .col;
-    width: 90%;
-    height: 45rem;
-    background: @black;
-    box-shadow: .0rem 0rem 6px 1px #000000;
-    margin: 0 auto;
-    margin-top: 5rem;
-    color: @white-text;
-    .vheader {
-        .flex;
-        .row;
-        border-bottom: solid .1rem @white-border;
-        .vexplorer {
-            flex: 0 0 17%;
-            text-align: center;
-            padding: 0.25vw;
-        }
-        .vheadername {
-            flex: 1;
-            padding: 0.25vw;
-            text-align: center;
-        }
-    }
-    .veditor {
-        .flex;
-        .row;
-        height: 100%;
-        .vmenu {
-            flex: 0 0 17%;
-            .flex;
-            .col;
-            border-right: solid 1px @blue;
-            .vfile-name {
-                .font-small;
-                color: @white-text;
-                .p-5;
-                padding-left: 1.5rem;
-                cursor: pointer;
-                &:hover {
-                    background: @black-bg;
-                }
-            }
-            .vfolder-name {
-                .font-small;
-                color: @white-text;
-                position: relative;
-                .flex;
-                .row;
-                .fls;
-                width: 100%;
-                .vcover {
-                    .flex;
-                    .col;
-                    flex-grow: 1;
-                    .parent {
-                        cursor: pointer;
-                        .flex;
-                        .row;
-                        .ac;
-                        .pv-5;
-                        .ph-5;
-                        transition: all 200ms ease;
-                        &:before {
-                            width: 0;
-                            height: 0;
-                            border-top: .5rem solid transparent;
-                            border-bottom: .5rem solid transparent;
-                            border-left: .5rem solid @white-text;
-                            content: '';
-                            display: inline-block;
-                            .mr-5;
-                            transition: all 100ms ease;
-                        }
-                    }
-                    input[type=checkbox] {
-                        display: none;
-                    }
-                    input[type=checkbox]:checked {
-                        ~.parent {
-                            background: @blue-bg;
-                            &:before {
-                                transform: rotate(60deg);
-                            }
-                        }
-                        ~.kids {
-                            height: auto;
-                            opacity: 1;
-                            display: flex;
-                            .col;
-                        }
-                    }
-                    .kids {
-                        height: 0;
-                        opacity: 0;
-                        display: none;
-                        .ml1;
-                        .kids-name {
-                            .p-5;
-                            .pl1;
-                            cursor: pointer;
-                            &:hover {
-                                background: @black-bg;
-                            }
-                        }
-                    }
-                }
-            }
-            .vfile-search {
-                // padding-bottom: .5rem;
-                flex: 0 0 3.5%;
-                >input {
-                    border: none;
-                    background: #3f3f46;
-                    color: @white-text;
-                    // outline: @blue solid .2rem;
-                    width: 100%;
-                    height: 100%;
-                    &:focus {
-                        outline: @blue solid .1rem;
-                        outline-offset: 0;
-                    }
-                }
-            }
-        }
-        .vfile {
-            .flex;
-            .col;
-            flex-grow: 1;
-            position: relative;
-            .vtabs {
-                flex: 0 0 3.5%;
-                color: #f8f8f8;
-                border-bottom: solid 1px @white-border;
-                .tab-space {
-                    height: auto;
-                }
-            }
-            .vport {
-                flex: 1;
-                .flex;
-                .row;
-                color: #f8f8f8;
-                .p1;
-                .vruler {
-                    flex: 0 0 5%;
-                    border-left: solid .2rem @blue;
-                    height: 100%;
-                }
-                .vcontent {
-                    flex: 0 0 82%;
-                    .header-name {
-                        font-size: @font-medium;
-                        color: @white-text1;
-                    }
-                    .header-content {
-                        .p-5;
-                        line-height: @font-medium;
-                        >a {
-                            text-decoration: none;
-                            border-bottom: solid 1px @white-border;
-                        }
-                    }
-                    .port-unit {
-                        .ph-5;
-                        border-left: solid 2px @blue;
-                        color: @white-text1;
-                        .unit-header {
-                            font-weight: 800;
-                        }
-                        .unit-content {
-                            .pv-5;
-                            line-height: 1.65rem;
-                            >a {
-                                line-height: @font-medium;
-                                text-decoration: none;
-                                color: @white-text1;
-                                border-bottom: solid 1px @white-border;
-                            }
-                            .list-skills {
-                                .flex;
-                                .row;
-                                flex-wrap: wrap;
-                                width: 50%;
-                                a.skill {
-                                    line-height: 1.45rem;
-                                    text-decoration: none;
-                                    color: #f9f9f3;
-                                    border-bottom: solid 1px @white-border;
-                                    margin-right: .5rem;
-                                }
-                                span.skill {
-                                    text-decoration: none;
-                                    color: @white-text;
-                                    padding: 0 .2rem;
-                                    border-bottom: solid 1px @blue-bg;
-                                    margin-right: 0.25rem;
-                                    margin-bottom: 0.25rem;
-                                }
-                            }
-                            .text-unit {
-                                .flex;
-                                .col;
-                                label {
-                                    color: @white-text;
-                                    line-height: 1.65rem;
-                                }
-                                .text-input {
-                                    border: none;
-                                    background: #3f3f46;
-                                    color: @white-text;
-                                    width: 100%;
-                                    height: 1.7rem;
-                                    &:focus {
-                                        outline: @blue solid .1rem;
-                                        outline-offset: 0;
-                                    }
-                                }
-                                .area-input {
-                                    border: none;
-                                    background: #3f3f46;
-                                    color: @white-text;
-                                    width: 100%;
-                                    height: 3rem;
-                                    &:focus {
-                                        outline: @blue solid .1rem;
-                                        outline-offset: 0;
-                                    }
-                                }
-                                .button-input {
-                                    border: none;
-                                    background: #3f3f46;
-                                    color: @white-text1;
-                                    width: 100%;
-                                    cursor: pointer;
-                                }
-                            }
-                            .success-unit {
-                                .mt-5;
-                                text-align: center;
-                                color: @blue;
-                                font-weight: 500;
-                            }
-                        }
-                    }
-                }
-            }
-            .vterminal {
-                width: 100%;
-                .terminal-space {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    border-top: solid 1px @white-border;
-                    .terminal-head {
-                        .flex;
-                        .row;
-                        .sb;
-                        >i {
-                            padding: .35vw;
-                        }
-                    }
-                    .terminal-area {
-                        display: flex;
-                        height: 11rem;
-                        #terminal-canvas {
-                            width: 100%;
-                            height: 100%;
-                        }
-                    }
-                    &.hide {
-                        .terminal-head {
-                            .fa-chevron-down::before {
-                                display: block;
-                                transform: rotate(180deg);
-                            }
-                        }
-                        .terminal-area {
-                            display: none;
-                            height: 0;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+// abandoned editor styles
+// working fine though
+
+// .vmetaeditor {
+//     .flex;
+//     .col;
+//     width: 90%;
+//     height: 45rem;
+//     background: @black;
+//     box-shadow: .0rem 0rem 6px 1px #000000;
+//     margin: 0 auto;
+//     margin-top: 5rem;
+//     color: @white-text;
+//     .vheader {
+//         .flex;
+//         .row;
+//         border-bottom: solid .1rem @white-border;
+//         .vexplorer {
+//             flex: 0 0 17%;
+//             text-align: center;
+//             padding: 0.25vw;
+//         }
+//         .vheadername {
+//             flex: 1;
+//             padding: 0.25vw;
+//             text-align: center;
+//         }
+//     }
+//     .veditor {
+//         .flex;
+//         .row;
+//         height: 100%;
+//         .vmenu {
+//             flex: 0 0 17%;
+//             .flex;
+//             .col;
+//             border-right: solid 1px @blue;
+//             .vfile-name {
+//                 .font-small;
+//                 color: @white-text;
+//                 .p-5;
+//                 padding-left: 1.5rem;
+//                 cursor: pointer;
+//                 &:hover {
+//                     background: @black-bg;
+//                 }
+//             }
+//             .vfolder-name {
+//                 .font-small;
+//                 color: @white-text;
+//                 position: relative;
+//                 .flex;
+//                 .row;
+//                 .fls;
+//                 width: 100%;
+//                 .vcover {
+//                     .flex;
+//                     .col;
+//                     flex-grow: 1;
+//                     .parent {
+//                         cursor: pointer;
+//                         .flex;
+//                         .row;
+//                         .ac;
+//                         .pv-5;
+//                         .ph-5;
+//                         transition: all 200ms ease;
+//                         &:before {
+//                             width: 0;
+//                             height: 0;
+//                             border-top: .5rem solid transparent;
+//                             border-bottom: .5rem solid transparent;
+//                             border-left: .5rem solid @white-text;
+//                             content: '';
+//                             display: inline-block;
+//                             .mr-5;
+//                             transition: all 100ms ease;
+//                         }
+//                     }
+//                     input[type=checkbox] {
+//                         display: none;
+//                     }
+//                     input[type=checkbox]:checked {
+//                         ~.parent {
+//                             background: @blue-bg;
+//                             &:before {
+//                                 transform: rotate(60deg);
+//                             }
+//                         }
+//                         ~.kids {
+//                             height: auto;
+//                             opacity: 1;
+//                             display: flex;
+//                             .col;
+//                         }
+//                     }
+//                     .kids {
+//                         height: 0;
+//                         opacity: 0;
+//                         display: none;
+//                         .ml1;
+//                         .kids-name {
+//                             .p-5;
+//                             .pl1;
+//                             cursor: pointer;
+//                             &:hover {
+//                                 background: @black-bg;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//             .vfile-search {
+//                 // padding-bottom: .5rem;
+//                 flex: 0 0 3.5%;
+//                 >input {
+//                     border: none;
+//                     background: #3f3f46;
+//                     color: @white-text;
+//                     // outline: @blue solid .2rem;
+//                     width: 100%;
+//                     height: 100%;
+//                     &:focus {
+//                         outline: @blue solid .1rem;
+//                         outline-offset: 0;
+//                     }
+//                 }
+//             }
+//         }
+//         .vfile {
+//             .flex;
+//             .col;
+//             flex-grow: 1;
+//             position: relative;
+//             .vtabs {
+//                 flex: 0 0 3.5%;
+//                 color: #f8f8f8;
+//                 border-bottom: solid 1px @white-border;
+//                 .tab-space {
+//                     height: auto;
+//                 }
+//             }
+//             .vport {
+//                 flex: 1;
+//                 .flex;
+//                 .row;
+//                 color: #f8f8f8;
+//                 .p1;
+//                 .vruler {
+//                     flex: 0 0 5%;
+//                     border-left: solid .2rem @blue;
+//                     height: 100%;
+//                 }
+//                 .vcontent {
+//                     flex: 0 0 82%;
+//                     .header-name {
+//                         font-size: @font-medium;
+//                         color: @white-text1;
+//                     }
+//                     .header-content {
+//                         .p-5;
+//                         line-height: @font-medium;
+//                         >a {
+//                             text-decoration: none;
+//                             border-bottom: solid 1px @white-border;
+//                         }
+//                     }
+//                     .port-unit {
+//                         .ph-5;
+//                         border-left: solid 2px @blue;
+//                         color: @white-text1;
+//                         .unit-header {
+//                             font-weight: 800;
+//                         }
+//                         .unit-content {
+//                             .pv-5;
+//                             line-height: 1.65rem;
+//                             >a {
+//                                 line-height: @font-medium;
+//                                 text-decoration: none;
+//                                 color: @white-text1;
+//                                 border-bottom: solid 1px @white-border;
+//                             }
+//                             .list-skills {
+//                                 .flex;
+//                                 .row;
+//                                 flex-wrap: wrap;
+//                                 width: 50%;
+//                                 a.skill {
+//                                     line-height: 1.45rem;
+//                                     text-decoration: none;
+//                                     color: #f9f9f3;
+//                                     border-bottom: solid 1px @white-border;
+//                                     margin-right: .5rem;
+//                                 }
+//                                 span.skill {
+//                                     text-decoration: none;
+//                                     color: @white-text;
+//                                     padding: 0 .2rem;
+//                                     border-bottom: solid 1px @blue-bg;
+//                                     margin-right: 0.25rem;
+//                                     margin-bottom: 0.25rem;
+//                                 }
+//                             }
+//                             .text-unit {
+//                                 .flex;
+//                                 .col;
+//                                 label {
+//                                     color: @white-text;
+//                                     line-height: 1.65rem;
+//                                 }
+//                                 .text-input {
+//                                     border: none;
+//                                     background: #3f3f46;
+//                                     color: @white-text;
+//                                     width: 100%;
+//                                     height: 1.7rem;
+//                                     &:focus {
+//                                         outline: @blue solid .1rem;
+//                                         outline-offset: 0;
+//                                     }
+//                                 }
+//                                 .area-input {
+//                                     border: none;
+//                                     background: #3f3f46;
+//                                     color: @white-text;
+//                                     width: 100%;
+//                                     height: 3rem;
+//                                     &:focus {
+//                                         outline: @blue solid .1rem;
+//                                         outline-offset: 0;
+//                                     }
+//                                 }
+//                                 .button-input {
+//                                     border: none;
+//                                     background: #3f3f46;
+//                                     color: @white-text1;
+//                                     width: 100%;
+//                                     cursor: pointer;
+//                                 }
+//                             }
+//                             .success-unit {
+//                                 .mt-5;
+//                                 text-align: center;
+//                                 color: @blue;
+//                                 font-weight: 500;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//             .vterminal {
+//                 width: 100%;
+//                 .terminal-space {
+//                     position: absolute;
+//                     bottom: 0;
+//                     left: 0;
+//                     width: 100%;
+//                     border-top: solid 1px @white-border;
+//                     .terminal-head {
+//                         .flex;
+//                         .row;
+//                         .sb;
+//                         >i {
+//                             padding: .35vw;
+//                         }
+//                     }
+//                     .terminal-area {
+//                         display: flex;
+//                         height: 11rem;
+//                         #terminal-canvas {
+//                             width: 100%;
+//                             height: 100%;
+//                         }
+//                     }
+//                     &.hide {
+//                         .terminal-head {
+//                             .fa-chevron-down::before {
+//                                 display: block;
+//                                 transform: rotate(180deg);
+//                             }
+//                         }
+//                         .terminal-area {
+//                             display: none;
+//                             height: 0;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
