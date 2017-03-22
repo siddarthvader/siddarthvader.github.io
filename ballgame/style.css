@@ -1,0 +1,64 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	margin:0 auto;
+	font-family:verdana;
+}
+.wrapper{
+	width:1000px;
+	height:600px;
+	margin:0 auto;
+	text-align:center;
+}
+.game-header{
+	margin:10 auto;
+	width:570px;
+	height:150px;
+	//border:solid 1px black;
+	background-color:rgb(16,67,0);
+	-moz-box-shadow: 0 0 3px 3px #5F9EA0;
+	-webkit-box-shadow: 0 0 3px 3px #5F9EA0;
+	box-shadow: 0 0 3px 3px #5F9EA0;
+	border-radius:8px;
+	
+}
+.header-name{
+	font-weight:bold;
+	font-size:32px;
+	color:rgb(62,202,18);
+	font-weight:bold;
+
+}
+.header-text{
+	font-weight:bold;
+	font-size:17px;
+	margin:10px auto;
+	color:rgb(246,229,113);
+	font-weight:bold;
+
+}
+.score{
+	width:130px;
+	float:left;
+	margin:2px;
+	text-align:left;
+	text-indent:5px;
+}
+.inst{
+	width:250px;
+	float:left;
+	margin:2px;
+
+
+}
+.high{
+	width:150px;
+	float:left;	
+	margin:2px;
+	text-align:left;
+	text-indent:7px;
+}
+canvas{
+	margin-top:1px;
+	border:solid 1px black;
+}
