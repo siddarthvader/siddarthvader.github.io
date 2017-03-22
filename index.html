@@ -25,9 +25,8 @@
 
         ga('create', 'UA-89531925-1', 'auto');
         ga('send', 'pageview');
-
     </script>
-<base href="/">
+    <base href="/">
 </head>
 
 <body>
@@ -35,25 +34,10 @@
     <div class="header">hi, i am siddharth and this is my
         <div class="element"></div>
     </div>
-    <div class="vmetaeditor">
-        <div class="vheader">
-            <div class="vexplorer">
-                Explorer
-            </div>
-            <div class="vheadername">
-                Meta Editor
-            </div>
-        </div>
-        <div class="veditor">
-            <div class="vmenu" ui-view="vmenu">
-            </div>
-            <div class="vfile">
-                <div class="vtabs" ui-view="vtabs"></div>
-                <div class="vport" ui-view="vport"></div>
-                <div class="vterminal" ui-view="vterminal"></div>
-            </div>
-        </div>
-    </div>
+
+    <div ui-view="vmenu"></div>̵
+    <div  ui-view="vtabs"></div>
+    <div  ui-view="vport"></div>
 
 
     <!-- build:js inline app/__dist/desktop.min.js-->
@@ -71,8 +55,9 @@
 
     <!--/build -->
 
-     <!--directive-->
-    <script src="app/directive/angular-vterminal.js"></script>
+    <!--directive-->
+    <!--abandoned code but working fine-->
+    <!--<script src="app/directive/angular-vterminal.js"></script>-->
     <!--directive-->
 
 
@@ -82,14 +67,34 @@
     <script src="app/run.js"></script>
     <!--app script-->
 
-   
+
     <!--controllers-->
     <script src="app/desktop/controllers/menuCtrl.js"></script>
     <script src="app/desktop/controllers/tabsCtrl.js"></script>
     <script src="app/desktop/controllers/portCtrl.js"></script>
-    <script src="app/desktop/controllers/terminalCtrl.js"></script>
-     <script src="app/desktop/controllers/contactCtrl.js"></script>
+    <script src="app/desktop/controllers/contactCtrl.js"></script>
     <!--controllers-->
 </body>
 
 </html>
+
+<!--abandoned but working-->
+<!--<div class="vmetaeditor">
+        <div class="vheader">
+            <div class="vexplorer">
+                Explorer
+            </div>
+            <div class="vheadername">
+                Meta Editor
+            </div>
+        </div>
+        <div class="veditor">
+            <div class="vmenu" ui-view="vmenu">
+            </div>
+            <div class="vfile">
+                <div class="vtabs" ui-view="vtabs"></div>
+                <div class="vport" ui-view="vport"></div>
+                <div class="vterminal" ui-view="vterminal"></div>
+            </div>
+        </div>
+    </div>-->
