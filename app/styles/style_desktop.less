@@ -429,6 +429,94 @@ body {
     }
 }
 
+.vcontainer{
+    width:80%;
+    margin:0 auto;
+    padding:1rem;
+    .vmenu{
+        padding:.5rem;
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        >div{
+            padding:.5rem;
+            font-weight:900;
+            font-size:1.25rem;
+            color:@blue;    
+            cursor:pointer;
+        }
+    }
+    .vport{
+                
+                padding:1rem;
+                display: flex;
+                flex-direction:column;
+                align-items: flex-start;
+                width:100%;
+        }
+    }
+
+@keyframes slide-up {
+	0% {
+		transform: translateY(100vh);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+[ui-view='content']{
+    width:100%;
+    &.ng-enter,
+    &.ng-leave {
+        position: absolute;
+        // left: 0;
+        // right: 0;
+        -webkit-transition: all @animation-speed-default ease-in-out;
+        transition: all @animation-speed-default ease-in-out;
+    }
+    &.ng-enter {
+        opacity: 0;
+        transform: translateY(-20vh);
+        .pin-down {
+            transform: translateY(100vh);
+        }
+    }
+    &.ng-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        //Animations for fixed elements to be handled here.
+        //CSS Transitions fuck up fixed elements. Why?
+        //This is because the transform creates a new local coordinate system.
+        //Read up more: http://stackoverflow.com/questions/15194313/webkit-css-transform3d-position-fixed-issue
+        .pin-down {
+            animation: slide-up @animation-speed-default ease-in-out @animation-speed-default;
+        }
+    }
+    &.ng-leave {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    &.ng-leave-active {
+        opacity: 0;
+        transform: translateY(20vh);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // abandoned editor styles
 // working fine though
 

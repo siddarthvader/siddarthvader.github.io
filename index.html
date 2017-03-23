@@ -35,10 +35,14 @@
         <div class="element"></div>
     </div>
 
-    <div ui-view="vmenu"></div>̵
-    <div  ui-view="vtabs"></div>
-    <div  ui-view="vport"></div>
+    <div class="vcontainer">
+        <div ui-view="vmenu" class="vmenu"></div>
+        <div ui-view="vport" class="vport"></div>
+    </div>
 
+
+
+    <!--<div  ui-view="vtabs"></div>-->
 
     <!-- build:js inline app/__dist/desktop.min.js-->
     <!-- dependency-->
@@ -62,6 +66,7 @@
 
 
     <!--app scrpipt-->
+
     <script src="app/app.js"></script>
     <script src="app/routing/routes.js"></script>
     <script src="app/run.js"></script>
@@ -70,7 +75,7 @@
 
     <!--controllers-->
     <script src="app/desktop/controllers/menuCtrl.js"></script>
-    <script src="app/desktop/controllers/tabsCtrl.js"></script>
+    <!--<script src="app/desktop/controllers/tabsCtrl.js"></script>-->
     <script src="app/desktop/controllers/portCtrl.js"></script>
     <script src="app/desktop/controllers/contactCtrl.js"></script>
     <!--controllers-->
