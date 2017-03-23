@@ -9,11 +9,11 @@ syd.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
                 controller: 'menuCtrl',
                 controllerAs: 'vmenu'
             },
-            "vtabs": {
-                templateUrl: 'app/desktop/views/tabs.html',
-                controller: 'tabsCtrl',
-                controllerAs: 'vtabs'
-            },
+            // "vtabs": {
+            //     templateUrl: 'app/desktop/views/tabs.html',
+            //     controller: 'tabsCtrl',
+            //     controllerAs: 'vtabs'
+            // },
             "vport": {
                 templateUrl: 'app/desktop/views/port.html',
                 controller: 'portCtrl',

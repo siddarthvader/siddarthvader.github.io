@@ -387,11 +387,11 @@ body {
     color: transparent;
   }
   50% {
-    color: #1b819d;
+    color: #10466a;
   }
 }
 .header {
-  color: #1b819d;
+  color: #10466a;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -520,11 +520,75 @@ body {
   animation-iteration-count: 2;
 }
 .header .element:after {
-  color: #1b819d;
+  color: #10466a;
   content: '_';
   font-weight: bold;
   font-size: 30px;
   animation: 300ms blink step-end infinite;
   transition: all 100ms ease-in-out;
   animation-iteration-count: 100;
+}
+.vcontainer {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.vcontainer .vmenu {
+  padding: .5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.vcontainer .vmenu > div {
+  padding: .5rem;
+  font-weight: 900;
+  font-size: 1.25rem;
+  color: #10466a;
+  cursor: pointer;
+}
+.vcontainer .vport {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+@keyframes slide-up {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+[ui-view='content'] {
+  width: 100%;
+}
+[ui-view='content'].ng-enter,
+[ui-view='content'].ng-leave {
+  position: absolute;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+[ui-view='content'].ng-enter {
+  opacity: 0;
+  transform: translateY(-20vh);
+}
+[ui-view='content'].ng-enter .pin-down {
+  transform: translateY(100vh);
+}
+[ui-view='content'].ng-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+[ui-view='content'].ng-enter-active .pin-down {
+  animation: slide-up 0.4s ease-in-out 0.4s;
+}
+[ui-view='content'].ng-leave {
+  opacity: 1;
+  transform: translateY(0);
+}
+[ui-view='content'].ng-leave-active {
+  opacity: 0;
+  transform: translateY(20vh);
 }
