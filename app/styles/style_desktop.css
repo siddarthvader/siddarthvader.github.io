@@ -278,6 +278,7 @@
 * {
   font-family: monaco;
   box-sizing: border-box;
+  color: #2a2d2e;
 }
 html {
   width: 100%;
@@ -380,6 +381,7 @@ body {
   }
   99.99% {
     content: "portfolio";
+    color: #ff6162;
   }
 }
 @keyframes blink {
@@ -387,11 +389,11 @@ body {
     color: transparent;
   }
   50% {
-    color: #10466a;
+    color: #035c5a;
   }
 }
 .header {
-  color: #10466a;
+  color: #005148;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -457,6 +459,7 @@ body {
   align-items: flex-end;
   font-size: 2.34rem;
   margin-left: .5rem;
+  color: #ff6162;
   position: relative;
   height: 2.34rem;
   width: 12rem;
@@ -518,15 +521,16 @@ body {
   content: 'portfolio';
   animation-delay: 3s;
   animation-iteration-count: 2;
+  color: #ff6162;
 }
 .header .element:after {
-  color: #10466a;
   content: '_';
   font-weight: bold;
   font-size: 30px;
   animation: 300ms blink step-end infinite;
   transition: all 100ms ease-in-out;
   animation-iteration-count: 100;
+  color: #ff6162;
 }
 .vcontainer {
   width: 80%;
@@ -543,15 +547,24 @@ body {
   padding: .5rem;
   font-weight: 900;
   font-size: 1.25rem;
-  color: #10466a;
+  color: #ff6162;
   cursor: pointer;
 }
 .vcontainer .vport {
-  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+  color: black;
+}
+.vcontainer .vport .vcontent {
+  font-size: 1.25rem;
+  color: black;
+  font-weight: 500;
+}
+.vcontainer .vport .vcontent > div {
+  border-top: solid 1px #ff6162;
+  padding: .5rem;
 }
 @keyframes slide-up {
   0% {
@@ -563,32 +576,5 @@ body {
 }
 [ui-view='content'] {
   width: 100%;
-}
-[ui-view='content'].ng-enter,
-[ui-view='content'].ng-leave {
-  position: absolute;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-[ui-view='content'].ng-enter {
-  opacity: 0;
-  transform: translateY(-20vh);
-}
-[ui-view='content'].ng-enter .pin-down {
-  transform: translateY(100vh);
-}
-[ui-view='content'].ng-enter-active {
-  opacity: 1;
-  transform: translateY(0);
-}
-[ui-view='content'].ng-enter-active .pin-down {
-  animation: slide-up 0.4s ease-in-out 0.4s;
-}
-[ui-view='content'].ng-leave {
-  opacity: 1;
-  transform: translateY(0);
-}
-[ui-view='content'].ng-leave-active {
-  opacity: 0;
-  transform: translateY(20vh);
+  font-size: 1rem;
 }
