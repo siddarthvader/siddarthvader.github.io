@@ -557,13 +557,18 @@ body {
   width: 100%;
   color: black;
 }
+.vcontainer .vport .loader {
+  height: .5rem;
+  color: #ff6162;
+  width: 100%;
+  background: #ff6162;
+}
 .vcontainer .vport .vcontent {
   font-size: 1.25rem;
   color: black;
   font-weight: 500;
 }
 .vcontainer .vport .vcontent > div {
-  border-top: solid 1px #ff6162;
   padding: .5rem;
 }
 @keyframes slide-up {
