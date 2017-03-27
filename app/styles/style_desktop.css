@@ -278,7 +278,6 @@
 * {
   font-family: monaco;
   box-sizing: border-box;
-  color: #2a2d2e;
 }
 html {
   width: 100%;
@@ -389,11 +388,11 @@ body {
     color: transparent;
   }
   50% {
-    color: #035c5a;
+    color: #2a465b;
   }
 }
 .header {
-  color: #005148;
+  color: #2a465b;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -538,17 +537,22 @@ body {
   padding: 1rem;
 }
 .vcontainer .vmenu {
-  padding: .5rem;
+  padding: .5rem 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
-.vcontainer .vmenu > div {
+.vcontainer .vmenu .tabs {
   padding: .5rem;
+  width: 20%;
+  text-align: center;
   font-weight: 900;
   font-size: 1.25rem;
-  color: #ff6162;
+  color: #2a465b;
   cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.vcontainer .vmenu .tabs.active {
+  color: #ff6162;
 }
 .vcontainer .vport {
   display: flex;
@@ -557,11 +561,36 @@ body {
   width: 100%;
   color: black;
 }
-.vcontainer .vport .loader {
-  height: .5rem;
-  color: #ff6162;
+.vcontainer .vport .parent-loader {
+  position: relative;
+  height: 1rem;
   width: 100%;
+}
+.vcontainer .vport .parent-loader .tab-indicator {
+  width: 10%;
+  height: .5rem;
   background: #ff6162;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+  left: 5%;
+}
+.vcontainer .vport .parent-loader .tab-indicator.l20 {
+  left: 25%;
+}
+.vcontainer .vport .parent-loader .tab-indicator.l40 {
+  left: 45%;
+}
+.vcontainer .vport .parent-loader .tab-indicator.l60 {
+  left: 65%;
+}
+.vcontainer .vport .parent-loader .tab-indicator.l80 {
+  left: 85%;
+}
+.vcontainer .vport .parent-loader .loader {
+  height: .5rem;
+  color: #0f4870;
+  width: 100%;
+  background: #0f4870;
 }
 .vcontainer .vport .vcontent {
   font-size: 1.25rem;
@@ -570,6 +599,7 @@ body {
 }
 .vcontainer .vport .vcontent > div {
   padding: .5rem;
+  color: #2a465b;
 }
 @keyframes slide-up {
   0% {
@@ -579,7 +609,10 @@ body {
     transform: translateY(0);
   }
 }
-[ui-view='content'] {
-  width: 100%;
-  font-size: 1rem;
+.avail-notifier {
+  color: #2a465b;
+  position: fixed;
+  right: 3%;
+  top: 3%;
+  padding: .5rem;
 }

@@ -278,8 +278,6 @@
 * {
     font-family: monaco;
     box-sizing: border-box;
-    color:@black-bg;
-
 }
 
 html {
@@ -396,7 +394,7 @@ body {
 }
 
 .header {
-    color: @green;
+    color: @blue;
     .flex;
     .row;
     .fe;
@@ -439,16 +437,22 @@ body {
     margin:0 auto;
     padding:1rem;
     .vmenu{
-        padding:.5rem;
+        padding:.5rem 0;
         display: flex;
         flex-direction:row;
-        justify-content: space-between;
-        >div{
+        // justify-content: space-between;
+        .tabs{
             padding:.5rem;
+            width:20%;
+            text-align:center;
             font-weight:900;
             font-size:1.25rem;
-            color:@orange;    
+            color:@blue;    
             cursor:pointer;
+            transition:all @animation-speed-default ease-in-out;            
+            &.active{
+                color:@orange;
+            }
         }
     }
     .vport{  
@@ -458,11 +462,36 @@ body {
             align-items: flex-start;
             width:100%;
             color:black;
-            .loader{
-                height:.5rem;
-                color:@orange;
+            .parent-loader{
+                position:relative;
+                height:1rem;
                 width:100%;
-                background: @orange;
+                 .tab-indicator{
+                    width:10%;
+                    height:.5rem;
+                    background: @orange;
+                    transition:all @animation-speed-default ease-in-out;
+                    position:absolute;
+                    left:5%;
+                    &.l20{
+                        left:25%;
+                    }
+                    &.l40{
+                        left:45%;
+                    } 
+                    &.l60{
+                        left:65%;
+                    }
+                    &.l80{
+                        left:85%;
+                    }   
+                }
+                .loader{
+                    height:.5rem;
+                    color:@blue-bg;
+                    width:100%;
+                    background: @blue-bg;
+                }
             }
             .vcontent{             
                 font-size:1.25rem;
@@ -471,6 +500,7 @@ body {
                 //  border-top:solid 1px @orange;   
                 >div{
                       padding:.5rem;
+                      color:@blue;
                 }
             }    
         }
@@ -485,9 +515,17 @@ body {
 	}
 }
 
-[ui-view='content']{
-    width:100%;
-    font-size:1rem;
+.avail-notifier{
+    color:@blue;
+    position:fixed;
+    right:3%;
+    top:3%;
+    padding:.5rem;
+}
+
+// [ui-view='content']{
+    // width:100%;
+    // font-size:1rem;
     // &.ng-enter,
     // &.ng-leave {
     //     position: absolute;
@@ -522,7 +560,7 @@ body {
     //     opacity: 0;
     //     transform: translateY(20vh);
     // }
-}
+// }
 
 
 
