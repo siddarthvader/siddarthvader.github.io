@@ -75,6 +75,15 @@ module.exports = function (grunt) {
                         dest: 'reserve/'
                     }
                 ]
+            },
+            reverse: {
+                files: [
+                    {
+                        expand: true,
+                        src: ['reserve/index.html'],
+                        dest: ''
+                    }
+                ]
             }
         },
         cssmin: {
@@ -85,7 +94,7 @@ module.exports = function (grunt) {
 
             target: {
                 files: {
-                    'app/__dist/desktop.min.css': ['app/static/css/**.css','app/styles/**.css']
+                    'app/__dist/desktop.min.css': ['bower_components/font-awesome/css/font-awesome.min.css', 'app/static/css/**.css', 'app/styles/**.css']
                 }
             }
 
@@ -113,7 +122,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');		//minify the css
     grunt.loadNpmTasks('grunt-embed-fonts');     //embed font file in css
 
-    grunt.registerTask('build', ['bower_concat', 'ngtemplates:desktop', 'ngAnnotate:dist', 'uglify:script', 'cssmin','embedFonts' ,'processhtml:production', 'clean:trash']);
+    grunt.registerTask('build', ['bower_concat', 'ngtemplates:desktop', 'ngAnnotate:dist', 'uglify:script', 'cssmin', 'embedFonts', 'processhtml:production', 'clean:trash']);
     grunt.registerTask('buildDev', ['bower_concat', 'uglify:script', 'processhtml:dev', 'clean:trash']);
 
 };
