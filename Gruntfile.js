@@ -25,8 +25,8 @@ module.exports = function (grunt) {
         },
         ngtemplates: {
             desktop: {
-                cwd: 'app/',
-                src: ['desktop/**/**.html'],
+                cwd: '',
+                src: ['app/desktop/**/**.html'],
                 dest: 'app/__generated/desktop_templates.js'
             },
             options: {
@@ -47,7 +47,7 @@ module.exports = function (grunt) {
         ngAnnotate: {
             dist: {
                 files: {
-                    'app/__generated/desktop_annotated_concatenated.js': ['app/*.js', 'app/desktop/**/*.js', 'app/directive/**/*.js', 'app/routes/**/*.js', 'app/_directives/**/*.js', 'app/__generated/desktop_templates.js']
+                    'app/__generated/desktop_annotated_concatenated.js': ['app/*.js','app/routing/*.js', 'app/directive/*.js','app/desktop/**/*.js', 'app/__generated/desktop_templates.js']
                 }
             }
         },
@@ -88,7 +88,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-angular-templates');  //angular templating
     grunt.loadNpmTasks('grunt-ng-annotate');        // annotation
 
-    grunt.registerTask('build', ['bower_concat', 'ngtemplates:desktop', 'ngAnnotate:dist', 'uglify:script', 'processhtml:production', 'clean:trash']);
+    grunt.registerTask('build', ['bower_concat', 'ngtemplates:desktop', 'ngAnnotate:dist', 'uglify:script', 'processhtml:production']);
     grunt.registerTask('buildDev', ['bower_concat', 'uglify:script', 'processhtml:dev', 'clean:trash']);
 
 };
