@@ -297,7 +297,7 @@ input[type='text'],
 input[type='email'],
 textarea {
   border: none;
-  background: #b5b5b5;
+  background: #f2f2f2;
   color: #0f4870;
   width: 100%;
   height: 100%;
@@ -331,7 +331,7 @@ html {
   font-family: monaco;
 }
 body {
-  background: #b5b5b5;
+  background: #f2f2f2;
   font-family: monaco;
   width: 100%;
   padding: 1rem 0;
@@ -1014,7 +1014,7 @@ body {
   font-size: 1.35rem;
   width: 65%;
   border: none;
-  background: #b5b5b5;
+  background: #f2f2f2;
   color: #0f4870;
 }
 .vcontainer .vport .vcontent .port-unit .unit-content .text-unit > input:-webkit-autofill,
@@ -1123,7 +1123,7 @@ body {
   flex-shrink: 0;
 }
 .vcontainer .vport .vcontent .port-unit .unit-content .skill-unit .skill-meter .meter > span {
-  font-weight: 600rem;
+  font-weight: 600;
   font-size: .8rem;
   width: 20%;
 }
