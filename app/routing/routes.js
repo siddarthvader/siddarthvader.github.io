@@ -23,7 +23,9 @@ syd.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
     }).state('ground.work',{
         views:{
             "content":{
-                templateUrl:'app/desktop/views/work.html'
+                templateUrl:'app/desktop/views/work.html',
+                controller:'workCtrl',
+                controllerAs:'wor'
             }
         }
     })

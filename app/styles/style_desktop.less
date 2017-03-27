@@ -278,6 +278,10 @@
     width:0% !important;
 }
 
+a{
+    text-decoration:none;
+}
+
 //element based css rules
 * {
     font-family: monaco;
@@ -512,11 +516,7 @@ body {
                       padding:.5rem;
                       color:@blue;
                 }
-                .about-port{
-                    font-size:1.15rem;
-                    // color:@blue;
-                    padding:1rem;
-                    .port-header{
+                .port-header{
                         .header-content{
                             font-weight:600;
                             width:85%;
@@ -553,6 +553,9 @@ body {
                                     .exp-role{
                                         font-weight:600;
                                         color:@blue;
+                                        >a{
+                                            color:@blue;
+                                        }
                                     }
                                 }
                             }
@@ -625,6 +628,26 @@ body {
                                 // margin-right: .5rem;
                             }
                         }
+                    }
+                .about-port{
+                    font-size:1.15rem;
+                    // color:@blue;
+                    padding:1rem;
+                
+                }
+                .work-port{
+                     font-size:1.15rem;
+                    // color:@blue;
+                    padding:1rem;
+                }
+                .blog-port{
+                    padding:1rem;
+                    font-size:1.15rem;
+                    >p{
+                        text-align:center;
+                        font-weight:600;
+                        color:@orange;
+                        font-weight:1.5rem;
                     }
                 }
             }    

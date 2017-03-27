@@ -1,3 +1,81 @@
-<div class="animated fadeInUp">
-    <p>my work name is siddharth</p>
+<div class="animated fadeInUp work-port">
+    <div class="port-header">
+        <div class="header-content">
+            I have been working extinsively on large single page applications for some time now. I have developed Javascript games,single
+            page apps, responsive web app, mobile website etc. I am mentioning some of my projects.
+        </div>
+    </div>
+    <div class="port-unit mt1">
+        <div class="unit-header">
+            Applications developed
+        </div>
+        <div class="exp-content">
+            <div class="exp-unit" ng-repeat="app in appsDev">
+                <div class="exp-header">
+                    <div class="exp-role">
+                        <a ng-href={{app.url}} target="_blank">
+                           {{app.title}}
+                       </a>
+                    </div>
+                    <div class="exp-duration">
+                        <span>{{app.dutation}}</span>
+                        <i class="fa fa-external-link" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="exp-company">
+                    {{app.company}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="port-unit mt1">
+        <div class="unit-header">
+            Open source contributation
+        </div>
+        <div class="exp-content">
+            <div class="exp-unit" ng-repeat="open in openSource">
+                <div class="exp-header">
+                    <div class="exp-role">
+                        <a ng-href={{app.url}} target="_blank">
+                           {{open.title}}
+                       </a>
+                    </div>
+                    <div class="exp-duration">
+                        <span>{{open.dutation}}</span>
+                        <i class="fa fa-external-link" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="exp-company">
+                    {{open.company}}
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="port-unit mt1">
+        <div class="unit-header">
+            Games
+        </div>
+        <div class="exp-content">
+            <div class="exp-unit" ng-repeat="open in gameDev">
+                <div class="exp-header">
+                    <div class="exp-role">
+                        <a ng-href={{app.url}} target="_blank">
+                           {{open.title}}
+                       </a>
+                    </div>
+                    <div class="exp-duration">
+                        <span>{{open.dutation}}</span>
+                        <i class="fa fa-external-link" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="exp-company">
+                    {{open.company}}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
