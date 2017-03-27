@@ -275,6 +275,9 @@
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.zw {
+  width: 0% !important;
+}
 * {
   font-family: monaco;
   box-sizing: border-box;
@@ -285,13 +288,10 @@ html {
   font-family: monaco;
 }
 body {
-  background: #f7f7f7;
+  background: #b5b5b5;
   font-family: monaco;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   width: 100%;
+  padding: 1rem 0;
 }
 @keyframes changeLetter {
   0% {
@@ -388,11 +388,11 @@ body {
     color: transparent;
   }
   50% {
-    color: #2a465b;
+    color: #0f4870;
   }
 }
 .header {
-  color: #2a465b;
+  color: #0f4870;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -532,7 +532,7 @@ body {
   color: #ff6162;
 }
 .vcontainer {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -547,7 +547,7 @@ body {
   text-align: center;
   font-weight: 900;
   font-size: 1.25rem;
-  color: #2a465b;
+  color: #0f4870;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
 }
@@ -588,7 +588,6 @@ body {
 }
 .vcontainer .vport .parent-loader .loader {
   height: .5rem;
-  color: #0f4870;
   width: 100%;
   background: #0f4870;
 }
@@ -596,10 +595,379 @@ body {
   font-size: 1.25rem;
   color: black;
   font-weight: 500;
+  width: 80%;
+  margin: 0 auto;
+}
+.vcontainer .vport .vcontent .base-content {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 3rem;
 }
 .vcontainer .vport .vcontent > div {
   padding: .5rem;
-  color: #2a465b;
+  color: #0f4870;
+}
+.vcontainer .vport .vcontent .about-port {
+  font-size: 1.15rem;
+  padding: 1rem;
+}
+.vcontainer .vport .vcontent .about-port .port-header .header-content {
+  font-weight: 600;
+  width: 85%;
+  margin: 0 auto;
+  line-height: 1.4rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.vcontainer .vport .vcontent .about-port .port-unit {
+  padding: 1rem auto;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-header {
+  font-weight: 600;
+  color: #ff6162;
+  font-weight: 1.15rem;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content.row {
+  flex-direction: row;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content.col {
+  flex-direction: column;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content.ac {
+  align-items: center;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content.ab {
+  align-items: baseline;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content.fls {
+  align-items: flex-start;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content.fe {
+  align-items: flex-end;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content.fs {
+  align-items: flex-start;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content.jc {
+  justify-content: center;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content.sb {
+  justify-content: space-between;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content.sa {
+  justify-content: space-around;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content.je {
+  justify-content: flex-end;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content.sc {
+  align-self: center;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content.asb {
+  align-self: baseline;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content.asf {
+  align-self: flex-start;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content.rw {
+  flex-flow: row wrap;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .fg1 {
+  flex-grow: 1;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .ns {
+  flex-shrink: 0;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit {
+  margin: .5rem 2rem;
+  width: 40%;
+  border: solid 2px #0f4870;
+  line-height: 1.5rem;
+  padding: .35rem;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit .exp-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit .exp-header.row {
+  flex-direction: row;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit .exp-header.col {
+  flex-direction: column;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit .exp-header.ac {
+  align-items: center;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit .exp-header.ab {
+  align-items: baseline;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit .exp-header.fls {
+  align-items: flex-start;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit .exp-header.fe {
+  align-items: flex-end;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit .exp-header.fs {
+  align-items: flex-start;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit .exp-header.jc {
+  justify-content: center;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit .exp-header.sb {
+  justify-content: space-between;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit .exp-header.sa {
+  justify-content: space-around;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit .exp-header.je {
+  justify-content: flex-end;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit .exp-header.sc {
+  align-self: center;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit .exp-header.asb {
+  align-self: baseline;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit .exp-header.asf {
+  align-self: flex-start;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit .exp-header.rw {
+  flex-flow: row wrap;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit .exp-header .fg1 {
+  flex-grow: 1;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit .exp-header .ns {
+  flex-shrink: 0;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .exp-content .exp-unit .exp-header .exp-role {
+  font-weight: 600;
+  color: #0f4870;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content.row {
+  flex-direction: row;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content.col {
+  flex-direction: column;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content.ac {
+  align-items: center;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content.ab {
+  align-items: baseline;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content.fls {
+  align-items: flex-start;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content.fe {
+  align-items: flex-end;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content.fs {
+  align-items: flex-start;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content.jc {
+  justify-content: center;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content.sb {
+  justify-content: space-between;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content.sa {
+  justify-content: space-around;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content.je {
+  justify-content: flex-end;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content.sc {
+  align-self: center;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content.asb {
+  align-self: baseline;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content.asf {
+  align-self: flex-start;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content.rw {
+  flex-flow: row wrap;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .fg1 {
+  flex-grow: 1;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .ns {
+  flex-shrink: 0;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit {
+  margin: .5rem 2rem;
+  width: 40%;
+  border: solid 2px #0f4870;
+  line-height: 1.5rem;
+  padding: .35rem;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-name {
+  color: #0f4870;
+  font-weight: 600;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter {
+  width: 100%;
+  margin-top: .65rem;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .load {
+  height: .5rem;
+  background: #ff6162;
+  transition: all 0.4s ease-in-out;
+  width: 0%;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .meter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .meter.row {
+  flex-direction: row;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .meter.col {
+  flex-direction: column;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .meter.ac {
+  align-items: center;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .meter.ab {
+  align-items: baseline;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .meter.fls {
+  align-items: flex-start;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .meter.fe {
+  align-items: flex-end;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .meter.fs {
+  align-items: flex-start;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .meter.jc {
+  justify-content: center;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .meter.sb {
+  justify-content: space-between;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .meter.sa {
+  justify-content: space-around;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .meter.je {
+  justify-content: flex-end;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .meter.sc {
+  align-self: center;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .meter.asb {
+  align-self: baseline;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .meter.asf {
+  align-self: flex-start;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .meter.rw {
+  flex-flow: row wrap;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .meter .fg1 {
+  flex-grow: 1;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .meter .ns {
+  flex-shrink: 0;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .unit-content .skill-unit .skill-meter .meter > span {
+  font-weight: .8rem;
+  width: 20%;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50%;
+  padding: .5rem 2rem;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills.row {
+  flex-direction: row;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills.col {
+  flex-direction: column;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills.ac {
+  align-items: center;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills.ab {
+  align-items: baseline;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills.fls {
+  align-items: flex-start;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills.fe {
+  align-items: flex-end;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills.fs {
+  align-items: flex-start;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills.jc {
+  justify-content: center;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills.sb {
+  justify-content: space-between;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills.sa {
+  justify-content: space-around;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills.je {
+  justify-content: flex-end;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills.sc {
+  align-self: center;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills.asb {
+  align-self: baseline;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills.asf {
+  align-self: flex-start;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills.rw {
+  flex-flow: row wrap;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills .fg1 {
+  flex-grow: 1;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills .ns {
+  flex-shrink: 0;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills .header {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #0f4870;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills span.skill {
+  text-decoration: none;
+  color: #0f4870;
+  padding: 0 .2rem;
+  border-bottom: solid 2px #ff6162;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills .skill-link {
+  margin-right: 1rem;
+}
+.vcontainer .vport .vcontent .about-port .port-unit .list-skills a.skill {
+  line-height: 1.45rem;
+  text-decoration: none;
+  color: #0f4870;
+  font-weight: 600;
+  border-bottom: solid 2px #0f4870;
 }
 @keyframes slide-up {
   0% {
@@ -610,9 +978,9 @@ body {
   }
 }
 .avail-notifier {
-  color: #2a465b;
+  color: #0f4870;
   position: fixed;
-  right: 3%;
+  right: 1rem;
   top: 3%;
   padding: .5rem;
 }

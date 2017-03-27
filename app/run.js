@@ -2,5 +2,5 @@
 
 syd.run(function($state) {
     console.info('iadhr');
-    $state.go('ground');
+    $state.go('ground.about');
 });

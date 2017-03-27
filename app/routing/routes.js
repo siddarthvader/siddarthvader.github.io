@@ -30,7 +30,9 @@ syd.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
     .state('ground.about',{
         views:{
             "content":{
-                templateUrl:'app/desktop/views/about.html'
+                templateUrl:'app/desktop/views/about.html',
+                controller:'aboutCtrl',
+                controllerAs:'about'
             }
         }
     })
