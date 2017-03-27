@@ -16,7 +16,7 @@ syd.controller('aboutCtrl', function ($state, $scope, $timeout) {
                     exp: moment().diff(moment('07-01-2012', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('07-01-2012', 'DD-MM-YYYY'), 'months') * 1.66 : 100
                 },
                 {
-                    name: 'JAVASCRIPT',
+                    name: 'Javscript',
                     exp: moment().diff(moment('06-01-2013', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('06-01-2013', 'DD-MM-YYYY'), 'months') * 1.66 : 100
                 },
                 {
@@ -25,17 +25,19 @@ syd.controller('aboutCtrl', function ($state, $scope, $timeout) {
                 },
                 {
                     name: 'JQuery',
-                    exp: moment('01-01-2016').diff(moment('07-01-2012', 'DD-MM-YYYY'), 'months') <= 60 ? moment('01-01-2016').diff(moment('07-01-2012', 'DD-MM-YYYY'), 'months') * 1.66 : 100
+                    exp: moment().diff(moment('07-06-2013', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('06-06-2013', 'DD-MM-YYYY'), 'months') * 1.66 : 100
                 },
                 {
                     name: 'PHP',
-                    exp: moment('10-06-2014', 'DD-MM-YYYY').diff(moment('01-06-2012', 'DD-MM-YYYY'), 'months') <= 60 ? moment('10-06-2014', 'DD-MM-YYYY').diff(moment('01-06-2012', 'DD-MM-YYYY'), 'months') * 1.66 : 100
+                    exp: moment('10-06-2014', 'DD-MM-YYYY').diff(moment('06-01-2013', 'DD-MM-YYYY'), 'months') <= 60 ? moment('10-06-2014', 'DD-MM-YYYY').diff(moment('01-06-2012', 'DD-MM-YYYY'), 'months') * 1.66 : 100
                 },
                 {
                     name: 'IONIC',
                     exp: moment().diff(moment('10-11-2016', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('10-11-2016', 'DD-MM-YYYY'), 'months') * 1.66 : 100
                 },
             ];
+
+            console.log($scope.skills);
 
             $scope.pastJobs = [
                 {
