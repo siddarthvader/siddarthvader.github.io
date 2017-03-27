@@ -1,8 +1,8 @@
-<div  ui-sref="ground.about">about</div>
-<div  ui-sref="ground.work">work</div>
-<div  ui-sref="ground.blog">blog</div>
-<div  ui-sref="ground.contact">contact</div>
-<div  ui-sref="ground.readme">README</div>
+<div class="tabs" ng-class={'active':$state.current.name=='ground.about'} ui-sref="ground.about">about</div>
+<div class="tabs" ng-class={'active':$state.current.name=='ground.work'} ui-sref="ground.work">work</div>
+<div class="tabs" ng-class={'active':$state.current.name=='ground.blog'} ui-sref="ground.blog">blog</div>
+<div class="tabs" ng-class={'active':$state.current.name=='ground.contact'} ui-sref="ground.contact">contact</div>
+<div class="tabs" ng-class={'active':$state.current.name=='ground.readme'} ui-sref="ground.readme">README</div>
 
 
 <!--abandoned code but working fine-->
@@ -12,7 +12,7 @@
 <div class="vfolder-name">
     <div class="vcover">
         <input type="checkbox" id="parent-checkbox">
-        <label class="parent" for="parent-checkbox">demo</label>
+        <label class="parent" formnt-checkbox">demo</label>
         <div class="kids">
             <div class="kids-name" ui-sref="ground.h2ttpshooter">angular-httpshooter</div>
             <div class="kids-name" ui-sref="ground.cssmedia">css-media-all</div>

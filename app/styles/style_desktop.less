@@ -274,12 +274,14 @@
     .pv2;
 }
 
+.zw{
+    width:0% !important;
+}
+
 //element based css rules
 * {
     font-family: monaco;
     box-sizing: border-box;
-    color:@black-bg;
-
 }
 
 html {
@@ -291,8 +293,8 @@ html {
 body {
     background: @white-bg;
     font-family: monaco;
-    .p1;
     width: 100%;
+    padding:1rem 0;
 }
 
 @keyframes changeLetter {
@@ -396,7 +398,7 @@ body {
 }
 
 .header {
-    color: @green;
+    color: @blue;
     .flex;
     .row;
     .fe;
@@ -435,20 +437,26 @@ body {
 }
 
 .vcontainer{
-    width:80%;
+    width:100%;
     margin:0 auto;
     padding:1rem;
     .vmenu{
-        padding:.5rem;
+        padding:.5rem 0;
         display: flex;
         flex-direction:row;
-        justify-content: space-between;
-        >div{
+        // justify-content: space-between;
+        .tabs{
             padding:.5rem;
+            width:20%;
+            text-align:center;
             font-weight:900;
             font-size:1.25rem;
-            color:@orange;    
+            color:@blue;    
             cursor:pointer;
+            transition:all @animation-speed-default ease-in-out;            
+            &.active{
+                color:@orange;
+            }
         }
     }
     .vport{  
@@ -458,19 +466,166 @@ body {
             align-items: flex-start;
             width:100%;
             color:black;
-            .loader{
-                height:.5rem;
-                color:@orange;
+            .parent-loader{
+                position:relative;
+                height:1rem;
                 width:100%;
-                background: @orange;
+                 .tab-indicator{
+                    width:10%;
+                    height:.5rem;
+                    background: @orange;
+                    transition:all @animation-speed-default ease-in-out;
+                    position:absolute;
+                    left:5%;
+                    &.l20{
+                        left:25%;
+                    }
+                    &.l40{
+                        left:45%;
+                    } 
+                    &.l60{
+                        left:65%;
+                    }
+                    &.l80{
+                        left:85%;
+                    }   
+                }
+                .loader{
+                    height:.5rem;
+                    width:100%;
+                    background: @blue;
+                }
             }
             .vcontent{             
                 font-size:1.25rem;
                 color:black;
                 font-weight:500;
-                //  border-top:solid 1px @orange;   
+                width:80%;
+                margin:0 auto;
+                //  border-top:solid 1px @orange;  
+                .base-content{
+                    font-size:2rem;
+                    text-align:center;
+                    margin-top:3rem;
+                } 
                 >div{
                       padding:.5rem;
+                      color:@blue;
+                }
+                .about-port{
+                    font-size:1.15rem;
+                    // color:@blue;
+                    padding:1rem;
+                    .port-header{
+                        .header-content{
+                            font-weight:600;
+                            width:85%;
+                            margin:0 auto;
+                            line-height:1.4rem;
+                            // font-size:1.35rem;
+                            text-align:center;
+                            margin-bottom:3rem;
+                        }
+                    }
+                    .port-unit{
+                        padding:1rem auto;
+                        .unit-header{
+                            font-weight:600;
+                            color:@orange;
+                            font-weight:1.15rem;
+                        }
+                        .exp-content{
+                            .flex;
+                            .row;
+                            flex-wrap:wrap;
+                            // justify-content: space-between;
+                            .exp-unit{
+                                margin:.5rem 2rem;
+                                width:40%;
+                                // box-shadow:0 0 .25rem @orange;
+                                border:solid 2px @blue;
+                                line-height:1.5rem;
+                                padding:.35rem;
+                                .exp-header{
+                                    .flex;
+                                    .row;
+                                    justify-content: space-between;
+                                    .exp-role{
+                                        font-weight:600;
+                                        color:@blue;
+                                    }
+                                }
+                            }
+                        }
+                        .unit-content{
+                             .flex;
+                             .row;
+                             flex-wrap:wrap;
+                             .skill-unit{
+                                margin:.5rem 2rem;
+                                width:40%;
+                                // box-shadow:0 0 .25rem @orange;
+                                border:solid 2px @blue;
+                                line-height:1.5rem;
+                                padding:.35rem;
+                                .skill-name{
+                                    color:@blue;
+                                    font-weight:600;
+                                }
+                                .skill-meter{
+                                    width:100%;
+                                    margin-top:.65rem;
+                                    .load{
+                                        height:.5rem;
+                                        background:@orange;
+                                        transition:all @animation-speed-default ease-in-out;
+                                        width:0%;
+                                    }
+                                    .meter{
+                                        .flex;
+                                        .row;
+                                        justify-content: space-between;
+                                        >span{
+                                            font-weight:.8rem;
+                                            width:20%;
+                                        }    
+                                    }
+                                }
+                             }       
+                        }
+                        .list-skills {
+                            .flex;
+                            .row;
+                            flex-wrap: wrap;
+                            width: 50%;
+                            padding:.5rem 2rem;
+                            .header{
+                                font-weight:600;
+                                font-size:1rem;
+                                color:@blue;
+                            }
+                            span.skill {
+                                text-decoration: none;
+                                color: @blue;
+                                padding: 0 .2rem;
+                                border-bottom: solid 2px @orange;
+                                margin-right: 0.25rem;
+                                margin-bottom: 0.25rem;
+                                font-weight:600;
+                            }
+                            .skill-link{
+                                margin-right:1rem;
+                            }
+                             a.skill {
+                                line-height: 1.45rem;
+                                text-decoration: none;
+                                color:@blue;
+                                font-weight:600;
+                                border-bottom: solid 2px @blue;
+                                // margin-right: .5rem;
+                            }
+                        }
+                    }
                 }
             }    
         }
@@ -485,9 +640,19 @@ body {
 	}
 }
 
-[ui-view='content']{
-    width:100%;
-    font-size:1rem;
+.avail-notifier{
+    color:@blue;
+    position:fixed;
+    right:1rem;
+    top:3%;
+    padding:.5rem;
+}
+
+
+
+// [ui-view='content']{
+    // width:100%;
+    // font-size:1rem;
     // &.ng-enter,
     // &.ng-leave {
     //     position: absolute;
@@ -522,7 +687,7 @@ body {
     //     opacity: 0;
     //     transform: translateY(20vh);
     // }
-}
+// }
 
 
 

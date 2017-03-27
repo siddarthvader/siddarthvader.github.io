@@ -1,43 +1,71 @@
 <div class="about-port animated fadeInUp">
     <div class="port-header">
-        <div class="header-name">
-            About
-        </div>
         <div class="header-content">
-            I am a front-end developer from Gurgaon, India. My areas of interest are web development, responsive layouts and javascript
-            . I went to NIT jaipur for graduation and I loved it there.
+            Hi, I am a front-end developer from India. My areas of interest are web development, responsive layouts and javascript. I
+            am an open source contributer too, in my free time i like to help. I am available for freelance work.
         </div>
     </div>
     <div class="port-unit mt1">
         <div class="unit-header">
-            Currently Working
+            In Jobs Experience
         </div>
-        <div class="unit-content">
-            I am working as a front-end developer @Acetone Designs Gurgaon since feb 2015. Here i am working on the front-end of
-            <a href="https://www.acadly.com" target="_blank">Acadly Website
-                </a> and <a href="https://app.acadly.com" targer="_blank">Acadly</a>;
+        <div class="exp-content">
+            <div class="exp-unit" ng-repeat="job in pastJobs">
+                <div class="exp-header">
+                    <div class="exp-role">
+                        {{job.title}}
+                    </div>
+                    <div class="exp-duration">
+                        {{job.dutation}}
+                    </div>
+                </div>
+
+                <div class="exp-company">
+                    {{job.company}}
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="port-unit mt1">
         <div class="unit-header">
-            Technologies I use
+            Technologies Experience (In years)
         </div>
         <div class="unit-content">
+            <div class="skill-unit" ng-repeat="skill in skills">
+                <div class="skill-name">
+                    {{skill.name}}
+                </div>
+                <div class="skill-meter">
+                    <div class="load zw" ng-style="{ 'width':skill.exp+ '%'}"></div>
+                    <div class="meter">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="port-unit mt1">
+            <div class="unit-header">
+                Other Technologies
+            </div>
             <div class="list-skills">
-                <span class="skill">HTML</span>
-                <span class="skill">CSS</span>
-                <span class="skill">Javascript</span>
-                <span class="skill">Angular</span>
                 <span class="skill">NPM</span>
-                <span class="skill">Git</span>
                 <span class="skill">Less</span>
                 <span class="skill">Grunt</span>
                 <span class="skill">Regex</span>
                 <span class="skill">Socket</span>
+                <span class="skill">Pusher</span>
                 <span class="skill">PHP</span>
+                <span class="skill">Cordova</span>
+                <span class="skill">Twitter Bootstrap</span>
+                <span class="skill">Gulp</span>
             </div>
         </div>
+
     </div>
 
     <div class="port-unit mt1">
@@ -46,26 +74,35 @@
         </div>
         <div class="unit-content">
             <div class="list-skills">
-                <a class="skill" target="_blank" href="https://www.npmjs.com/package/angular-httpshooter">Angular Httpshooter</a>
-                <a class="skill" target="_blank" href="https://www.npmjs.com/package/css-media-all">CSS Media All</a>
+                <div class="skill-link">
+                    <a class="skill" target="_blank" href="https://www.npmjs.com/package/angular-httpshooter">Angular Httpshooter</a>
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                </div>
+                <div class="skill-link">
+                    <a class="skill" target="_blank" href="https://www.npmjs.com/package/css-media-all">CSS Media All</a>
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="port-unit mt1">
         <div class="unit-header">
-           Education
+            Education
         </div>
         <div class="unit-content">
             <div class="list-skills">
-                <span class="skill">NIT Jaipur (IT,2010-14)</span>
+                <div class="skill-link">
+                    <a class="skill" target="_blank" href="http://mnit.ac.in">NIT Jaipur (IT,2010-14)</a>
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                </div>
             </div>
         </div>
     </div>
 
-     <div class="port-unit mt1">
+    <div class="port-unit mt1">
         <div class="unit-header">
-           Interests
+            Interests
         </div>
         <div class="unit-content">
             <div class="list-skills">
@@ -77,18 +114,28 @@
     </div>
 
 
-     <div class="port-unit mt1">
+    <div class="port-unit mt1">
         <div class="unit-header">
-           Profiles
+            Profiles
         </div>
         <div class="unit-content">
             <div class="list-skills">
-                 <a class="skill" target="_blank" href="http://stackoverflow.com/users/2439835/siddharth">Stackoverflow</a>
-                <a class="skill" target="_blank" href="https://github.com/siddarthvader">Github</a>
-                <a class="skill" target="_blank" href=" https://www.npmjs.com/~siddarthvader">NPM</a>
-                <a class="skill" target="_blank" href="https://www.upwork.com/freelancers/~016fec88e43102b929">Upwork</a>
-                
-               
+                <div class="skill-link">
+                    <a class="skill" target="_blank" href="http://stackoverflow.com/users/2439835/siddharth">Stackoverflow</a>
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                </div>
+                <div class="skill-link">
+                    <a class="skill" target="_blank" href="https://github.com/siddarthvader">Github</a>
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                </div>
+                <div class="skill-link">
+                    <a class="skill" target="_blank" href=" https://www.npmjs.com/~siddarthvader">NPM</a>
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                </div>
+                <div class="skill-link">
+                    <a class="skill" target="_blank" href="https://www.upwork.com/freelancers/~016fec88e43102b929">Upwork</a>
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                </div>
             </div>
         </div>
     </div>
