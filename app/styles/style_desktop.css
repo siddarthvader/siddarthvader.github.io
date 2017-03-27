@@ -1220,7 +1220,7 @@ body {
 }
 .avail-notifier {
   color: #0f4870;
-  position: fixed;
+  position: absolute;
   right: 1rem;
   top: 3%;
   padding: .5rem;
