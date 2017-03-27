@@ -278,6 +278,23 @@
     width:0% !important;
 }
 
+.orange-bg{
+    background:@orange;
+}
+
+.blue-bg{
+    background:@blue;
+}
+
+.orange-text{
+    color:@orange;
+}
+
+.blue-text{
+    color:@blue;
+}
+
+
 a{
     text-decoration:none;
 }
@@ -553,6 +570,12 @@ body {
                             // font-size:1.35rem;
                             text-align:center;
                             margin-bottom:3rem;
+                            .a{
+                                color:@blue;
+                            }
+                            i{
+                                color:@blue;
+                            }
                         }
                     }
                     .port-unit{
@@ -624,8 +647,6 @@ body {
                             }
                         }
                         .unit-content{
-                            .flex;
-                            .col;
                             .flex;
                              .row;
                             padding:.5rem 0rem;
@@ -715,6 +736,17 @@ body {
                                 }
                              }   
                         }
+                        .readme-content{
+                             .flex;
+                             .col;
+                            padding:.5rem 2rem;
+                            flex-wrap:wrap;
+                            >div{
+                                color:@blue;
+                                font-weight:600;
+                                line-height:1.5rem;
+                            }       
+                        }
                     }
                 .about-port{
                     font-size:1.15rem;
@@ -736,6 +768,10 @@ body {
                         color:@orange;
                         font-weight:1.5rem;
                     }
+                }
+                .readme-port{
+                    padding:1rem;
+                    font-size:1.15rem;
                 }
             }    
         }
