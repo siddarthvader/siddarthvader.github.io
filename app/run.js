@@ -5,7 +5,7 @@ syd.run(function($state,$timeout) {
 
     $timeout(function(){
         document.getElementById('target-elem').classList.add('element');
-    },5000)
+    },12000)
     
 
     $state.go('ground.about');

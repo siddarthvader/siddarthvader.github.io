@@ -47,7 +47,7 @@ module.exports = function (grunt) {
         ngAnnotate: {
             dist: {
                 files: {
-                    'app/__generated/desktop_annotated_concatenated.js': ['app/*.js','app/routing/*.js', 'app/directive/*.js','app/desktop/**/*.js', 'app/__generated/desktop_templates.js']
+                    'app/__generated/desktop_annotated_concatenated.js': ['app/*.js', 'app/routing/*.js', 'app/directive/*.js', 'app/desktop/**/*.js', 'app/__generated/desktop_templates.js']
                 }
             }
         },
@@ -76,6 +76,29 @@ module.exports = function (grunt) {
                     }
                 ]
             }
+        },
+        cssmin: {
+            options: {
+                shorthandCompacting: false,
+                roundingPrecision: -1
+            },
+
+            target: {
+                files: {
+                    'app/__dist/desktop.min.css': ['app/static/css/**.css','app/styles/**.css']
+                }
+            }
+
+        },
+        embedFonts: {
+            fonts: {
+                options: {
+                    xFontMimeType: true
+                },
+                files: {
+                    'app/__dist/desktop.min.css': ['app/__dist//desktop.min.css'],
+                }
+            }
         }
     });
 
@@ -87,8 +110,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');       //for copying file
     grunt.loadNpmTasks('grunt-angular-templates');  //angular templating
     grunt.loadNpmTasks('grunt-ng-annotate');        // annotation
+    grunt.loadNpmTasks('grunt-contrib-cssmin');		//minify the css
+    grunt.loadNpmTasks('grunt-embed-fonts');     //embed font file in css
 
-    grunt.registerTask('build', ['bower_concat', 'ngtemplates:desktop', 'ngAnnotate:dist', 'uglify:script', 'processhtml:production']);
+    grunt.registerTask('build', ['bower_concat', 'ngtemplates:desktop', 'ngAnnotate:dist', 'uglify:script', 'cssmin','embedFonts' ,'processhtml:production', 'clean:trash']);
     grunt.registerTask('buildDev', ['bower_concat', 'uglify:script', 'processhtml:dev', 'clean:trash']);
 
 };
