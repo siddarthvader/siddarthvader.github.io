@@ -47,7 +47,7 @@ module.exports = function (grunt) {
         ngAnnotate: {
             dist: {
                 files: {
-                    'app/__generated/desktop_annotated_concatenated.js': ['app/*.js','app/routing/*.js', 'app/directive/*.js','app/desktop/**/*.js', 'app/__generated/desktop_templates.js']
+                    'app/__generated/desktop_annotated_concatenated.js': ['app/*.js', 'app/routing/*.js', 'app/directive/*.js', 'app/desktop/**/*.js', 'app/__generated/desktop_templates.js']
                 }
             }
         },
@@ -76,7 +76,20 @@ module.exports = function (grunt) {
                     }
                 ]
             }
-        }
+        },
+        cssmin: {
+            options: {
+                shorthandCompacting: false,
+                roundingPrecision: -1
+            },
+
+            target: {
+                files: {
+                    'app/__dist/desktop.min.css': ['bower_components/font-awesome/css/font-awesome.min.css', 'app/styles/**.css']
+                }
+            }
+
+        },
     });
 
 
@@ -87,8 +100,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');       //for copying file
     grunt.loadNpmTasks('grunt-angular-templates');  //angular templating
     grunt.loadNpmTasks('grunt-ng-annotate');        // annotation
+    grunt.loadNpmTasks('grunt-contrib-cssmin');		//minify the css
 
-    grunt.registerTask('build', ['bower_concat', 'ngtemplates:desktop', 'ngAnnotate:dist', 'uglify:script', 'processhtml:production']);
+    grunt.registerTask('build', ['bower_concat', 'ngtemplates:desktop', 'ngAnnotate:dist', 'uglify:script','cssmin' ,'processhtml:production']);
     grunt.registerTask('buildDev', ['bower_concat', 'uglify:script', 'processhtml:dev', 'clean:trash']);
 
 };
