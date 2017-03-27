@@ -23,10 +23,38 @@ module.exports = function (grunt) {
 
             }
         },
+        ngtemplates: {
+            desktop: {
+                cwd: 'app/',
+                src: ['desktop/**/**.html'],
+                dest: 'public/__generated/desktop_templates.js'
+            },
+            options: {
+                module: 'sydApp',
+                htmlmin: {
+                    collapseBooleanAttributes: true,
+                    collapseWhitespace: true,
+                    conservativeCollapse: true,
+                    removeAttributeQuotes: true,
+                    removeComments: true, // Only if you don't use comment directives!
+                    removeEmptyAttributes: true,
+                    removeRedundantAttributes: true,
+                    removeScriptTypeAttributes: true,
+                    removeStyleLinkTypeAttributes: true
+                }
+            }
+        },
+        ngAnnotate: {
+            dist: {
+                files: {
+                    'app/__generated/desktop_annotated_concatenated.js': ['app/*.js', 'app/desktop/**/*.js', 'app/directive/**/*.js', 'app/routes/**/*.js', 'app/_directives/**/*.js', 'public/__generated/desktop_templates.js']
+                }
+            }
+        },
         uglify: {
             script: {
                 files: {
-                    'app/__dist/desktop.min.js': ['app/__generated/bower_concatenated.js']
+                    'app/__dist/desktop.min.js': ['app/__generated/bower_concatenated.js', 'app/__generated/desktop_annotated_concatenated.js']
                 }
             }
         },
@@ -39,12 +67,12 @@ module.exports = function (grunt) {
             }
         },
         copy: {
-            indexCopy:{
-                files:[
+            indexCopy: {
+                files: [
                     {
-                        expand:true,
-                        src:['index.html'],
-                        dest:'reserve/'
+                        expand: true,
+                        src: ['index.html'],
+                        dest: 'reserve/'
                     }
                 ]
             }
@@ -57,8 +85,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');     //uglify your code    
     grunt.loadNpmTasks('grunt-contrib-clean');		//clean files
     grunt.loadNpmTasks('grunt-contrib-copy');       //for copying file
+    grunt.loadNpmTasks('grunt-angular-templates');
 
-    grunt.registerTask('build', ['bower_concat', 'uglify:script', 'processhtml:production', 'clean:trash']);
+
+    grunt.registerTask('build', ['bower_concat', 'ngtemplates:desktop','ngAnnotate:dist','uglify:script', 'processhtml:production', 'clean:trash']);
     grunt.registerTask('buildDev', ['bower_concat', 'uglify:script', 'processhtml:dev', 'clean:trash']);
 
 };
