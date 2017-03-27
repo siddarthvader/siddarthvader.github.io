@@ -27,7 +27,7 @@ module.exports = function (grunt) {
             desktop: {
                 cwd: 'app/',
                 src: ['desktop/**/**.html'],
-                dest: 'public/__generated/desktop_templates.js'
+                dest: 'app/__generated/desktop_templates.js'
             },
             options: {
                 module: 'sydApp',
@@ -47,7 +47,7 @@ module.exports = function (grunt) {
         ngAnnotate: {
             dist: {
                 files: {
-                    'app/__generated/desktop_annotated_concatenated.js': ['app/*.js', 'app/desktop/**/*.js', 'app/directive/**/*.js', 'app/routes/**/*.js', 'app/_directives/**/*.js', 'public/__generated/desktop_templates.js']
+                    'app/__generated/desktop_annotated_concatenated.js': ['app/*.js', 'app/desktop/**/*.js', 'app/directive/**/*.js', 'app/routes/**/*.js', 'app/_directives/**/*.js', 'app/__generated/desktop_templates.js']
                 }
             }
         },
