@@ -31,13 +31,24 @@ module.exports = function (grunt) {
             }
         },
         clean: {
-			trash: {
-				src: ['app/__dist', 'app/__generated']
-			},
+            trash: {
+                src: ['app/__dist', 'app/__generated']
+            },
             all: {
-				src: ['app/__dist', 'app/__generated','index_desktop.html']
-			}
-		}
+                src: ['app/__dist', 'app/__generated', 'index_desktop.html']
+            }
+        },
+        copy: {
+            indexCopy:{
+                files:[
+                    {
+                        expand:true,
+                        src:['index.html'],
+                        dest:'reserve/'
+                    }
+                ]
+            }
+        }
     });
 
 
@@ -45,8 +56,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-processhtml');		//Process HTML inclusions (this might make many of the above obsolete)
     grunt.loadNpmTasks('grunt-contrib-uglify');     //uglify your code    
     grunt.loadNpmTasks('grunt-contrib-clean');		//clean files
+    grunt.loadNpmTasks('grunt-contrib-copy');       //for copying file
 
-    grunt.registerTask('build', ['bower_concat','uglify:script' ,'processhtml:production', 'clean:trash']);
-    grunt.registerTask('buildDev', ['bower_concat','uglify:script' ,'processhtml:dev', 'clean:trash']);
+    grunt.registerTask('build', ['bower_concat', 'uglify:script', 'processhtml:production', 'clean:trash']);
+    grunt.registerTask('buildDev', ['bower_concat', 'uglify:script', 'processhtml:dev', 'clean:trash']);
 
 };
