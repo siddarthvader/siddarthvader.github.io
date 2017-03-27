@@ -670,7 +670,7 @@ body {
 .vcontainer .vport .vcontent .port-unit .unit-header {
   font-weight: 600;
   color: #ff6162;
-  font-weight: 1.15rem;
+  font-size: 1.15rem;
   margin-top: 1rem;
   margin-bottom: .25rem;
 }
@@ -1061,7 +1061,7 @@ body {
   margin-top: .65rem;
 }
 .vcontainer .vport .vcontent .port-unit .unit-content .skill-unit .skill-meter .load {
-  height: .5rem;
+  height: .75rem;
   background: #ff6162;
   transition: all 0.4s ease-in-out;
   width: 0%;
@@ -1123,7 +1123,8 @@ body {
   flex-shrink: 0;
 }
 .vcontainer .vport .vcontent .port-unit .unit-content .skill-unit .skill-meter .meter > span {
-  font-weight: .8rem;
+  font-weight: 600rem;
+  font-size: .8rem;
   width: 20%;
 }
 .vcontainer .vport .vcontent .port-unit .readme-content {
