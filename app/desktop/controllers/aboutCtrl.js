@@ -54,7 +54,7 @@ syd.controller('aboutCtrl', function ($state, $scope, $timeout) {
                 },
                 {
                     title: 'User Interface Developer',
-                    duration: 'Feb-2016 - Feb 2017',
+                    duration: 'July-2014 - Feb 2016',
                     past: true,
                     company: 'Nucleus Software Pvt Ltd, India'
                 }
