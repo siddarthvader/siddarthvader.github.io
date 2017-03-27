@@ -85,10 +85,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');     //uglify your code    
     grunt.loadNpmTasks('grunt-contrib-clean');		//clean files
     grunt.loadNpmTasks('grunt-contrib-copy');       //for copying file
-    grunt.loadNpmTasks('grunt-angular-templates');
+    grunt.loadNpmTasks('grunt-angular-templates');  //angular templating
+    grunt.loadNpmTasks('grunt-ng-annotate');        // annotation
 
-
-    grunt.registerTask('build', ['bower_concat', 'ngtemplates:desktop','ngAnnotate:dist','uglify:script', 'processhtml:production', 'clean:trash']);
+    grunt.registerTask('build', ['bower_concat', 'ngtemplates:desktop', 'ngAnnotate:dist', 'uglify:script', 'processhtml:production', 'clean:trash']);
     grunt.registerTask('buildDev', ['bower_concat', 'uglify:script', 'processhtml:dev', 'clean:trash']);
 
 };
