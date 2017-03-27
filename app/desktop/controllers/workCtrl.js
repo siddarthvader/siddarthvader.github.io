@@ -46,7 +46,22 @@ syd.controller('workCtrl', function ($state, $scope, $timeout) {
                 past: false,
                 company: 'Self authored',
                 url: 'https://siddarthvader.github.io/ballgame/'
-            }]
+            }];
+
+            $scope.freeelancing = [{
+                title: 'Fees management system',
+                dutation: 'May 2014',
+                company: 'Self Authored',
+                url: 'https://github.com/siddarthvader/sms/tree/master'
+            },
+            {
+                title: 'College Sports Fest Site',
+                dutation: 'Jan 2013',
+                company: 'Self Authored',
+                url: 'https://github.com/siddarthvader/mst/tree/master'
+            }
+            ];
+
 
             setTimeout(function () {
                 var i = 0;

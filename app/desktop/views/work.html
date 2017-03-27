@@ -54,7 +54,8 @@
             </div>
         </div>
     </div>
-     <div class="port-unit mt1">
+
+    <div class="port-unit mt1">
         <div class="unit-header">
             Games
         </div>
@@ -74,6 +75,31 @@
 
                 <div class="exp-company">
                     {{open.company}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="port-unit mt1">
+        <div class="unit-header">
+            Freelancing Projects
+        </div>
+        <div class="exp-content">
+            <div class="exp-unit" ng-repeat="app in freeelancing">
+                <div class="exp-header">
+                    <div class="exp-role">
+                        <a ng-href={{app.url}} target="_blank">
+                           {{app.title}}
+                       </a>
+                    </div>
+                    <div class="exp-duration">
+                        <span>{{app.dutation}}</span>
+                        <i class="fa fa-external-link" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="exp-company">
+                    {{app.company}}
                 </div>
             </div>
         </div>
