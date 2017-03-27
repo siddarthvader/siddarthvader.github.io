@@ -7,7 +7,7 @@
     </div>
     <div class="port-unit mt1">
         <div class="unit-header">
-            In Jobs Experience
+            In Jobs' Experience
         </div>
         <div class="exp-content">
             <div class="exp-unit" ng-repeat="job in pastJobs">
@@ -16,7 +16,10 @@
                         {{job.title}}
                     </div>
                     <div class="exp-duration">
-                        {{job.dutation}}
+                        <span>
+                            {{job.duration}}
+                        </span>
+                        <i class="fa fa-bolt" ng-class={'orange-text':job.past,'blue-text':!job.past} aria-hidden="true"></i>
                     </div>
                 </div>
 

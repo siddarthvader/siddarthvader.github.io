@@ -1,19 +1,15 @@
 <div class="contact-port animated fadeInUp">
+
     <div class="port-header">
-        <div class="header-name">
-            Contact
-        </div>
         <div class="header-content">
-            I can be reached any time at my mail id
-            <bold>siddharthjn93@gmail.com</bold>
+           If you want to get anything related to web developed, you can drop me a mail, I am up for freelancing gigs. I will get back to you within two working days.
         </div>
     </div>
-
     <div class="port-unit mt1">
         <div class="unit-header">
-            Or Mail me rn {{name}}
+            Get in touch
         </div>
-        <div class="unit-content w30">
+        <div class="unit-content">
             <form ng-submit="sendMail()">
                 <div class="text-unit">
                     <label for="mail-name">Name</label>
@@ -24,10 +20,10 @@
                     <input class="text-input" ng-model="formData.email" name="email" required type="email" id="mail-email">
                 </div>
                 <div class="text-unit">
-                    <label for="mail-name">Message</label>
-                    <textarea class="area-input" ng-model="formData.message" name="message" required id="mail-message"></textarea>
+                    <label for="mail-name" class="mr1">Message</label>
+                    <textarea class="area-input" cols="10" rows="5" ng-model="formData.message" name="message" required id="mail-message"></textarea>
                 </div>
-                <div class="text-unit mt1">
+                <div class="text-unit mt1 button">
                     <input class="button-input" type="submit" value="Send">
                 </div>
                 <div class="success-unit" ng-if="success">
