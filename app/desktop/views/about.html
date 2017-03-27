@@ -7,7 +7,7 @@
     </div>
     <div class="port-unit mt1">
         <div class="unit-header">
-            In Jobs' Experience
+             Job history
         </div>
         <div class="exp-content">
             <div class="exp-unit" ng-repeat="job in pastJobs">
@@ -19,7 +19,7 @@
                         <span>
                             {{job.duration}}
                         </span>
-                        <i class="fa fa-bolt" ng-class={ 'orange-text':job.past, 'blue-text':!job.past} aria-hidden="true"></i>
+                        <i class="fa fa-bolt" ng-class="{ 'orange-text':job.past, 'blue-text':!job.past}" aria-hidden="true"></i>
                     </div>
                 </div>
 
@@ -32,7 +32,7 @@
 
     <div class="port-unit mt1">
         <div class="unit-header">
-            Technologies' Experience (In years)
+         Experience of technologies (In years)
         </div>
         <div class="unit-content">
             <div class="skill-unit" ng-repeat="skill in skills">
