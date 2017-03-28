@@ -10,12 +10,12 @@
             Applications developed
         </div>
         <div class="exp-content">
-            <div class="exp-unit" ng-repeat="app in appsDev">
+            <a class="exp-unit link" ng-repeat="app in appsDev" ng-href={{app.url}} target="_blank">
                 <div class="exp-header">
                     <div class="exp-role">
-                        <a ng-href={{app.url}} target="_blank">
+                        <span>
                            {{app.title}}
-                       </a>
+                       </span>
                     </div>
                     <div class="exp-duration">
                         <span>{{app.dutation}}</span>
@@ -26,7 +26,7 @@
                 <div class="exp-company">
                     {{app.company}}
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 
@@ -35,12 +35,12 @@
             Open source contributation
         </div>
         <div class="exp-content">
-            <div class="exp-unit" ng-repeat="open in openSource">
+            <a class="exp-unit link" ng-repeat="open in openSource" ng-href={{open.url}} target="_blank">
                 <div class="exp-header">
                     <div class="exp-role">
-                        <a ng-href={{open.url}} target="_blank">
+                        <span>
                            {{open.title}}
-                       </a>
+                       </span>
                     </div>
                     <div class="exp-duration">
                         <span>{{open.dutation}}</span>
@@ -51,7 +51,7 @@
                 <div class="exp-company">
                     {{open.company}}
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 
@@ -60,12 +60,12 @@
             Games
         </div>
         <div class="exp-content">
-            <div class="exp-unit" ng-repeat="open in gameDev">
+            <a class="exp-unit link" ng-repeat="open in gameDev" ng-href={{open.url}} target="_blank">
                 <div class="exp-header">
                     <div class="exp-role">
-                        <a ng-href={{open.url}} target="_blank">
+                        <span>
                            {{open.title}}
-                       </a>
+                       </span>
                     </div>
                     <div class="exp-duration">
                         <span>{{open.dutation}}</span>
@@ -77,7 +77,7 @@
                     {{open.company}}
                 </div>
             </div>
-        </div>
+        </a>
     </div>
 
     <div class="port-unit mt1">
@@ -85,12 +85,12 @@
             Freelancing Projects
         </div>
         <div class="exp-content">
-            <div class="exp-unit" ng-repeat="app in freeelancing">
+            <a class="exp-unit link" ng-repeat="app in freeelancing" ng-href={{app.url}} target="_blank">
                 <div class="exp-header">
                     <div class="exp-role">
-                        <a ng-href={{app.url}} target="_blank">
+                        <span>
                            {{app.title}}
-                       </a>
+                       </span>
                     </div>
                     <div class="exp-duration">
                         <span>{{app.dutation}}</span>
@@ -101,7 +101,7 @@
                 <div class="exp-company">
                     {{app.company}}
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </div>

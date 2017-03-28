@@ -801,6 +801,25 @@ body {
 .vcontainer .vport .vcontent .port-unit .exp-content .exp-unit .exp-header .exp-role > a {
   color: #0f4870;
 }
+.vcontainer .vport .vcontent .port-unit .exp-content .exp-unit .exp-header .exp-duration {
+  color: #0f4870;
+}
+.vcontainer .vport .vcontent .port-unit .exp-content .exp-unit .exp-header .exp-duration > i {
+  color: #0f4870;
+}
+.vcontainer .vport .vcontent .port-unit .exp-content .exp-unit .exp-company {
+  color: #0f4870;
+}
+.vcontainer .vport .vcontent .port-unit .exp-content .exp-unit.link {
+  transition: all 250ms ease;
+  cursor: pointer;
+}
+.vcontainer .vport .vcontent .port-unit .exp-content .exp-unit.link:hover {
+  transition: all 250ms ease;
+  border-color: rgba(15, 72, 112, 0.82);
+  transform: translate3d(0, -0.15rem, 0);
+  box-shadow: 0 0.25rem 1.25rem rgba(15, 72, 112, 0.4), 0 0 0.25rem rgba(15, 72, 112, 0.12), 0 1.25rem 1.25rem rgba(15, 72, 112, 0.12);
+}
 .vcontainer .vport .vcontent .port-unit .list-skills {
   display: flex;
   flex-direction: row;
