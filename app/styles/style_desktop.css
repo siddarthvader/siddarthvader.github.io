@@ -1219,6 +1219,7 @@ body {
 .vcontainer .vport .vcontent .blog-port {
   padding: 1rem;
   font-size: 1.15rem;
+  height: 80rem;
 }
 .vcontainer .vport .vcontent .blog-port > p {
   text-align: center;

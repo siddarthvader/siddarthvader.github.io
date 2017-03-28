@@ -78,9 +78,10 @@ module.exports = function (grunt) {
             },
             reverse: {
                 files: [
-                    {
+                    {   
+                        cwd:'reserve/',
                         expand: true,
-                        src: ['reserve/index.html'],
+                        src: ['index.html'],
                         dest: ''
                     }
                 ]
