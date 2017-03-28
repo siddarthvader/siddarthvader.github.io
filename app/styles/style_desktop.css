@@ -804,9 +804,6 @@ body {
 .vcontainer .vport .vcontent .port-unit .exp-content .exp-unit .exp-header .exp-duration {
   color: #0f4870;
 }
-.vcontainer .vport .vcontent .port-unit .exp-content .exp-unit .exp-header .exp-duration > i {
-  color: #0f4870;
-}
 .vcontainer .vport .vcontent .port-unit .exp-content .exp-unit .exp-company {
   color: #0f4870;
 }
