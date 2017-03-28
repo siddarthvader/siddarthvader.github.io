@@ -446,49 +446,55 @@ body {
     }
 }
 
-.header {
-    color: @blue;
-    .flex;
-    .row;
-    .fe;
-    .jc;
-    .font-big;
-    font-weight: bold;
-    .element {
+.header-container{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding-top:1.5rem;
+    background:@white-bg;
+    z-index:1;
+    .header {
+        color: @blue;
         .flex;
         .row;
-        .ac;
         .fe;
+        .jc;
         .font-big;
-        .ml-5;
-        color:@orange;
-        position: relative;
-        height: @font-big;
-        width: 12rem;
-        &:before {
-            animation: changeLetter 9900ms linear infinite;
-            display: block;
-            content: 'portfolio';
-            animation-delay: 3s;
-            animation-iteration-count: 2;
+        font-weight: bold;
+        .element {
+            .flex;
+            .row;
+            .ac;
+            .fe;
+            .font-big;
+            .ml-5;
             color:@orange;
-        }
-        &:after {
-            content: '_';
-            font-weight: bold;
-            font-size: 30px;
-            animation: 300ms blink step-end infinite;
-            transition: all 100ms ease-in-out;
-            animation-iteration-count: 100;
-            color:@orange;
+            position: relative;
+            height: @font-big;
+            width: 12rem;
+            &:before {
+                animation: changeLetter 9900ms linear infinite;
+                display: block;
+                content: 'portfolio';
+                animation-delay: 3s;
+                animation-iteration-count: 2;
+                color:@orange;
+            }
+            &:after {
+                content: '_';
+                font-weight: bold;
+                font-size: 30px;
+                animation: 300ms blink step-end infinite;
+                transition: all 100ms ease-in-out;
+                animation-iteration-count: 100;
+                color:@orange;
+            }
         }
     }
-}
 
-.vcontainer{
-    width:100%;
-    margin:0 auto;
-    padding:1rem;
+
+
     .vmenu{
         padding:.5rem 0;
         display: flex;
@@ -507,7 +513,59 @@ body {
                 color:@orange;
             }
         }
+    
     }
+
+
+    .parent-loader{
+        position:relative;
+        height:1rem;
+        width:100%;
+            .tab-indicator{
+            width:10%;
+            height:.5rem;
+            background: @orange;
+            transition:all @animation-speed-default ease-in-out;
+            position:absolute;
+            left:5%;
+            &.l20{
+                left:25%;
+            }
+            &.l40{
+                left:45%;
+            } 
+            &.l60{
+                left:65%;
+            }
+            &.l80{
+                left:85%;
+            }   
+        }
+        .loader{
+            height:.5rem;
+            width:100%;
+            background: @blue;
+        }
+    }
+
+    
+}
+
+.avail-notifier{
+        color:@blue;
+        position:fixed;
+        right:1rem;
+        top:3%;
+        padding:.5rem;
+        z-index: 2;
+        font-weight:900;
+    }
+
+.vcontainer{
+    width:100%;
+    margin:0 auto;
+    padding: 1rem;
+    margin-top:10rem;
     .vport{  
             // margin:1rem;
             display: flex;
@@ -515,36 +573,6 @@ body {
             align-items: flex-start;
             width:100%;
             color:black;
-            .parent-loader{
-                position:relative;
-                height:1rem;
-                width:100%;
-                 .tab-indicator{
-                    width:10%;
-                    height:.5rem;
-                    background: @orange;
-                    transition:all @animation-speed-default ease-in-out;
-                    position:absolute;
-                    left:5%;
-                    &.l20{
-                        left:25%;
-                    }
-                    &.l40{
-                        left:45%;
-                    } 
-                    &.l60{
-                        left:65%;
-                    }
-                    &.l80{
-                        left:85%;
-                    }   
-                }
-                .loader{
-                    height:.5rem;
-                    width:100%;
-                    background: @blue;
-                }
-            }
             .vcontent{             
                 font-size:1.25rem;
                 color:black;
@@ -807,15 +835,6 @@ body {
 		transform: translateY(0);
 	}
 }
-
-.avail-notifier{
-    color:@blue;
-    position:absolute;
-    right:1rem;
-    top:3%;
-    padding:.5rem;
-}
-
 
 
 // [ui-view='content']{

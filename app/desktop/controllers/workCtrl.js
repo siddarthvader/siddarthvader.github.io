@@ -8,14 +8,14 @@ syd.controller('workCtrl', function ($state, $scope, $timeout) {
             $scope.appsDev = [
                 {
                     title: 'Acadly App',
-                    duration: 'Feb-2017 - now',
-                    past: false,
+                    duration: 'Feb-2016 - Feb 2017',
+                    past: true,
                     company: 'Acetone Designs Pvt Ltd',
                     url: 'https://app.acadly.com/'
                 },
                 {
                     title: 'Acadly Website',
-                    duration: 'Feb-2017 - now',
+                    duration: 'Feb-2016 - Feb 2016',
                     past: true,
                     company: 'Acetone Designs Pvt Ltd, India',
                     url: 'https://www.acadly.com/'
@@ -34,7 +34,7 @@ syd.controller('workCtrl', function ($state, $scope, $timeout) {
                 {
                     title: 'CSS Media All',
                     duration: 'Jan-2017 - now',
-                    past: true,
+                    past: false,
                     company: 'Self authored',
                     url: 'https://www.npmjs.com/package/css-media-all'
                 }
@@ -50,14 +50,16 @@ syd.controller('workCtrl', function ($state, $scope, $timeout) {
 
             $scope.freeelancing = [{
                 title: 'Fees management system',
-                dutation: 'May 2014',
+                duration: 'May 2014',
                 company: 'Self Authored',
+                past:true,
                 url: 'https://github.com/siddarthvader/sms/tree/master'
             },
             {
                 title: 'College Sports Fest Site',
-                dutation: 'Jan 2013',
+                duration: 'Jan 2013',
                 company: 'Self Authored',
+                past:true,
                 url: 'https://github.com/siddarthvader/mst/tree/master'
             }
             ];

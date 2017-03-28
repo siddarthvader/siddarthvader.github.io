@@ -18,7 +18,8 @@
                        </span>
                     </div>
                     <div class="exp-duration">
-                        <span>{{app.dutation}}</span>
+                        <span>{{app.duration}}</span>
+                        <i class="fa fa-bolt" ng-class="{ 'orange-text':app.past, 'blue-text':!app.past}" aria-hidden="true"></i>
                         <i class="fa fa-external-link" aria-hidden="true"></i>
                     </div>
                 </div>
@@ -43,7 +44,8 @@
                        </span>
                     </div>
                     <div class="exp-duration">
-                        <span>{{open.dutation}}</span>
+                        <span>{{open.duration}}</span>
+                        <i class="fa fa-bolt" ng-class="{ 'orange-text':open.past, 'blue-text':!open.past}" aria-hidden="true"></i>
                         <i class="fa fa-external-link" aria-hidden="true"></i>
                     </div>
                 </div>
@@ -68,7 +70,9 @@
                        </span>
                     </div>
                     <div class="exp-duration">
-                        <span>{{open.dutation}}</span>
+                        <span>{{open.duration}}</span>
+                        <i class="fa fa-bolt" ng-class="{ 'orange-text':open.past, 'blue-text':!open.past}" aria-hidden="true"></i>
+
                         <i class="fa fa-external-link" aria-hidden="true"></i>
                     </div>
                 </div>
@@ -76,7 +80,7 @@
                 <div class="exp-company">
                     {{open.company}}
                 </div>
-            </div>
+        </div>
         </a>
     </div>
 
@@ -93,7 +97,8 @@
                        </span>
                     </div>
                     <div class="exp-duration">
-                        <span>{{app.dutation}}</span>
+                        <span>{{app.duration}}</span>
+                        <i class="fa fa-bolt" ng-class="{ 'orange-text':app.past, 'blue-text':!app.past}" aria-hidden="true"></i>
                         <i class="fa fa-external-link" aria-hidden="true"></i>
                     </div>
                 </div>
