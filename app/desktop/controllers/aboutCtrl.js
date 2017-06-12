@@ -5,6 +5,7 @@ syd.controller('aboutCtrl', function ($state, $scope, $timeout) {
     console.log('ods');
 
     $scope.$on('$viewContentLoaded', function () {
+
         $timeout(function () {
             $scope.skills = [
                 {
@@ -24,6 +25,10 @@ syd.controller('aboutCtrl', function ($state, $scope, $timeout) {
                     exp: moment().diff(moment('01-01-2016', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('01-01-2016', 'DD-MM-YYYY'), 'months') * 1.66 : 100
                 },
                 {
+                    name: 'NodeJS',
+                    exp: moment().diff(moment('03-03-2016', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('03-03-2016', 'DD-MM-YYYY'), 'months') * 1.66 : 100
+                },
+                {
                     name: 'JQuery',
                     exp: moment().diff(moment('07-06-2013', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('06-06-2013', 'DD-MM-YYYY'), 'months') * 1.66 : 100
                 },
@@ -34,6 +39,10 @@ syd.controller('aboutCtrl', function ($state, $scope, $timeout) {
                 {
                     name: 'IONIC',
                     exp: moment().diff(moment('10-11-2016', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('10-11-2016', 'DD-MM-YYYY'), 'months') * 1.66 : 100
+                },
+                {
+                    name: 'MongoDB',
+                    exp: moment().diff(moment('05-05-2017', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('05-05-2017', 'DD-MM-YYYY'), 'months') * 1.66 : 100
                 },
             ];
 

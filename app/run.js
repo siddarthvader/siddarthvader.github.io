@@ -5,8 +5,7 @@ syd.run(function ($state, $timeout, $rootScope) {
 
     $timeout(function () {
         document.getElementById('target-elem').classList.add('element');
-    }, 12000)
-
+    }, 12000);
 
 
     $rootScope.$state = $state;
@@ -39,8 +38,8 @@ syd.run(function ($state, $timeout, $rootScope) {
     $rootScope.$on('$stateChangeSuccess', function () {
         document.body.scrollTop = 0;
         deterClass();
-        
     });
+
 
     $state.go('ground.about');
 });
