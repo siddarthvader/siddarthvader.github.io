@@ -25,7 +25,7 @@ syd.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
             "content":{
                 templateUrl:'app/desktop/views/work.html',
                 controller:'workCtrl',
-                controllerAs:'wor'
+                controllerAs:'work'
             }
         }
     })

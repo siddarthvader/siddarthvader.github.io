@@ -7,6 +7,13 @@ syd.controller('workCtrl', function ($state, $scope, $timeout) {
 
             $scope.appsDev = [
                 {
+                    title: 'Stock Market Trading Application',
+                    duration: 'July-2017',
+                    past: false,
+                    company: 'Freelancing',
+                    url:'https://damp-oasis-64949.herokuapp.com/'
+                },
+                {
                     title: 'Acadly App',
                     duration: 'Feb-2016 - Feb 2017',
                     past: true,
