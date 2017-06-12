@@ -1,0 +1,98 @@
+<html ng-app="todoMVC">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./../bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="dist/bundle.css">
+    <style lang="">
+        .selected {
+            background: rgb(220, 220, 220);
+        }
+
+        .cursor-p {
+            cursor: pointer;
+        }
+
+        .mt-4 {
+            margin-top: 4rem;
+        }
+
+        .red-text {
+            color: rgb(255, 56, 96);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div ng-controller="mainController" class="container is-fluid hero">
+        <div class="hero-head has-fixed-header">To-Do App</div>
+        <div class="hero-body mt-4">
+            <div class="columns">
+                <div class="column is-4 is-offset-4">
+                    <div class="box">
+
+                        <ul ng-if="notes.length">
+                            <li class="columns is-mobile cursor-p" ng-repeat="note in notes track by $index" ng-class="{'selected':isSelected(note)}">
+                                <div class="is-8 column" ng-click="select(note)">
+                                    <div>
+                                        {{$index+1}}- {{note}}
+                                    </div>
+                                </div>
+                                <div class="is-4 column has-text-right">
+                                    <span class="icon is-small cursor-p" ng-click="select(note)">
+                                    <i class="fa fa-check"></i>
+                                    </span>
+                                    <span class="icon is-small cursor-p" ng-click="delete(index)">
+                                    <i class="fa fa-minus red-text"></i>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                        <p ng-if="!notes.length" class="help is-danger has-text-centered">
+                            Nothing to show
+                        </p>
+                        <form ng-submit="addNote()">
+                            <div class="field mt-4">
+                                <label class="  label blue-text">Add Note</label>
+                                <p class="control is-expanded">
+                                    <input class="input" type="text" ng-model="noteText">
+                                </p>
+                            </div>
+                            <div class="field has-addons ">
+                                <p class="control">
+                                    <a class="button is-primary is-pulled-right" ng-click="addNote()">
+                                Add
+                        </a>
+                                </p>
+                                <p class="control" ng-if="selected!=notes && notes.length>0">
+                                    <a class="button is-info" ng-click="selectAll()">
+                            Select all
+                        </a>
+                                </p>
+                                <p class="control" ng-if="selected==notes && selected.length>0">
+                                    <a class="button is-info" ng-click="deselectAll()">
+                            De-select all
+                        </a>
+                                </p>
+                                <p class="control">
+                                    <a class="button is-danger" ng-if="selected===notes && selected.length>0" ng-click="deleteAll()">
+                                Delete All
+                            </a>
+                                </p>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--<script src="node_modules/angular/angular.min.js"></script>
+    <script src="app/app.js"></script>-->
+    <script src="dist/bundle.js"></script>
+</body>
+
+</html>
