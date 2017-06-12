@@ -63,14 +63,14 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(4);
+__webpack_require__(3);
 module.exports = angular;
 
 
@@ -81,8 +81,7 @@ module.exports = angular;
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 2 */,
-/* 3 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1)
@@ -95,57 +94,62 @@ todoMVC.controller('mainController', ['$scope', function ($scope) {
     $scope.noteText = '';
     var ctrl = this;
 
-    $scope.addNote = function (data) {
-        $scope.notes.push($scope.noteText);
+    $scope.addNote = function () {
+        var obj = {
+            text: $scope.noteText,
+            index: $scope.notes.length + 1,
+            selected: false
+        }
+        $scope.notes.push(obj);
         $scope.noteText = '';
     };
 
-    $scope.isSelected = function (index) {
-        console.log($scope.selected);
-        if ($scope.selected) {
-            return $scope.selected.indexOf(index) > -1 ? true : false;
-        }
-        else {
-            return false;
-        }
-    }
-
-    $scope.select = function (note) {
-        if (!$scope.selected) {
-            $scope.selected = [];
-            $scope.selected.push(note);
-        }
-        else {
-            var index=$scope.selected.indexOf(note);
-            if ( index== -1) {
-                $scope.selected.push(note);
+    $scope.select = function (note, index) {
+        $scope.notes[index].selected = !$scope.notes[index].selected;
+        var flag = false;
+        $scope.notes.forEach(function (note,i) {
+            if (note.selected) {
+                flag = true;
             }
-            else {
-                $scope.selected.splice(index,1);
-            }
+        });
+        $scope.selectOn = flag;
 
-        }
+    };
 
-    }
+    $scope.deleteSelected = function () {
+        var notes=$scope.notes.filter(function (note,i) {
+            return !note.selected;
+        });
+        $scope.notes=notes;
+        $scope.selectOn=false;
+        $scope.selectedAll=false;
+    };
 
-    $scope.delete = function ($index) {
+    $scope.delete = function (note, $index) {
         $scope.notes.splice($index, 1);
     }
 
     $scope.deleteAll = function () {
         $scope.notes = [];
+        $scope.selectedAll = false;
     }
 
     $scope.selectAll = function () {
-        $scope.selected = $scope.notes;
+        $scope.notes.forEach(function (note, i) {
+            $scope.notes[i].selected = true;
+        });
+        $scope.selectedAll = true;
     }
-    $scope.deselectAll=function(){
-        $scope.selected=[];
+    $scope.deselectAll = function () {
+        $scope.notes.forEach(function (note, i) {
+            $scope.notes[i].selected = false;
+        });
+        $scope.selectedAll = false;
     }
 }]);
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, exports) {
 
 /**
