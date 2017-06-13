@@ -6,7 +6,7 @@ var Path = require('path');
 var compression = require('compression');
 var size = require('window-size');
 
-var port = 8000;
+var port = 8080;
 
 app.use(compression({level: 6}));	//6 is default
 

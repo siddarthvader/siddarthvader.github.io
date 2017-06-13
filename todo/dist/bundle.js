@@ -107,7 +107,7 @@ todoMVC.controller('mainController', ['$scope', function ($scope) {
     $scope.select = function (note, index) {
         $scope.notes[index].selected = !$scope.notes[index].selected;
         var flag = false;
-        $scope.notes.forEach(function (note,i) {
+        $scope.notes.forEach(function (note, i) {
             if (note.selected) {
                 flag = true;
             }
@@ -117,12 +117,12 @@ todoMVC.controller('mainController', ['$scope', function ($scope) {
     };
 
     $scope.deleteSelected = function () {
-        var notes=$scope.notes.filter(function (note,i) {
+        var notes = $scope.notes.filter(function (note, i) {
             return !note.selected;
         });
-        $scope.notes=notes;
-        $scope.selectOn=false;
-        $scope.selectedAll=false;
+        $scope.notes = notes;
+        $scope.selectOn = false;
+        $scope.selectedAll = false;
     };
 
     $scope.delete = function (note, $index) {
@@ -145,6 +145,8 @@ todoMVC.controller('mainController', ['$scope', function ($scope) {
             $scope.notes[i].selected = false;
         });
         $scope.selectedAll = false;
+        $scope.selectOn = false;
+
     }
 }]);
 
