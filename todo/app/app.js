@@ -1,6 +1,8 @@
-require("bulma/css/bulma.css")
+require("bulma/css/bulma.css");
+require('font-awesome/css/font-awesome.css');
 require('angular');
 var todoMVC = angular.module('todoMVC', []);
+
 
 todoMVC.controller('mainController', ['$scope', function ($scope) {
     $scope.text = "we are up";

@@ -1,0 +1,1 @@
+stack= Angular+Bulma+Sass+Webpack+Yarn

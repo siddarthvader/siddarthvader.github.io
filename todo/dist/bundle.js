@@ -63,14 +63,14 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(3);
+__webpack_require__(4);
 module.exports = angular;
 
 
@@ -82,11 +82,19 @@ module.exports = angular;
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(1)
+__webpack_require__(1);
+__webpack_require__(2);
 __webpack_require__(0);
 var todoMVC = angular.module('todoMVC', []);
+
 
 todoMVC.controller('mainController', ['$scope', function ($scope) {
     $scope.text = "we are up";
@@ -150,8 +158,9 @@ todoMVC.controller('mainController', ['$scope', function ($scope) {
     }
 }]);
 
+
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports) {
 
 /**
