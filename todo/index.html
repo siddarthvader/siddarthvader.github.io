@@ -1,7 +1,7 @@
 <html ng-app="todoMVC">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="./../bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="dist/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="dist/bundle.css">
     <style lang="">
         .selected {
@@ -32,17 +32,17 @@
                     <div class="box">
 
                         <ul ng-if="notes.length">
-                            <li class="columns is-mobile cursor-p" ng-repeat="note in notes track by $index" ng-class="{'selected':isSelected(note)}">
-                                <div class="is-8 column" ng-click="select(note)">
+                            <li class="columns is-mobile cursor-p" ng-repeat="note in notes track by $index" ng-class="{'selected':note.selected}">
+                                <div class="is-8 column" ng-click="select(note,$index)">
                                     <div>
-                                        {{$index+1}}- {{note}}
+                                        {{$index+1}}- {{note.text}}
                                     </div>
                                 </div>
                                 <div class="is-4 column has-text-right">
-                                    <span class="icon is-small cursor-p" ng-click="select(note)">
+                                    <span class="icon is-small cursor-p" ng-click="select(note,$index)">
                                     <i class="fa fa-check"></i>
                                     </span>
-                                    <span class="icon is-small cursor-p" ng-click="delete(index)">
+                                    <span class="icon is-small cursor-p" ng-click="delete(note,$index)">
                                     <i class="fa fa-minus red-text"></i>
                                     </span>
                                 </div>
@@ -64,18 +64,23 @@
                                 Add
                         </a>
                                 </p>
-                                <p class="control" ng-if="selected!=notes && notes.length>0">
+                                <p class="control" ng-if="notes.length && !selectedAll">
                                     <a class="button is-info" ng-click="selectAll()">
                             Select all
                         </a>
                                 </p>
-                                <p class="control" ng-if="selected==notes && selected.length>0">
+                                <p class="control" ng-if="selectedAll">
                                     <a class="button is-info" ng-click="deselectAll()">
                             De-select all
                         </a>
                                 </p>
                                 <p class="control">
-                                    <a class="button is-danger" ng-if="selected===notes && selected.length>0" ng-click="deleteAll()">
+                                    <a class="button is-danger" ng-if="selectOn" ng-click="deleteSelected()">
+                                Delete
+                            </a>
+                                </p>
+                                <p class="control">
+                                    <a class="button is-danger" ng-if="selectedAll" ng-click="deleteAll()">
                                 Delete All
                             </a>
                                 </p>
