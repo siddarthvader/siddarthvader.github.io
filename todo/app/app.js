@@ -20,15 +20,19 @@ todoMVC.controller('mainController', ['$scope', function ($scope) {
         $scope.noteText = '';
     };
 
+    $scope.check=function(){
+      $scope.notes.forEach(function (note, i) {
+          if (note.selected) {
+              flag = true;
+          }
+      });
+      $scope.selectOn = flag;
+    }
+
     $scope.select = function (note, index) {
         $scope.notes[index].selected = !$scope.notes[index].selected;
         var flag = false;
-        $scope.notes.forEach(function (note, i) {
-            if (note.selected) {
-                flag = true;
-            }
-        });
-        $scope.selectOn = flag;
+        $scope.check()
 
     };
 
@@ -43,11 +47,14 @@ todoMVC.controller('mainController', ['$scope', function ($scope) {
 
     $scope.delete = function (note, $index) {
         $scope.notes.splice($index, 1);
+        $scope.check();
     }
 
     $scope.deleteAll = function () {
         $scope.notes = [];
         $scope.selectedAll = false;
+        $scope.selectOn=false;
+
     }
 
     $scope.selectAll = function () {

@@ -1,1 +1,5 @@
-stack= Angular+Bulma+Sass+Webpack+Yarn
+
+> npm run server
+
+
+> yarn run server
