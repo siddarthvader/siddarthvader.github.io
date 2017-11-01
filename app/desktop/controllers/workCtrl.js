@@ -13,7 +13,7 @@ syd.controller('workCtrl', function ($state, $scope, $timeout) {
                     url: 'http://amanegi.com/'
                 },
                 {
-                    title: 'Stock Market Trading Application',
+                    title: 'Trading Application',
                     duration: 'July-2017',
                     past: false,
                     company: 'Freelancing',
