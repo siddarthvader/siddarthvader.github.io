@@ -5,13 +5,19 @@ syd.controller('workCtrl', function ($state, $scope, $timeout) {
     $scope.$on('$viewContentLoaded', function () {
         $timeout(function () {
 
-            $scope.appsDev = [
+            $scope.appsDev = [{
+                    title: 'Portfolio',
+                    duration: 'Aug-2017 - Sep 2017',
+                    past: true,
+                    company: 'Freelancing',
+                    url: 'http://amanegi.com/'
+                },
                 {
                     title: 'Stock Market Trading Application',
                     duration: 'July-2017',
                     past: false,
                     company: 'Freelancing',
-                    url:'https://damp-oasis-64949.herokuapp.com/'
+                    url: 'https://damp-oasis-64949.herokuapp.com/'
                 },
                 {
                     title: 'Acadly App',
@@ -30,8 +36,7 @@ syd.controller('workCtrl', function ($state, $scope, $timeout) {
             ];
 
 
-            $scope.openSource = [
-                {
+            $scope.openSource = [{
                     title: 'Angular Httpshooter',
                     duration: 'Jan-2017 - now',
                     past: false,
@@ -56,19 +61,19 @@ syd.controller('workCtrl', function ($state, $scope, $timeout) {
             }];
 
             $scope.freeelancing = [{
-                title: 'Fees management system',
-                duration: 'May 2014',
-                company: 'Self Authored',
-                past:true,
-                url: 'https://github.com/siddarthvader/sms/tree/master'
-            },
-            {
-                title: 'College Sports Fest Site',
-                duration: 'Jan 2013',
-                company: 'Self Authored',
-                past:true,
-                url: 'https://github.com/siddarthvader/mst/tree/master'
-            }
+                    title: 'Fees management system',
+                    duration: 'May 2014',
+                    company: 'Self Authored',
+                    past: true,
+                    url: 'https://github.com/siddarthvader/sms/tree/master'
+                },
+                {
+                    title: 'College Sports Fest Site',
+                    duration: 'Jan 2013',
+                    company: 'Self Authored',
+                    past: true,
+                    url: 'https://github.com/siddarthvader/mst/tree/master'
+                }
             ];
 
 

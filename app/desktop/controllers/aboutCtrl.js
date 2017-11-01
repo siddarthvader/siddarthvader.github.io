@@ -7,8 +7,7 @@ syd.controller('aboutCtrl', function ($state, $scope, $timeout) {
     $scope.$on('$viewContentLoaded', function () {
 
         $timeout(function () {
-            $scope.skills = [
-                {
+            $scope.skills = [{
                     name: 'HTML',
                     exp: moment().diff(moment('07-01-2012', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('07-01-2012', 'DD-MM-YYYY'), 'months') * 10 / 6 : 100
                 },
@@ -25,6 +24,10 @@ syd.controller('aboutCtrl', function ($state, $scope, $timeout) {
                     exp: moment().diff(moment('01-01-2016', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('01-01-2016', 'DD-MM-YYYY'), 'months') * 1.66 : 100
                 },
                 {
+                    name: 'Mithril',
+                    exp: moment().diff(moment('10-11-2016', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('10-05-2017', 'DD-MM-YYYY'), 'months') * 1.66 : 100
+                },
+                {
                     name: 'NodeJS',
                     exp: moment().diff(moment('03-03-2016', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('03-03-2016', 'DD-MM-YYYY'), 'months') * 1.66 : 100
                 },
@@ -37,10 +40,6 @@ syd.controller('aboutCtrl', function ($state, $scope, $timeout) {
                     exp: moment('10-06-2014', 'DD-MM-YYYY').diff(moment('06-01-2013', 'DD-MM-YYYY'), 'months') <= 60 ? moment('10-06-2014', 'DD-MM-YYYY').diff(moment('01-06-2012', 'DD-MM-YYYY'), 'months') * 1.66 : 100
                 },
                 {
-                    name: 'IONIC',
-                    exp: moment().diff(moment('10-11-2016', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('10-11-2016', 'DD-MM-YYYY'), 'months') * 1.66 : 100
-                },
-                {
                     name: 'MongoDB',
                     exp: moment().diff(moment('05-05-2017', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('05-05-2017', 'DD-MM-YYYY'), 'months') * 1.66 : 100
                 },
@@ -48,8 +47,7 @@ syd.controller('aboutCtrl', function ($state, $scope, $timeout) {
 
             console.log($scope.skills);
 
-            $scope.pastJobs = [
-                {
+            $scope.pastJobs = [{
                     title: 'Web Developer/Freelancer',
                     duration: 'Feb-2017 - now',
                     past: false,
