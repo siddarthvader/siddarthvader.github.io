@@ -28,6 +28,7 @@ syd.controller('workCtrl', function ($state, $scope, $timeout) {
                 },
                 {
                     title: 'Acadly Website',
+                    
                     duration: 'Feb-2016 - Feb 2016',
                     past: true,
                     company: 'Acetone Designs Pvt Ltd, India',
