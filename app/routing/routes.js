@@ -50,7 +50,7 @@ syd.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
     .state('ground.blog',{
         views:{
             "content":{
-                templateUrl:'app/desktop/views/blog.html'
+                templateUrl:'blog/index.html'
             }
         }
     })
