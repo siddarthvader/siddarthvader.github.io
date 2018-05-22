@@ -18,21 +18,6 @@ syd.controller('workCtrl', function ($state, $scope, $timeout) {
                     past: false,
                     company: 'Freelancing',
                     url: 'https://damp-oasis-64949.herokuapp.com/'
-                },
-                {
-                    title: 'Acadly App',
-                    duration: 'Feb-2016 - Feb 2017',
-                    past: true,
-                    company: 'Acetone Designs Pvt Ltd',
-                    url: 'https://app.acadly.com/'
-                },
-                {
-                    title: 'Acadly Website',
-                    
-                    duration: 'Feb-2016 - Feb 2016',
-                    past: true,
-                    company: 'Acetone Designs Pvt Ltd, India',
-                    url: 'https://www.acadly.com/'
                 }
             ];
 

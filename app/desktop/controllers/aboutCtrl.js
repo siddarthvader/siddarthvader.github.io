@@ -9,40 +9,44 @@ syd.controller('aboutCtrl', function ($state, $scope, $timeout) {
         $timeout(function () {
             $scope.skills = [{
                     name: 'HTML',
-                    exp: moment().diff(moment('07-01-2012', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('07-01-2012', 'DD-MM-YYYY'), 'months') * 10 / 6 : 100
+                    exp: moment().diff(moment('07-01-2012', 'DD-MM-YYYY'), 'months') <= 120 ? moment().diff(moment('07-01-2012', 'DD-MM-YYYY'), 'months')*.83 : 100
                 },
                 {
                     name: 'CSS',
-                    exp: moment().diff(moment('07-01-2012', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('07-01-2012', 'DD-MM-YYYY'), 'months') * 1.66 : 100
+                    exp: moment().diff(moment('07-01-2012', 'DD-MM-YYYY'), 'months') <= 120 ? moment().diff(moment('07-01-2012', 'DD-MM-YYYY'), 'months')*.83 : 100
                 },
                 {
                     name: 'Javscript',
-                    exp: moment().diff(moment('06-01-2013', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('06-01-2013', 'DD-MM-YYYY'), 'months') * 1.66 : 100
+                    exp: moment().diff(moment('06-01-2013', 'DD-MM-YYYY'), 'months') <= 120 ? moment().diff(moment('06-01-2013', 'DD-MM-YYYY'), 'months')*.83 : 100
                 },
                 {
                     name: 'Angular',
-                    exp: moment().diff(moment('01-01-2016', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('01-01-2016', 'DD-MM-YYYY'), 'months') * 1.66 : 100
+                    exp: moment().diff(moment('01-01-2016', 'DD-MM-YYYY'), 'months') <= 120 ? moment().diff(moment('01-01-2016', 'DD-MM-YYYY'), 'months')*.83 : 100
                 },
                 {
                     name: 'Mithril',
-                    exp: moment().diff(moment('10-11-2016', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('10-05-2017', 'DD-MM-YYYY'), 'months') * 1.66 : 100
+                    exp: moment().diff(moment('10-11-2016', 'DD-MM-YYYY'), 'months') <= 120 ? moment().diff(moment('10-05-2017', 'DD-MM-YYYY'), 'months')*.83 : 100
                 },
                 {
                     name: 'NodeJS',
-                    exp: moment().diff(moment('03-03-2016', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('03-03-2016', 'DD-MM-YYYY'), 'months') * 1.66 : 100
-                },
-                {
-                    name: 'JQuery',
-                    exp: moment().diff(moment('07-06-2013', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('06-06-2013', 'DD-MM-YYYY'), 'months') * 1.66 : 100
+                    exp: moment().diff(moment('03-03-2016', 'DD-MM-YYYY'), 'months') <= 120 ? moment().diff(moment('03-03-2016', 'DD-MM-YYYY'), 'months')*.83 : 100
                 },
                 {
                     name: 'PHP',
-                    exp: moment('10-06-2014', 'DD-MM-YYYY').diff(moment('06-01-2013', 'DD-MM-YYYY'), 'months') <= 60 ? moment('10-06-2014', 'DD-MM-YYYY').diff(moment('01-06-2012', 'DD-MM-YYYY'), 'months') * 1.66 : 100
+                    exp: moment().diff(moment('06-05-2013', 'DD-MM-YYYY'), 'months') <= 120 ? moment().diff(moment('01-06-2012', 'DD-MM-YYYY'), 'months')*.83  : 100
+                },
+                {
+                    name: 'MYSQL',
+                    exp: moment().diff(moment('05-05-2012', 'DD-MM-YYYY'), 'months') <= 120 ? moment().diff(moment('05-05-2012', 'DD-MM-YYYY'), 'months')*.83: 100
                 },
                 {
                     name: 'MongoDB',
-                    exp: moment().diff(moment('05-05-2017', 'DD-MM-YYYY'), 'months') <= 60 ? moment().diff(moment('05-05-2017', 'DD-MM-YYYY'), 'months') * 1.66 : 100
+                    exp: moment().diff(moment('05-05-2017', 'DD-MM-YYYY'), 'months') <= 120 ? moment().diff(moment('05-05-2017', 'DD-MM-YYYY'), 'months')*.83 : 100
                 },
+                {
+                    name: 'ReactJS',
+                    exp: moment().diff(moment('05-12-2017', 'DD-MM-YYYY'), 'months') <= 120 ? moment().diff(moment('05-12-2017', 'DD-MM-YYYY'), 'months')*.83 : 100
+                }
             ];
 
             console.log($scope.skills);
