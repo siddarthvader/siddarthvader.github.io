@@ -5,7 +5,14 @@ syd.controller('workCtrl', function ($state, $scope, $timeout) {
     $scope.$on('$viewContentLoaded', function () {
         $timeout(function () {
 
-            $scope.appsDev = [{
+            $scope.appsDev = [
+                {
+                    title: 'IDAOSE Website',
+                    duration: 'Aug-2019 - Now',
+                    past: false,
+                    company: 'Freelancing',
+                    url: 'http://idaosejaipur.com/'
+                },{
                     title: 'Portfolio',
                     duration: 'Aug-2017 - Sep 2017',
                     past: true,
@@ -15,7 +22,7 @@ syd.controller('workCtrl', function ($state, $scope, $timeout) {
                 {
                     title: 'Trading Application',
                     duration: 'July-2017',
-                    past: false,
+                    past: true,
                     company: 'Freelancing',
                     url: 'https://damp-oasis-64949.herokuapp.com/'
                 }

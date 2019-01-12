@@ -20,6 +20,7 @@ app.use(express.static(__dirname));
 // });
 
 http.listen(port, "0.0.0.0", function () {
+	console.log(port);
 	console.log('up and running');
 });
 

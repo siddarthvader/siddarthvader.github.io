@@ -53,19 +53,19 @@ syd.controller('aboutCtrl', function ($state, $scope, $timeout) {
 
             $scope.pastJobs = [{
                     title: 'Web Developer/Freelancer',
-                    duration: 'Feb-2017 - now',
+                    duration: 'Feb-17 - now',
                     past: false,
                     company: 'Freelancer/Self Employed'
                 },
                 {
                     title: 'Front-End Developer',
-                    duration: 'Feb-2016 - Feb 2017',
+                    duration: 'Feb-16 - Feb 17',
                     past: true,
                     company: 'Acetone Designs Pvt Ltd, India'
                 },
                 {
                     title: 'User Interface Developer',
-                    duration: 'July-2014 - Feb 2016',
+                    duration: 'July-14 - Feb 16',
                     past: true,
                     company: 'Nucleus Software Pvt Ltd, India'
                 }
