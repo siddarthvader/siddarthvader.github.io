@@ -11,7 +11,7 @@
     "server": "python -m SimpleHTTPServer"
   },
   "dependencies": {
-    "angular": "^1.6.4",
+    "angular": "^1.8.3",
     "bulma": "^0.4.2",
     "extract-text-webpack-plugin": "^2.1.2",
     "font-awesome": "^4.7.0",
